@@ -130,7 +130,7 @@ const Monitor = () => {
                     <div className=" md:grid-cols-2 shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3 sm:p-4 col-span-full">
                             <div className="flex items-center gap-2">
-                                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
+                                <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
                                 <h1 className="font-bold text-base sm:text-lg dark:text-white">
                                     High Risk Transactions
                                 </h1>
