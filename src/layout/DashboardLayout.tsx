@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Sidebar } from '../components/Sidebar/Sidebar';
-import Dashboard from '../pages/Dashboard/Dashboard';
+import  {Sidebar}  from '../components/Sidebar/Sidebar.js';
+import Dashboard from '../pages/Dashboard/Dashboard.js';
 // import { Menu, X } from 'lucide-react';
 
 const DashboardLayout = () => {

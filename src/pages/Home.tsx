@@ -1,5 +1,5 @@
 
-import DashboardLayout from "../layout/DashboardLayout"
+import DashboardLayout from "../layout/DashboardLayout.js"
 
 const Home = () => {
     return (

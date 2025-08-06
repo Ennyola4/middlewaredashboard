@@ -1,24 +1,24 @@
-import type { RouteProps } from "../interfaces/Global";
-// import  Home  from "../pages/Dashboard/Home";
-import BusinessBanking from "../pages/Dashboard/Product/BusinessBanking";
-import Ecam from "../pages/Dashboard/Product/Ecam";
-import PosSystem from "../pages/Dashboard/Product/PosSystem";
-import GoldBucks from "../pages/Dashboard/Product/GoldBucks";
-import MobileBanking from "../pages/Dashboard/Product/MobileBanking";
-import HighRiskTransaction from "../pages/Dashboard/Transaction/HighRiskTransaction";
-import LiveTransaction from "../pages/Dashboard/Transaction/LiveTransaction";
-import RiskUsers from "../pages/Dashboard/RiskManagement/RiskUsers";
-import RiskTransaction from "../pages/Dashboard/RiskManagement/RiskTransaction";
-import FraudAlert from "../pages/Dashboard/RiskManagement/FraudAlert";
-import RecurringExceptions from "../pages/Dashboard/RiskManagement/RecurringExceptions";
-import RecommendationBoard from "../pages/Dashboard/RiskManagement/RecommendationBoard";
-import UnusualUserActivity from "../pages/Dashboard/RiskManagement/UnusualUserActivity";
-import UnusualUserOnboarding from "../pages/Dashboard/RiskManagement/UnusualUserOnboarding";
-import CustomerManagement from "../pages/Dashboard/Management/CustomerManagement";
-import TransactionReport from "../pages/Dashboard/Management/TransactionReport";
-import ThirdPartyIntegrations from "../pages/Dashboard/Management/ThirdPartyIntegrations";
-import SystemHealth from "../pages/Dashboard/Monitoring/SystemHealth";
-import SecurityOverview from "../pages/Dashboard/Monitoring/SecurityOverview";
+import type { RouteProps } from "../interfaces/Global.js";
+// import  Home  from "../pages/Dashboard/Home.js";
+import BusinessBanking from "../pages/Dashboard/Product/BusinessBanking.js";
+import Ecam from "../pages/Dashboard/Product/Ecam.js";
+import PosSystem from "../pages/Dashboard/Product/PosSystem.js";
+import GoldBucks from "../pages/Dashboard/Product/GoldBucks.js";
+import MobileBanking from "../pages/Dashboard/Product/MobileBanking.js";
+import HighRiskTransaction from "../pages/Dashboard/Transaction/HighRiskTransaction.js";
+import LiveTransaction from "../pages/Dashboard/Transaction/LiveTransaction.js";
+import RiskUsers from "../pages/Dashboard/RiskManagement/RiskUsers.js";
+import RiskTransaction from "../pages/Dashboard/RiskManagement/RiskTransaction.js";
+import FraudAlert from "../pages/Dashboard/RiskManagement/FraudAlert.js";
+import RecurringExceptions from "../pages/Dashboard/RiskManagement/RecurringExceptions.js";
+import RecommendationBoard from "../pages/Dashboard/RiskManagement/RecommendationBoard.js";
+import UnusualUserActivity from "../pages/Dashboard/RiskManagement/UnusualUserActivity.js";
+import UnusualUserOnboarding from "../pages/Dashboard/RiskManagement/UnusualUserOnboarding.js";
+import CustomerManagement from "../pages/Dashboard/Management/CustomerManagement.js";
+import TransactionReport from "../pages/Dashboard/Management/TransactionReport.js";
+import ThirdPartyIntegrations from "../pages/Dashboard/Management/ThirdPartyIntegrations.js";
+import SystemHealth from "../pages/Dashboard/Monitoring/SystemHealth.js";
+import SecurityOverview from "../pages/Dashboard/Monitoring/SecurityOverview.js";
 
 
 
