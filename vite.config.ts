@@ -8,6 +8,9 @@ export default defineConfig({
     tailwindcss()],
   base: '/', // Ensure this is set correctly for your deployment
   server: {
+    fs:{
+      strict: false, // Allow serving files outside of the root directory
+    },
     port: 3000,
   },
   build: {
