@@ -115,8 +115,8 @@ export const Sidebar = () => {
             <motion.aside
               initial={isMobile ? { x: -300 } : {}}
               animate={isMobile ? { x: 0 } : {}}
-              exit={isMobile ? { x: -300 } : {}}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              exit={isMobile ? { x: -400 } : {}}
+              transition={{ type: "spring", stiffness: 100, damping: 30 }}
               className={`flex flex-col border-r dark:border-gray-200 dark:bg-gray-900 bg-blue-700 ${
                 isMobile ? "fixed inset-0 z-40 w-84" : "w-790"
               }`}
