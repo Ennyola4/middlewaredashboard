@@ -37,20 +37,20 @@ const SecondMonitor = () => {
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 justify-center align-center p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadwo-lg">
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
 
                                 <p className="text-[10px] justify-center align-center font-serif">Authenticated</p>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <h1 className="text-xl font-extrabold text-red-400">2,555</h1>
                                 <p className="text-[10px] justify-center align-center  font-serif">Failed</p>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <h1 className="text-xl font-extrabold text-blue-400">12,450</h1>
                                 <p className="text-[10px] justify-center align-center  font-serif">Access Token</p>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center">
                                 <h1 className="text-xl font-extrabold text-green-400">98.37%</h1>
                                 <p className="text-[10px] justify-center align-center  font-serif">Success Rate</p>
                             </div>
@@ -119,24 +119,24 @@ const SecondMonitor = () => {
                 <div className="flex-1">
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
-                        <h1 className=" text-2xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
+                        <h1 className=" text-xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 justify-center align-center p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadwo-lg">
-                            <div>
-                                <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
+                            <div className="flex flex-col items-center">
+                                <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>
 
-                                <p className="text-[10px] justify-center align-center font-serif">Authenticated</p>
+                                <p className="text-[10px] justify-center align-center font-serif">Info Logs</p>
                             </div>
-                            <div>
-                                <h1 className="text-xl font-extrabold text-red-400">2,555</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Failed</p>
+                            <div className="flex flex-col items-center">
+                                <h1 className="text-xl font-extrabold text-yellow-500">5,678</h1>
+                                <p className="text-[10px] justify-center align-center  font-serif">Warnings</p>
                             </div>
-                            <div>
-                                <h1 className="text-xl font-extrabold text-blue-400">12,450</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Access Token</p>
+                            <div className="flex flex-col items-center">
+                                <h1 className="text-xl font-extrabold text-red-400">1,234</h1>
+                                <p className="text-[10px] justify-center align-center  font-serif">Errors</p>
                             </div>
-                            <div>
-                                <h1 className="text-xl font-extrabold text-green-400">98.37%</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Success Rate</p>
+                            <div className="flex flex-col items-center">
+                                <h1 className="text-xl font-extrabold text-green-400">145ms</h1>
+                                <p className="text-[10px] justify-center align-center  font-serif">Average Response</p>
                             </div>
                         </div>
 
@@ -182,7 +182,7 @@ const SecondMonitor = () => {
                                             </div>
                                         </div>
 
-                                        <div className="flex flex-col items-end sm:items-start md:items-end">
+                                        <div className=" items-end sm:items-start md:items-end">
                                             <p className="font-bold text-sm md:text-lg dark:text-white">
                                                 {event.time}
                                             </p>
