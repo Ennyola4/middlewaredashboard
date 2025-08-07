@@ -36,23 +36,25 @@ const SecondMonitor = () => {
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 justify-center align-center p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadwo-lg">
-                            <div className="flex flex-col items-center">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                           
+                            <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
+                                <p className="text-[10px] font-serif">Authenticated</p>
+                            </div>
+                            <div className="flex flex-col items-center col-span-1">
+                                <h1 className="text-xl font-extrabold text-red-500">2,555</h1>
+                                <p className="text-[10px] font-serif">Failed</p>
+                            </div>
 
-                                <p className="text-[10px] justify-center align-center font-serif">Authenticated</p>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <h1 className="text-xl font-extrabold text-red-400">2,555</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Failed</p>
-                            </div>
-                            <div className="flex flex-col items-center">
+                           
+                            <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-blue-400">12,450</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Access Token</p>
+                                <p className="text-[10px] font-serif">Active Tokens</p>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <h1 className="text-xl font-extrabold text-green-400">98.37%</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Success Rate</p>
+                            <div className="flex flex-col items-center col-span-1">
+                                <h1 className="text-xl font-extrabold">98.37%</h1>
+                                <p className="text-[10px] font-serif">Success Rate</p>
                             </div>
                         </div>
 
@@ -82,19 +84,19 @@ const SecondMonitor = () => {
                                                     {event.event}
                                                 </p>
 
-                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/10 dark:text-red-300' :
-                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/10 dark:text-green-300' :
-                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/10 dark:text-yellow-300'
+                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/40 dark:text-red-300' :
+                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/40 dark:text-green-300' :
+                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/40 dark:text-yellow-300'
                                                     }`}>
                                                     {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
                                                 </span>
                                             </div>
 
                                             <div className="mt-2 space-y-1">
-                                                <p className="text-gray-500 w-22 dark:text-gray-400 rounded-md shadow-sm p-1  text-xs">
+                                                <p className="text-gray-500 w-22 dark:text-gray-400 p-1  text-xs">
                                                     {event.authId}
                                                 </p>
-                                                <span className="inline-block bg-blue-300/55 dark:bg-blue-900/20 text-blue-700 dark:text-blue-200 text-xs px-2 py-1 rounded-md">
+                                                <span className="inline-block bg-gray-300/55 dark:bg-gray-900/50 text-gray-700 dark:text-blue-200 text-xs px-2 py-1 rounded-md">
                                                     IP: {event.eventId}
                                                 </span>
                                             </div>
@@ -120,23 +122,24 @@ const SecondMonitor = () => {
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
                         <h1 className=" text-xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 justify-center align-center p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadwo-lg">
-                            <div className="flex flex-col items-center">
-                                <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
 
-                                <p className="text-[10px] justify-center align-center font-serif">Info Logs</p>
+                            <div className="flex flex-col items-center col-span-1">
+                                <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>
+                                <p className="text-[10px] font-serif">Info Logs</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-yellow-500">5,678</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Warnings</p>
+                                <p className="text-[10px] font-serif">Warnings</p>
                             </div>
-                            <div className="flex flex-col items-center">
+
+                            <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-red-400">1,234</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Errors</p>
+                                <p className="text-[10px] font-serif">Errors</p>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <h1 className="text-xl font-extrabold text-green-400">145ms</h1>
-                                <p className="text-[10px] justify-center align-center  font-serif">Average Response</p>
+                            <div className="flex flex-col items-center col-span-1">
+                                <h1 className="text-xl font-extrabold">145ms</h1>
+                                <p className="text-[10px] font-serif">Average Response</p>
                             </div>
                         </div>
 
@@ -164,9 +167,9 @@ const SecondMonitor = () => {
                                                 <p className="text-gray-500 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
                                                     {event.authId}
                                                 </p>
-                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/10 dark:text-red-300' :
-                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/10 dark:text-green-300' :
-                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/10 dark:text-yellow-300'
+                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/40 dark:text-red-300' :
+                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/40 dark:text-green-300' :
+                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/40 dark:text-yellow-300'
                                                     }`}>
                                                     {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
                                                 </span>
@@ -176,7 +179,7 @@ const SecondMonitor = () => {
                                                 <p className="font-semibold text-sm text-gray-700 dark:text-white">
                                                     {event.event}
                                                 </p>
-                                                <span className="inline-block bg-purple-300/55 dark:bg-purple-900/20 text-purple-700 dark:text-purple-200 text-xs px-2 py-1 rounded-md">
+                                                <span className="inline-block bg-gray-300/55 dark:bg-gray-900/50 text-gray-700 dark:text-purple-200 text-xs px-2 py-1 rounded-md">
                                                     Source: {event.eventId}
                                                 </span>
                                             </div>
