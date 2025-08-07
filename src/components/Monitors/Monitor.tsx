@@ -190,7 +190,7 @@ const Monitor = () => {
                                 </div>
                             </div>
                         ))}
-                         <button className="flex items-center gap-2 bg-white dark:bg-gray-200 px-4 py-2 rounded-md cursor-pointer text-sm font-serif shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                        <button className="flex items-center gap-2 bg-white dark:bg-gray-200 px-4 py-2 rounded-md cursor-pointer text-sm font-serif shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
                             <Eye className="w-4 h-4" />
                             View all Risk Transactions
                         </button>

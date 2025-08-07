@@ -1,9 +1,17 @@
 import { Lock } from "lucide-react";
 import { Activity } from "lucide-react";
+import { Eye } from "lucide-react";
+import { CircleAlert } from 'lucide-react';
+import { Layers } from 'lucide-react';
+import { Database } from 'lucide-react'
+import { Shield } from 'lucide-react'
+
+
 
 const recentAuthEvents = [
     {
         event: "Failed login attempt",
+        icon: <CircleAlert className="w-5 h-5" />,
         authId: "temitope@gmail.com",
         eventId: "192.168.1.105",
         time: "2 mins ago",
@@ -25,6 +33,25 @@ const recentAuthEvents = [
     },
 ];
 
+const logAndmon = [
+    {
+        log: "API Call Tracking",
+        status: "Active",
+        icon: <Layers className="w-5 h-5" />
+    },
+    {
+        log: "Performance Monitoring",
+        status: "Active",
+        icon: <Database className="w-5 h-5" />
+    },
+    {
+        log: "Error Tracking",
+        status: "Active",
+        icon: <Shield className="w-5 h-5" />
+    },
+
+]
+
 const SecondMonitor = () => {
     return (
         <div className="p-4 dark:bg-gray-950 space-y-6">
@@ -37,7 +64,7 @@ const SecondMonitor = () => {
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
                         <div className="grid grid-cols-2 gap-4 mb-6 p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
-                           
+
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
                                 <p className="text-[10px] font-serif">Authenticated</p>
@@ -47,7 +74,7 @@ const SecondMonitor = () => {
                                 <p className="text-[10px] font-serif">Failed</p>
                             </div>
 
-                           
+
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-blue-400">12,450</h1>
                                 <p className="text-[10px] font-serif">Active Tokens</p>
@@ -65,9 +92,7 @@ const SecondMonitor = () => {
                                     Recent Auth Events
                                 </h1>
                             </div>
-                            {/* <p className="bg-red-500 text-white rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-xs sm:text-sm font-medium">
-                                {recentAuthEvents.length} Events
-                            </p> */}
+
                         </div>
 
                         <div className="space-y-4 mt-4">
@@ -80,13 +105,14 @@ const SecondMonitor = () => {
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2 flex-wrap">
 
-                                                <p className="font-semibold text-sm text-gray-700 dark:text-white">
+                                                <p className="font-semibold text-sm text-gray-700 dark:text-white flex items-center gap-2">
+                                                    <CircleAlert className="h-4 w-4 text-red-500" />
                                                     {event.event}
                                                 </p>
 
-                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/40 dark:text-red-300' :
-                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/40 dark:text-green-300' :
-                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/40 dark:text-yellow-300'
+                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'border-[0.5px] text-red-600  dark:text-red-400' :
+                                                    event.status === 'success' ? 'border-[0.5px] text-green-700  dark:text-green-400' :
+                                                        'border-[0.5px] text-yellow-700 dark:text-yellow-400'
                                                     }`}>
                                                     {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
                                                 </span>
@@ -117,12 +143,12 @@ const SecondMonitor = () => {
                     </div>
                 </div>
 
-                {/* Second card - same as first but you can customize differently */}
-                <div className="flex-1">
+                {/* Logging & Monitoring */}
+                <div className="flex-1 h-fit">
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
                         <h1 className=" text-xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
-                        <div className="grid grid-cols-2 gap-4 mb-6 p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-5 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
 
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>
@@ -142,6 +168,19 @@ const SecondMonitor = () => {
                                 <p className="text-[10px] font-serif">Average Response</p>
                             </div>
                         </div>
+                        <div className="w-full space-y-2">
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Log Storage Usage</span>
+                                <span className="text-sm font-bold text-gray-900 dark:text-white">78.5%</span>
+                            </div>
+
+                            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1">
+                                <div
+                                    className="bg-blue-600 h-1 rounded-full"
+                                    style={{ width: '78.5%' }}
+                                ></div>
+                            </div>
+                        </div>
 
                         <div className="flex items-center justify-between gap-2 p-3 sm:p-4">
                             <div className="flex items-center gap-2">
@@ -150,53 +189,40 @@ const SecondMonitor = () => {
                                     Event Logs
                                 </h1>
                             </div>
-                            {/* <p className="bg-red-500 text-white rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-xs sm:text-sm font-medium">
-                                {recentAuthEvents.length} Logs
-                            </p> */}
+
                         </div>
 
-                        <div className="space-y-4 mt-4">
-                            {recentAuthEvents.map((event, index) => (
+                        <div className="space-y-4 w-full">
+                            {logAndmon.map((item, index) => (
                                 <div
-                                    key={`log-${index}`}
-                                    className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 border-l-4 border-green-400"
+                                    key={index}
+                                    className="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                                 >
-                                    <div className="flex flex-col sm:flex-row justify-between gap-3">
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 flex-wrap">
-                                                <p className="text-gray-500 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
-                                                    {event.authId}
-                                                </p>
-                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'bg-red-500/35 text-red-700 dark:bg-red-800/40 dark:text-red-300' :
-                                                    event.status === 'success' ? 'bg-green-500/35 text-green-700 dark:bg-green-800/40 dark:text-green-300' :
-                                                        'bg-yellow-500/35 text-yellow-700 dark:bg-yellow-800/40 dark:text-yellow-300'
-                                                    }`}>
-                                                    {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
-                                                </span>
-                                            </div>
-
-                                            <div className="mt-2 space-y-1">
-                                                <p className="font-semibold text-sm text-gray-700 dark:text-white">
-                                                    {event.event}
-                                                </p>
-                                                <span className="inline-block bg-gray-300/55 dark:bg-gray-900/50 text-gray-700 dark:text-purple-200 text-xs px-2 py-1 rounded-md">
-                                                    Source: {event.eventId}
-                                                </span>
-                                            </div>
+            
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+                                            {item.icon}
                                         </div>
-
-                                        <div className=" items-end sm:items-start md:items-end">
-                                            <p className="font-bold text-sm md:text-lg dark:text-white">
-                                                {event.time}
-                                            </p>
-                                            <p className="text-[10px] text-gray-500 dark:text-gray-400">
-                                                {event.status}
-                                            </p>
-                                        </div>
+                                        <p className="font-serif text-sm text-gray-800 dark:text-gray-100">
+                                            {item.log}
+                                        </p>
                                     </div>
+
+                                    
+                                    <span className={`px-2 py-1 text-[10px] font-serif rounded-md ${item.status === 'Active'
+                                        ? 'border-[0.5px] text-green-500 dark:text-green-500'
+                                        : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
+                                        }`}>
+                                        {item.status}
+                                    </span>
                                 </div>
                             ))}
+                            <button className="flex items-center gap-2  bg-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                                <Eye className="w-4 h-4" />
+                                View Full Logs
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
