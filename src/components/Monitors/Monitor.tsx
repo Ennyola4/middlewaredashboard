@@ -72,7 +72,7 @@ const Monitor = () => {
     };
 
     return (
-        <div className='w-full dark:bg-gray-950'>
+        <div className='w-full grid grid-cols-1 dark:bg-gray-950'>
             {/* Parent Container */}
             <div className="flex flex-col p-4 lg:flex-row gap-9">
                 {/* High Risk Users*/}
@@ -143,9 +143,9 @@ const Monitor = () => {
                         {highRiskTransaction.map((transaction, index) => (
                             <div
                                 key={`transaction-${index}`}
-                                className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 mb-5 border-l-4 border-blue-400"
+                                className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-3 mb-5 border-l-4 border-blue-400"
                             >
-                                <div className="flex justify-between items-start">
+                                <div className="flex justify-between text-[10px] items-start">
                                     <div className="flex flex-col gap-1">
                                         <div className="flex items-center gap-2">
                                             <p className="text-gray-500 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
@@ -185,9 +185,9 @@ const Monitor = () => {
                         ))}
                     </div>
                 </div>
-
-
+                
             </div>
+            
         </div>
     );
 };
