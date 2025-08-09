@@ -58,7 +58,7 @@ const AnalyticsCard = () => {
                 whileHover={{ scale: 1.1 }}
                 className={`text-sm font-medium ${index < 3 ? 'text-green-500 hover:text-green-600' : 'text-red-500 hover:text-red-600'
                   }`}
-              > <div className="flex items-center gap-1">
+              > <div className="flex items-center  gap-1">
                 <TrendingUp className="flex" size={15} /> 
                 {stat.change}
               </div>
@@ -75,7 +75,7 @@ const AnalyticsCard = () => {
               </motion.h3>
               <motion.p
                 whileHover={{ x: 2 }}
-                className="text-xs text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                className="text-xs font-serif text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
               >
                 {stat.textChange}
               </motion.p>

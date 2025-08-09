@@ -1,6 +1,0 @@
-static_sites:
-  - name: your-app-name
-    public_path: /
-    build_command: npm run build
-    static_path: dist
-    env: node

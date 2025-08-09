@@ -55,15 +55,15 @@ const logAndmon = [
 const SecondMonitor = () => {
     return (
         <div className="p-4 dark:bg-gray-950 space-y-6">
-            {/* Main container with flex layout */}
+            {/* Main container */}
             <div className="flex flex-col lg:flex-row gap-6">
-                {/* First card - takes full width on mobile, half on larger screens */}
+                {/*AUTHENTICATION AND AUTHORIZATION*/}
                 <div className="flex-1">
 
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
-                        <div className="grid grid-cols-2 gap-4 mb-6 p-7 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
 
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
@@ -85,9 +85,9 @@ const SecondMonitor = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-between gap-2 p-3 sm:p-4">
+                        <div className="flex items-center justify-between gap-2 p-1 sm:p-4">
                             <div className="flex items-center gap-2">
-                                <Lock className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
+                                <Lock  className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
                                 <h1 className="font-bold text-base sm:text-lg dark:text-white">
                                     Recent Auth Events
                                 </h1>
@@ -95,7 +95,7 @@ const SecondMonitor = () => {
 
                         </div>
 
-                        <div className="space-y-4 mt-4">
+                        <div className="space-y-4 mt-1">
                             {recentAuthEvents.map((event, index) => (
                                 <div
                                     key={`event-${index}`}
@@ -122,10 +122,11 @@ const SecondMonitor = () => {
                                                 <p className="text-gray-500 w-22 dark:text-gray-400 p-1  text-xs">
                                                     {event.authId}
                                                 </p>
-                                                <span className="inline-block bg-gray-300/55 dark:bg-gray-900/50 text-gray-700 dark:text-blue-200 text-xs px-2 py-1 rounded-md">
+                                                
+                                            </div>
+                                            <span className="inline-block bg-gray-300/55 dark:bg-gray-900/50 text-gray-700 dark:text-blue-200 text-xs px-2 py-1 rounded-md">
                                                     IP: {event.eventId}
                                                 </span>
-                                            </div>
                                         </div>
 
                                         <div className="flex flex-col items-end sm:items-start md:items-end">
@@ -143,12 +144,12 @@ const SecondMonitor = () => {
                     </div>
                 </div>
 
-                {/* Logging & Monitoring */}
+                {/*LOGGING AND MONITORING */}
                 <div className="flex-1 h-fit">
                     <div className="shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl">
 
                         <h1 className=" text-xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
-                        <div className="grid grid-cols-2 gap-4 mb-6 p-5 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
 
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>

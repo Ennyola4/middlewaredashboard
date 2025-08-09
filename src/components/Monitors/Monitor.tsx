@@ -86,16 +86,16 @@ const Monitor = () => {
                                 <Users className="h-6 w-6 text-red-500" />
                                 <h1 className="font-bold text-lg dark:text-white">High Risk Users</h1>
                             </div>
-                            <p className="bg-red-500 text-white rounded-full px-3 py-1 text-sm font-medium">
+                            <p className="bg-red-500 text-white rounded-md px-3 py-1 text-[12px] font-medium">
                                 3 Active
                             </p>
                         </div>
                         {highRiskUser.map((user, index) => (
-                            <div key={`left-${index}`} className="bg-white dark:bg-gray-700 rounded-lg shadow-md mb-4 p-4 border-l-4 border-red-500">
+                            <div key={`left-${index}`} className="bg-white dark:bg-gray-700 rounded-lg shadow-md mb-4 p-4 border-l-4 border-red-400/70">
 
                                 <div className="flex justify-between items-start">
                                     <div className="flex items-center text-xs">
-                                        <p className="text-gray-500 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 mr-1">{user.usr}</p>
+                                        <p className="text-gray-700 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 mr-1">{user.usr}</p>
                                         <h3 className="font-bold text-sm dark:text-white">{user.usrName}</h3>
                                     </div>
                                     <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${statusColors[user.status as keyof typeof statusColors]}`}>
@@ -107,12 +107,7 @@ const Monitor = () => {
 
                                     <div className="flex justify-left items-center mt-1">
                                         <p className="text-gray-800 text-xs font-serif dark:text-gray-300">{user.hru}</p>
-                                        {/* <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full">
-                                            <div
-                                                className="h-1 rounded-full bg-red-500"
-                                                style={{ width: user.hruStatus.split(': ')[1] }}
-                                            ></div>
-                                        </div> */}
+
                                         <span className="ml-2 text-xs font-medium text-red-500 dark:text-red-400">
                                             {user.hruStatus}
                                         </span>
@@ -142,24 +137,24 @@ const Monitor = () => {
                                     High Risk Transactions
                                 </h1>
                             </div>
-                            <p className="bg-red-500 text-white rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-xs sm:text-sm font-medium">
-                                {highRiskTransaction.length} Active
+                            <p className="bg-red-500 text-white text-[8px] rounded-md px-2 py-0.5 sm:px-3 sm:py-1 sm:text-sm font-medium">
+                                3 Active
                             </p>
                         </div>
 
                         {highRiskTransaction.map((transaction, index) => (
                             <div
                                 key={`transaction-${index}`}
-                                className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-3 mb-5 border-l-4 border-blue-400"
+                                className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-3 mb-5 border-l-4 border-blue-400/70"
                             >
                                 <div className="flex justify-between text-[10px] items-start">
                                     <div className="flex flex-col gap-1">
                                         <div className="flex items-center gap-2">
-                                            <p className="text-gray-500 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
+                                            <p className="text-gray-700 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
                                                 {transaction.usrTwo}
                                             </p>
                                             <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${statusColors[transaction.usrStatus as keyof typeof statusColors] ||
-                                                'bg-purple-500/35 shadow-sm text-purple-700 dark:bg-purple-800/10 dark:text-purple-300'
+                                                'border shadow-sm text-purple-700 dark:text-purple-300'
                                                 }`}>
                                                 {transaction.usrStatus.charAt(0).toUpperCase() + transaction.usrStatus.slice(1)}
                                             </span>
@@ -169,10 +164,10 @@ const Monitor = () => {
 
                                         <div className="flex flex-wrap gap-2 mt-2">
                                             <p className="font-semibold text-sm text-gray-400 dark:text-white mt-1">by {transaction.name}</p>
-                                            <span className="bg-red-300/55 dark:bg-red-900/20 text-red-700 dark:text-red-200 text-xs px-2 py-1 rounded-md">
+                                            <span className="bg-red-300/45 dark:bg-red-900/20 text-red-700 dark:text-red-200 text-xs px-2 py-1 rounded-md">
                                                 {transaction.firstNameStatus}
                                             </span>
-                                            <span className="bg-red-300/55 shadow-sm  dark:bg-red-900/20 text-red-700 dark:text-red-200 text-xs px-2 py-1 rounded-md">
+                                            <span className="bg-red-300/45 shadow-sm  dark:bg-red-900/20 text-red-700 dark:text-red-200 text-xs px-2 py-1 rounded-md">
                                                 {transaction.secondNameStatus}
                                             </span>
                                         </div>

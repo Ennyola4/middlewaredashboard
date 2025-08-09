@@ -23,7 +23,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <div className="flex flex-col xs:flex-row xs:items-center gap-1 xs:gap-2">
-              <span className="px-4 py-1 xs:px-3 xs:py-1 text-xs text-green-800 font-serif bg-green-200 rounded-full dark:text-green-100 whitespace-nowrap dark:bg-green-900">
+              <span className="px-4 py-1 xs:px-3 xs:py-1 text-xs text-green-700 font-serif bg-green-300/45 rounded-full dark:text-green-100 whitespace-nowrap dark:bg-green-900">
                 Operational
               </span>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center justify-end gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
           {/* Notification icon */}
           <button
-            className="bg-blue-100 p-3 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
+            className="bg-blue-100 p-2 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
              transition-all duration-300 ease-in-out
              hover:bg-gray-400 dark:hover:bg-gray-700
              hover:scale-110 active:scale-95
@@ -50,7 +50,7 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-200 hover:rotate-12"
+              className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-200 hover:rotate-42"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -66,7 +66,7 @@ const Navbar = () => {
 
           {/* Settings button */}
           <button
-            className="flex shadow-lg items-center justify-center sm:gap-2 p-3  text-black rounded-full 
+            className="flex shadow-lg items-center justify-center sm:gap-2 p-2  text-black rounded-full 
              bg-blue-100 dark:bg-gray-300 dark:text-black
              transition-all duration-300 ease-out
              hover:bg-gray-400 dark:hover:bg-gray-700
@@ -79,7 +79,7 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 
                transition-transform duration-500 ease-in-out
-               group-hover:rotate-45"
+               group-hover:rotate-85"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
