@@ -48,7 +48,7 @@ const Monitor = () => {
             usrTwo: "TXN-RISK-002",
             usrStatus: "flagged",
             value: "₦1,800,000",
-            valuePurpose: "International Transfer",
+            valuePurpose: "Int'l Transfer",
             name: "Mohammed Salah",
             firstNameStatus: "Foreign Recipient",
             secondNameStatus: "New Payee",
@@ -77,9 +77,9 @@ const Monitor = () => {
         <div className='w-full grid grid-cols-1 dark:bg-gray-950'>
             {/* Parent Container */}
             <div className="flex flex-col p-4 lg:flex-row gap-9">
+
                 {/* High Risk Users*/}
                 <div className="flex-1">
-
                     <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3">
                             <div className="flex items-center gap-2">

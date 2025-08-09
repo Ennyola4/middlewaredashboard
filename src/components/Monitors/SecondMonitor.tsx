@@ -49,6 +49,13 @@ const logAndmon = [
         status: "Active",
         icon: <Shield className="w-5 h-5" />
     },
+        {
+        log: "API Call Tracking",
+        status: "Active",
+        icon: <Layers className="w-5 h-5" />
+    }
+    
+    
 
 ]
 

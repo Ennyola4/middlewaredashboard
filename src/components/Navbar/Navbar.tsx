@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center justify-end gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
           {/* Notification icon */}
           <button
-            className="bg-blue-100 p-2 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
+            className="bg-blue-300 p-2 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
              transition-all duration-300 ease-in-out
              hover:bg-gray-400 dark:hover:bg-gray-700
              hover:scale-110 active:scale-95
@@ -67,7 +67,7 @@ const Navbar = () => {
           {/* Settings button */}
           <button
             className="flex shadow-lg items-center justify-center sm:gap-2 p-2  text-black rounded-full 
-             bg-blue-100 dark:bg-gray-300 dark:text-black
+             bg-blue-300 dark:bg-gray-300 dark:text-black
              transition-all duration-300 ease-out
              hover:bg-gray-400 dark:hover:bg-gray-700
              hover:scale-[1.03] active:scale-[0.98]
