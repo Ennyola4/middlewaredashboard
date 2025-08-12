@@ -1,5 +1,6 @@
 import AnalyticsCard from "../../components/AnalyticsCard/AnalyticsCard.js"
 import { Charts } from "../../components/charts/Charts.js"
+import LastMonitor from "../../components/Monitors/LastMonitor.js"
 import Monitor from "../../components/Monitors/Monitor.js"
 import SecondMonitor from "../../components/Monitors/SecondMonitor.js"
 import ThirdMonitor from "../../components/Monitors/ThirdMonitor.js"
@@ -15,7 +16,9 @@ const Dashboard = () => {
             <Charts/>
             <Monitor/>
             <SecondMonitor/>
+            <LastMonitor/>
             <ThirdMonitor/>
+           
         </div>
     )
 }

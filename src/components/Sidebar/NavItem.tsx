@@ -15,7 +15,7 @@ export const NavItem = ({ href, icon, children }: NavItemProps) => (
   <Link
     to={href}
     className={cn(
-      "flex items-center gap-3 px-4 py-3 rounded-md text-xs text-grey-100 font-serif",
+      "flex items-center gap-3 px-4 py-3 font-semibold rounded-md text-[12px] text-grey-100 ",
       "hover:bg-white hover:text-gray-500",
       "dark:hover:bg-gray-800 dark:hover:text-white",
       "transition-all duration-500 ease-out",

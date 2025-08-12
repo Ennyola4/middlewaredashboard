@@ -74,19 +74,19 @@ const Monitor = () => {
     };
 
     return (
-        <div className='w-full grid grid-cols-1 dark:bg-gray-950'>
+        <div className='w-full grid grid-cols-1 bg-white dark:bg-gray-950'>
             {/* Parent Container */}
             <div className="flex flex-col p-4 lg:flex-row gap-9">
 
                 {/* High Risk Users*/}
                 <div className="flex-1">
-                    <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" grid-cols-1 md:grid-cols-2 shadow-2xl p-5  dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3">
                             <div className="flex items-center gap-2">
                                 <Users className="h-6 w-6 text-red-500" />
                                 <h1 className="font-bold text-lg dark:text-white">High Risk Users</h1>
                             </div>
-                            <p className="bg-red-500 text-white rounded-md px-3 py-1 text-[12px] font-medium">
+                            <p className="bg-red-500/70 text-white rounded-md px-3 py-1 text-[12px] font-medium">
                                 3 Active
                             </p>
                         </div>
@@ -119,7 +119,7 @@ const Monitor = () => {
                                 </div>
                             </div>
                         ))}
-                        <button className="flex items-center gap-2  bg-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                        <button className="flex items-center gap-2 dark:text-gray-400  bg-gray-800 text-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
                             <Eye className="w-4 h-4" />
                             View all Risk Users
                         </button>
@@ -129,7 +129,7 @@ const Monitor = () => {
 
                 {/* High Risk Transactions */}
                 <div className="flex-1">
-                    <div className=" md:grid-cols-2 shadow-sm p-5 bg-gray-300 dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" md:grid-cols-2 shadow-2xl p-5 bg-white dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3 sm:p-4 col-span-full">
                             <div className="flex items-center gap-2">
                                 <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
@@ -137,7 +137,7 @@ const Monitor = () => {
                                     High Risk Transactions
                                 </h1>
                             </div>
-                            <p className="bg-red-500 text-white text-[8px] rounded-md px-2 py-0.5 sm:px-3 sm:py-1 sm:text-sm font-medium">
+                            <p className="bg-red-500/70 text-white rounded-md px-3 py-1 text-[12px] font-medium">
                                 3 Active
                             </p>
                         </div>
@@ -150,10 +150,10 @@ const Monitor = () => {
                                 <div className="flex justify-between text-[10px] items-start">
                                     <div className="flex flex-col gap-1">
                                         <div className="flex items-center gap-2">
-                                            <p className="text-gray-700 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-xs">
+                                            <p className="text-gray-700 dark:text-gray-400 rounded-md shadow-sm p-1 bg-gray-200 dark:bg-gray-900 text-[10px]">
                                                 {transaction.usrTwo}
                                             </p>
-                                            <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${statusColors[transaction.usrStatus as keyof typeof statusColors] ||
+                                            <span className={`text-[9px] px-1.5 py-0.5 rounded-md ${statusColors[transaction.usrStatus as keyof typeof statusColors] ||
                                                 'border shadow-sm text-purple-700 dark:text-purple-300'
                                                 }`}>
                                                 {transaction.usrStatus.charAt(0).toUpperCase() + transaction.usrStatus.slice(1)}
@@ -185,7 +185,7 @@ const Monitor = () => {
                                 </div>
                             </div>
                         ))}
-                        <button className="flex items-center gap-2 bg-white dark:bg-gray-200 px-4 py-2 rounded-md cursor-pointer text-sm font-serif shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                        <button className="flex items-center  gap-2 bg-gray-800 text-white dark:text-gray-300 dark:bg-gray-200 px-4 py-2 rounded-md cursor-pointer text-sm font-serif shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
                             <Eye className="w-4 h-4" />
                             View all Risk Transactions
                         </button>

@@ -5,7 +5,7 @@ import {
   TabletSmartphone, Tablets, ClipboardMinus, Camera, Building2, 
   MonitorCheck, Lock, BarChart2, ChevronDown, Activity, Menu, 
   Users, TrendingUp, Shield, TriangleAlert, RefreshCcw, Brain, 
-  Globe, UserX, UserPlus, UserRoundCheck, X 
+  Globe, UserX, UserPlus, UserRoundCheck, X, House
 } from "lucide-react";
 import { type NavSection } from "../Sidebar/types";
 import imageOne from "../../image/imageOne.jpg";
@@ -40,18 +40,23 @@ export const Sidebar = () => {
     }));
   };
 
-  const navSections: NavSection[] = [
-   {
-      title: "Product",
-      icon: < TabletSmartphone className="w-5 h-5" />,
-      links: [
-        { title: "Overview", href: "/", icon: < TabletSmartphone className="w-5 h-5" /> },
-        { title: "Business Banking", href: "/business-banking", icon: <Building2 className="w-5 h-5" /> },
-        { title: "Mobile Banking", href: "/mobile-banking", icon: < TabletSmartphone className="w-5 h-5" /> },
-        { title: "Gold Bucks", href: "/gold-bucks", icon: < Tablets className="w-5 h-5" /> },
-        { title: "E-cam", href: "/e-cam", icon: < Camera className="w-5 h-5" /> },
-        { title: "POS system", href: "/pos", icon: < TabletSmartphone className="w-5 h-5" /> },
+  const handleNavItemClick = () => {
+    if (isMobile) {
+      setIsMobileOpen(false);
+    }
+  };
 
+  const navSections: NavSection[] = [
+    {
+      title: "Product",
+      icon: <TabletSmartphone className="w-5 h-5" />,
+      links: [
+        { title: "Home", href: "/", icon: <House className="w-5 h-5" /> },
+        { title: "Business Banking", href: "/business-banking", icon: <Building2 className="w-5 h-5" /> },
+        { title: "Mobile Banking", href: "/mobile-banking", icon: <TabletSmartphone className="w-5 h-5" /> },
+        { title: "Gold Bucks", href: "/gold-bucks", icon: <Tablets className="w-5 h-5" /> },
+        { title: "E-cam", href: "/e-cam", icon: <Camera className="w-5 h-5" /> },
+        { title: "POS system", href: "/pos", icon: <TabletSmartphone className="w-5 h-5" /> },
       ]
     },
     {
@@ -73,7 +78,6 @@ export const Sidebar = () => {
         { title: "Recommendation Board", href: "/reports/monthly", icon: <Brain className="w-5 h-5" /> },
         { title: "Unusual User Activity", href: "/reports/annual", icon: <UserX className="w-5 h-5" /> },
         { title: "Unusual User Onboarding", href: "/reports/monthly", icon: <UserPlus className="w-5 h-5" /> },
-
       ]
     },
     {
@@ -93,7 +97,7 @@ export const Sidebar = () => {
         { title: "Security Overview", href: "/settings/security", icon: <Lock className="w-5 h-5" /> }
       ]
     }
-  ]
+  ];
 
   return (
     <>
@@ -101,86 +105,163 @@ export const Sidebar = () => {
       {isMobile && (
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="fixed z-50 bottom-15 right-5 p-4  rounded-full border-gray-100 dark:border-gray-100 bg-blue-700  text-white  transition-colors dark:bg-gray-700 dark:text:white dark:hover:bg-gray-800 "
+          className="fixed z-50 bottom-6 right-6 p-3 rounded-full bg-[#0E0C60] hover:bg-blue-800 text-white shadow-lg transition-colors"
         >
           {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       )}
 
-      {/* Sidebar container */}
-      <div className="flex h-screen overflow-hidden dark:bg-gray-900">
-        {/* Sidebar - Desktop (always visible) / Mobile (conditional) */}
-        <AnimatePresence>
-          {(!isMobile || isMobileOpen) && (
+      {/* Desktop Sidebar - Always visible */}
+      {!isMobile && (
+        <div className="w-64 h-screen flex flex-col bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900">
+          {/* Fixed header */}
+          <div className="flex items-center gap-2 p-2 bg-white dark:bg-white border-b flex-shrink-0">
+            <img src={imageOne} alt="Alert Group Logo" className="w-12 h-12 rounded-lg object-cover" />
+            <div className="flex-1 min-w-0">
+              <h1 className="text-sm font-semibold font-serif text-gray-900 dark:text-black truncate">
+                Alert Group
+              </h1>
+              <p className="text-gray-400 dark:text-gray-400 text-xs font-serif">
+                Middleware Dashboard
+              </p>
+            </div>
+          </div>
+
+          {/* Scrollable navigation */}
+          <nav className="flex-1 overflow-y-auto px-2 py-2 space-y-1 text-amber-50 dark:text-white">
+            {navSections.map((section) => (
+              <div key={section.title} className="py-0.5">
+                <button
+                  onClick={() => toggleSection(section.title.toLowerCase())}
+                  className="flex items-center justify-between w-full px-2 py-1.5 text-left hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    {section.icon}
+                    <span className="font-medium text-sm">{section.title}</span>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: expandedSections[section.title.toLowerCase()] ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {expandedSections[section.title.toLowerCase()] && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      className="ml-4 mt-0.5 space-y-0.5 overflow-hidden"
+                    >
+                      {section.links.map((link) => (
+                        <NavItem
+                          key={link.href}
+                          href={link.href}
+                          icon={link.icon}
+                          className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
+                          >
+                          {link.title}
+                        </NavItem>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
+        </div>
+      )}
+
+      {/* Mobile Sidebar Overlay */}
+      <AnimatePresence>
+        {isMobile && isMobileOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40"
+              onClick={() => setIsMobileOpen(false)}
+            />
+            
+            {/* Mobile Sidebar */}
             <motion.aside
-              initial={isMobile ? { x: -300 } : {}}
-              animate={isMobile ? { x: 0 } : {}}
-              exit={isMobile ? { x: -400 } : {}}
-              transition={{ type: "spring", stiffness: 100, damping: 30 }}
-              className={`flex flex-col border-r dark:border-gray-200 dark:bg-gray-900 bg-blue-700 ${
-                isMobile ? "fixed inset-0 z-40 w-84" : "w-790"
-              }`}
+              initial={{ x: -280 }}
+              animate={{ x: 0 }}
+              exit={{ x: -280 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed inset-y-0 left-0 w-64 z-50 bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900 flex flex-col"
             >
               {/* Fixed header */}
-              <div className="flex max-w-sm items-center gap-x-1 outline p-1 sticky top-0 z-10 bg-white  dark:bg-white ">
-                <img src={imageOne} alt="" className="w-20 p-2 rounded-2xl size-20 " />
-                <div>
-                  <h1 className="text-xl font-semibold font-serif text-gray-900  dark:text-black">Alert Group</h1>
-                  <p className="text-gray-400 dark:text-gray-400 text-xs font-serif ">Middleware Dashboard</p>
+              <div className="flex items-center gap-2 p-2 bg-white dark:bg-white border-b flex-shrink-0">
+                <img src={imageOne} alt="Alert Group Logo" className="w-10 h-10 rounded-lg object-cover" />
+                <div className="flex-1 min-w-0">
+                  <h1 className="text-sm font-semibold font-serif text-gray-900 dark:text-black truncate">
+                    Alert Group
+                  </h1>
+                  <p className="text-gray-400 dark:text-gray-400 text-xs font-serif">
+                    Middleware Dashboard
+                  </p>
                 </div>
               </div>
 
-              {/* Scrollable content - Fixed height with overflow */}
-              <div className="flex-1 flex flex-col overflow-hidden">
-                <nav className="flex-1 overflow-y-auto px-4 space-y-2 text-amber-50 dark:text-white">
-                  {navSections.map((section) => (
-                    <div key={section.title} className="py-1">
-                      <button
-                        onClick={() => toggleSection(section.title.toLowerCase())}
-                        className="flex items-center justify-between w-full px-3 py-2 dark:hover:bg-gray-800 rounded-lg"
+              {/* Scrollable navigation */}
+              <nav className="flex-1 overflow-y-auto px-2 py-2 space-y-1 text-amber-50 dark:text-white">
+                {navSections.map((section) => (
+                  <div key={section.title} className="py-0.5">
+                    <button
+                      onClick={() => toggleSection(section.title.toLowerCase())}
+                      className="flex items-center justify-between w-full px-2 py-1.5 text-left hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        {section.icon}
+                        <span className="font-medium text-sm">{section.title}</span>
+                      </div>
+                      <motion.div
+                        animate={{ rotate: expandedSections[section.title.toLowerCase()] ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
                       >
-                        <div className="flex items-center gap-3">
-                          <span>{section.title}</span>
-                        </div>
-                        <motion.div
-                          animate={{ rotate: expandedSections[section.title.toLowerCase()] ? 180 : 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <ChevronDown className="w-5 h-5" />
-                        </motion.div>
-                      </button>
+                        <ChevronDown className="w-4 h-4" />
+                      </motion.div>
+                    </button>
 
-                      <AnimatePresence>
-                        {expandedSections[section.title.toLowerCase()] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-8 space-y-1 overflow-hidden dark:text-white"
-                          >
-                            {section.links.map((link) => (
-                              <NavItem
-                                key={link.href}
-                                href={link.href}
-                                icon={link.icon}
-                                className="text-amber-50 dark:text-white"
-                                onClick={() => isMobile && setIsMobileOpen(false)}
-                              >
-                                {link.title}
-                              </NavItem>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </nav>
-              </div>
+                    <AnimatePresence>
+                      {expandedSections[section.title.toLowerCase()] && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2, ease: "easeInOut" }}
+                          className="ml-4 mt-0.5 space-y-0.5 overflow-hidden"
+                        >                      
+                          {section.links.map((link) => (
+                            <div onClick={handleNavItemClick}>
+
+                            <NavItem
+                              key={link.href}
+                              href={link.href}
+                              icon={link.icon}
+                              className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
+                            >
+                              {link.title}
+                            </NavItem>
+                            </div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </nav>
             </motion.aside>
-          )}
-        </AnimatePresence>
-      </div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };

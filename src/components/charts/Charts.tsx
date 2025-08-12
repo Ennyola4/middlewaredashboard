@@ -129,7 +129,7 @@ const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
 
 export const Charts = () => {
     return (
-        <div className='w-full  p-5  dark:bg-gray-950 '>
+        <div className='w-full  p-5 bg-white  dark:bg-gray-950 '>
             <div className="grid  grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Line Chart Card */}
                 <Card className="bg-white dark:bg-gray-800 border-none shadow-lg h-[400px]">

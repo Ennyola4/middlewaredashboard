@@ -34,23 +34,21 @@ const AnalyticsCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3 dark:gap-3 p-3 dark:p-1 dark:bg-gray-950">
+    <div className="grid grid-cols-1 md:grid-cols-2 bg-white  lg:grid-cols-4 gap-3 dark:gap-3 p-3 dark:p-1 dark:bg-gray-950">
       {stats.map((stat, index) => (
         <motion.div
           key={index}
-          initial={{ y: 0, boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)" }}
           whileHover={{
             y: -4,
-            boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
             transition: { duration: 0.2, ease: "easeOut" }
           }}
-          className="bg-white dark:bg-gray-950 rounded-3xl shadow-sm p-3   transition-all duration-200 "
+          className="bg-white dark:bg-gray-950  p-3 transition-all duration-200 "
         >
-          <div className="flex flex-col space-y-4 rounded-3xl p-4 dark:bg-gray-900">
+          <div className="flex flex-col space-y-4 rounded-2xl shadow-sm p-4 dark:bg-gray-900">
             <div className="flex items-center justify-between">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="p-3 rounded-full shadow-sm bg-gray-50 dark:bg-gray-700"
+                className="p-3 rounded-full  bg-gray-50 dark:bg-gray-700"
               >
                 {stat.icon}
               </motion.div>
@@ -59,10 +57,10 @@ const AnalyticsCard = () => {
                 className={`text-sm font-medium ${index < 3 ? 'text-green-500 hover:text-green-600' : 'text-red-500 hover:text-red-600'
                   }`}
               > <div className="flex items-center  gap-1">
-                <TrendingUp className="flex" size={15} /> 
-                {stat.change}
-              </div>
-                
+                  <TrendingUp className="flex" size={15} />
+                  {stat.change}
+                </div>
+
               </motion.span>
             </div>
 
@@ -75,7 +73,7 @@ const AnalyticsCard = () => {
               </motion.h3>
               <motion.p
                 whileHover={{ x: 2 }}
-                className="text-xs font-serif text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                className="text-xs  text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
               >
                 {stat.textChange}
               </motion.p>

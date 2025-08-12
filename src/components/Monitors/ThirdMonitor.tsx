@@ -125,45 +125,15 @@ const activeAlerts = [
         source: "Gold Bucks",
         time: "15:18:10",
     },
-     {
-        action: "Multiple Failed Login Attempts",
-        actionStatus: "MEDIUM",
-        desc: "15 failed login attempts detected from IP 197.xxx.xxx.xxx in 5 minutes",
-        descStatus: "investigating",
-        source: "Business Banking",
-        time: "15:25:10",
-    },
-    {
-        action: "Third-Party API Timeout",
-        actionStatus: "WARNING",
-        desc: "Gold Bucks external payment gateway experiencing intermittent timeouts",
-        descStatus: "resolved",
-        source: "Gold Bucks",
-        time: "15:18:10",
-    },
-     {
-        action: "Multiple Failed Login Attempts",
-        actionStatus: "MEDIUM",
-        desc: "15 failed login attempts detected from IP 197.xxx.xxx.xxx in 5 minutes",
-        descStatus: "investigating",
-        source: "Business Banking",
-        time: "15:25:10",
-    },
-    {
-        action: "Third-Party API Timeout",
-        actionStatus: "WARNING",
-        desc: "Gold Bucks external payment gateway experiencing intermittent timeouts",
-        descStatus: "resolved",
-        source: "Gold Bucks",
-        time: "15:18:10",
-    }
+
+
 ]
 
 const ThirdMonitor = () => {
     return (
         <div className="flex max-h-[630px] flex-col lg:flex-row gap-4 lg:gap-5 p-2 dark:bg-black sm:p-4">
             {/* First Column */}
-            <div className="space-y-3 sm:space-y-4 w-full p-4 sm:p-6 rounded-2xl shadow-sm bg-gray-300 dark:bg-gray-800 mt-1">
+            <div className="space-y-3 sm:space-y-4 w-full p-4 sm:p-6 rounded-md shadow-sm dark:bg-gray-800 mt-1">
                 {/* Header */}
                 <div className="flex items-center gap-2">
                     <Monitor className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
@@ -271,8 +241,8 @@ const ThirdMonitor = () => {
                 </div>
             </div>
 
-            {/* Second Column */}
-            <div className="space-y-4 w-full p-6 rounded-2xl bg-gray-300 dark:bg-gray-800">
+            {/* Active Alert */}
+            <div className="space-y-4 w-full p-6 rounded-md shadow-2xl dark:bg-gray-800">
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-2">
                         <BellRing className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
@@ -280,8 +250,8 @@ const ThirdMonitor = () => {
                     </div>
 
                     <div className="flex items-center gap-2">
-                        <p className="text-[10px]  bg-red-400/40 rounded-md text-white px-2 py-1 dark:text-white">1 Critical</p>
-                        <p className="text-[11px] bg-yellow-400/40 rounded-md px-2 py-1 text-white dark:text-white">2 Alerts</p>
+                        <p className="text-[10px]  bg-red-400/100 rounded-md text-white px-2 py-1 dark:text-white">1 Critical</p>
+                        <p className="text-[11px] bg-yellow-400/100 rounded-md px-2 py-1 text-black dark:text-white">2 Alerts</p>
                     </div>
                 </div>
 
@@ -310,7 +280,7 @@ const ThirdMonitor = () => {
 
                             {/* Description and Status */}
                             <div className="flex justify-between items-start mb-3">
-                                <p className="text-[13px] text-gray-600 dark:text-gray-300">{alert.desc}</p>
+                                <p className="text-[12px] text-gray-600 dark:text-gray-300">{alert.desc}</p>
                                 <span className={`px-2 py-1 rounded-md text-[10px] border ${alert.descStatus === 'Active' ? 'text-green-500 border-green-300 dark:bg-green-900/50 dark:text-green-400' :
                                     alert.descStatus === 'investigating' ? 'text-blue-500 border-blue-300 dark:bg-blue-900/50 dark:text-blue-400' :
                                         alert.descStatus === 'resolved' ? 'text-gray-500 border-gray-300 dark:bg-gray-600 dark:text-gray-300' :

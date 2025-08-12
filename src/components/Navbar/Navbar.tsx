@@ -13,17 +13,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex overflow-hidden flex-col  shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-7 ">
+    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-lg dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-7 ">
       <div className="flex  sm:flex-row items-start sm:items-center justify-between gap-4">
         {/* Left side - Title, status, and clock */}
         <div className="flex flex-col xs:flex-row items-start xs:items-center gap-2 sm:gap-4 w-full sm:w-auto">
-          <h3 className="text-2xl xs:text-2xl sm:text-[28px] text-gray-600 font-semibold dark:text-white font-serif">
+          <h3 className=" xs:text-2xl sm:text-[23px] text-gray-600 font-semibold dark:text-white font-serif">
             Dashboard
           </h3>
 
           <div className="flex items-center gap-2">
             <div className="flex flex-col xs:flex-row xs:items-center gap-1 xs:gap-2">
-              <span className="px-4 py-1 xs:px-3 xs:py-1 text-xs text-green-700 font-serif bg-green-300/45 rounded-full dark:text-green-100 whitespace-nowrap dark:bg-green-900">
+              <span className="px-4 py-1 xs:px-3 xs:py-1 text-xs text-green-700 font-serif bg-green-300/45 rounded-md dark:text-green-100 whitespace-nowrap dark:bg-green-900">
                 Operational
               </span>
 
@@ -105,7 +105,8 @@ const Navbar = () => {
             </span>
           </button>
         </div>
-      </div>
+      </div> 
+      
     </div>
   )
 }
