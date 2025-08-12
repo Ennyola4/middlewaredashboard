@@ -71,13 +71,13 @@ export const Sidebar = () => {
       title: "Risk Management",
       icon: <Building2 className="w-5 h-5" />,
       links: [
-        { title: "Risk Users", href: "/reports/monthly", icon: <Users className="w-5 h-5" /> },
-        { title: "Risk Transaction", href: "/reports/annual", icon: <Shield className="w-5 h-5" /> },
-        { title: "Fraud Alert", href: "/reports/monthly", icon: <TriangleAlert className="w-5 h-5" /> },
-        { title: "Recurring Execptions", href: "/reports/annual", icon: <RefreshCcw className="w-5 h-5" /> },
-        { title: "Recommendation Board", href: "/reports/monthly", icon: <Brain className="w-5 h-5" /> },
-        { title: "Unusual User Activity", href: "/reports/annual", icon: <UserX className="w-5 h-5" /> },
-        { title: "Unusual User Onboarding", href: "/reports/monthly", icon: <UserPlus className="w-5 h-5" /> },
+        { title: "Risk Users", href: "/risk/users", icon: <Users className="w-5 h-5" /> },
+        { title: "Risk Transaction", href: "/risk/transactions", icon: <Shield className="w-5 h-5" /> },
+        { title: "Fraud Alert", href: "/risk/fraud-alert", icon: <TriangleAlert className="w-5 h-5" /> },
+        { title: "Recurring Execptions", href: "/risk/exceptions", icon: <RefreshCcw className="w-5 h-5" /> },
+        { title: "Recommendation Board", href: "/risk/recommendations", icon: <Brain className="w-5 h-5" /> },
+        { title: "Unusual User Activity", href: "/risk/unusual-activity", icon: <UserX className="w-5 h-5" /> },
+        { title: "Unusual User Onboarding", href: "/risk/unusual-onboarding", icon: <UserPlus className="w-5 h-5" /> },
       ]
     },
     {
@@ -85,15 +85,15 @@ export const Sidebar = () => {
       icon: <BarChart2 className="w-5 h-5" />,
       links: [
         { title: "Customer Management", href: "/analytics/traffic", icon: <UserRoundCheck className="w-5 h-5" /> },
-        { title: "Transaction Report", href: "/analytics/sales", icon: <ClipboardMinus className="w-5 h-5" /> },
-        { title: "Third Party Integrations", href: "/analytics/sales", icon: <Globe className="w-5 h-5" /> }
+        { title: "Transaction Report", href: "/management/transaction-report", icon: <ClipboardMinus className="w-5 h-5" /> },
+        { title: "Third Party Integrations", href: "/management/integrations", icon: <Globe className="w-5 h-5" /> }
       ]
     },
     {
       title: "Monitoring",
       icon: <TabletSmartphone className="w-5 h-5" />,
       links: [
-        { title: "System Health", href: "/settings/profile", icon: <MonitorCheck className="w-5 h-5" /> },
+        { title: "System Health", href: "/system-health", icon: <MonitorCheck className="w-5 h-5" /> },
         { title: "Security Overview", href: "/settings/security", icon: <Lock className="w-5 h-5" /> }
       ]
     }
@@ -105,15 +105,15 @@ export const Sidebar = () => {
       {isMobile && (
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="fixed z-50 bottom-6 right-6 p-3 rounded-full bg-[#0E0C60] hover:bg-blue-800 text-white shadow-lg transition-colors"
+          className="fixed z-50 bottom-20 right-8 p-4 rounded-full bg-[#0E0C60] hover:bg-blue-800 text-white shadow-sm transition-colors"
         >
           {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       )}
 
-      {/* Desktop Sidebar - Always visible */}
+      {/* Desktop Sidebar */}
       {!isMobile && (
-        <div className="w-64 h-screen flex flex-col bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900">
+        <div className="w-66 h-screen flex flex-col bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900">
           {/* Fixed header */}
           <div className="flex items-center gap-2 p-2 bg-white dark:bg-white border-b flex-shrink-0">
             <img src={imageOne} alt="Alert Group Logo" className="w-12 h-12 rounded-lg object-cover" />
@@ -162,6 +162,7 @@ export const Sidebar = () => {
                           href={link.href}
                           icon={link.icon}
                           className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
+                          onClick={handleNavItemClick}
                           >
                           {link.title}
                         </NavItem>
@@ -184,7 +185,7 @@ export const Sidebar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3 }}
               className="fixed inset-0 z-40"
               onClick={() => setIsMobileOpen(false)}
             />
@@ -194,7 +195,7 @@ export const Sidebar = () => {
               initial={{ x: -280 }}
               animate={{ x: 0 }}
               exit={{ x: -280 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              transition={{ type: "spring", stiffness: 150, damping: 30 }}
               className="fixed inset-y-0 left-0 w-64 z-50 bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900 flex flex-col"
             >
               {/* Fixed header */}
@@ -240,16 +241,14 @@ export const Sidebar = () => {
                           className="ml-4 mt-0.5 space-y-0.5 overflow-hidden"
                         >                      
                           {section.links.map((link) => (
-                            <div onClick={handleNavItemClick}>
-
-                            <NavItem
-                              key={link.href}
-                              href={link.href}
-                              icon={link.icon}
-                              className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
-                            >
-                              {link.title}
-                            </NavItem>
+                            <div key={link.href} onClick={handleNavItemClick}>
+                              <NavItem
+                                href={link.href}
+                                icon={link.icon}
+                                className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
+                              >
+                                {link.title}
+                              </NavItem>
                             </div>
                           ))}
                         </motion.div>

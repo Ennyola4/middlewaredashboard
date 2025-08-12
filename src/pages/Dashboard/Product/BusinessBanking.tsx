@@ -96,8 +96,8 @@ const BusinessBanking = () => {
 
       {/* Header */}
       <div className="flex items-center gap-3 p-4 sm:p-5">
-        <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
-        <h1 className="text-xl sm:text-2xl md:text-[28px] text-gray-600 dark:text-white font-semibold font-serif">
+        <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" />
+        <h1 className="text-xl sm:text-2xl md:text-[28px] text-gray-600 dark:text-blue-500 font-semibold font-serif">
           Business Banking
         </h1>
       </div>
@@ -127,7 +127,7 @@ const BusinessBanking = () => {
       {/* System Health & Performance */}
       <div className="p-3 sm:p-4">
         <div className="mt-6 sm:mt-8 dark:bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-5 w-full">
-          <h1 className="text-xl sm:text-2xl md:text-[28px] font-serif dark:text-white p-3 sm:p-4">
+          <h1 className="text-xl sm:text-2xl md:text-[28px] font-serif dark:text-green-500  p-3 sm:p-4">
             System Health & Performance
           </h1>
 
@@ -200,7 +200,7 @@ const BusinessBanking = () => {
         </div>
       </div>
 
-      {/* Recent Transactions */}
+      {/* Recent High Value Transactions */}
       <div className="p-3 sm:p-4">
         <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
           <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-white">

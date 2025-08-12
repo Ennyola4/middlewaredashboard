@@ -7,6 +7,7 @@ import BusinessBanking from './pages/Dashboard/Product/BusinessBanking.js';
 import MobileBanking from './pages/Dashboard/Product/MobileBanking.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
 import Navbar from './components/Navbar/Navbar.js';
+import GoldBucks from './pages/Dashboard/Product/GoldBucks.js';
 
 const router = createBrowserRouter([
   {
@@ -28,10 +29,14 @@ const router = createBrowserRouter([
       {
         path: 'navbar',
         element : <Navbar/>
-      }
-    ],
-  },
-]);
+      },
+      {
+        path: "/gold-bucks",
+        element : <GoldBucks/>
+      },
+    ]
+  }
+])
 
 
 

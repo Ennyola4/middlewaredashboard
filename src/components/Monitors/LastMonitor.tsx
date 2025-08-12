@@ -160,7 +160,7 @@ const activeAlerts = [
 
 const LastMonitor = () => {
     return (
-        <div className="w-full p-4">
+        <div className="w-full p-4 bg-white dark:bg-gray-950">
             {/* Main container with responsive flex layout */}
             <div className="flex flex-col lg:flex-row gap-4 w-full">
                 {/* Transaction Monitor Container */}
@@ -321,7 +321,7 @@ const LastMonitor = () => {
                         ))}
                     </div>
 
-                    <button className=" flex items-center justify-center gap-2 bg-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors mt-4">
+                    <button className=" flex items-center justify-center gap-2 bg-blue-600 text-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors mt-4">
                         <Eye className="w-4 h-4" />
                         View Full Logs
                     </button>

@@ -1,6 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar"
 import { motion } from 'framer-motion';
-import { TabletSmartphoneIcon, Download, Users, CreditCard, Activity } from "lucide-react"
+import { TabletSmartphoneIcon, Landmark, Globe, Download, Users, CreditCard, Activity, ArrowRightLeft, } from "lucide-react"
 
 const mBanking = [
   {
@@ -48,36 +48,55 @@ const featureUsageAnalytics = [
   },
 ]
 
-// const recentMobileTransanction = [
-//   {
-//     id : "MB-1",
-//     name : "Sarah Banks",
-//     type : "Fund Transfer",
-//     value : "₦250,000"
-//   },
-//    {
-//     id : "MB-2",
-//     name : "Abel Bammy",
-//     type : "Bill Payment",
-//     value : "₦75,000"
-//   },
-//    {
-//     id : "MB-3",
-//     name : " Diogo Jota",
-//     type : "Airtime Purchase",
-//     value : "₦250,00"
-//   },
-// ]
+const recentMobileTransanction = [
+  {
+    id: "MB-1",
+    name: "Sarah Banks",
+    type: "Fund Transfer",
+    value: "₦250,000",
+    status: "Completed"
+  },
+  {
+    id: "MB-2",
+    name: "Abel Bammy",
+    type: "Bill Payment",
+    value: "₦75,000",
+    status: "Completed"
+  },
+  {
+    id: "MB-3",
+    name: " Diogo Jota",
+    type: "Airtime Purchase",
+    value: "₦250,00",
+    status: "Pending"
+  },
+]
+
+const systemPerformance = [
+  {
+    title: "App Uptime",
+    rate: "99.95%"
+  },
+  {
+    title: "Error Rate",
+    rate: "1.5%"
+  },
+]
 
 const MobileBanking = () => {
+
+  const getProgressValue = (rate: string): number => {
+    return parseFloat(rate); // Removes the "%" and converts to float
+  };
+
   return (
     <div className="bg-white dark:bg-black min-h-screen">
       <Navbar />
-      
+
       {/* Header */}
       <div className="flex items-center gap-3 p-4 sm:p-5">
-        <TabletSmartphoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 dark:text-green-400" />
-        <h1 className="text-xl sm:text-2xl md:text-[28px] text-gray-700 dark:text-white font-semibold font-serif">
+        <TabletSmartphoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-500 dark:text-green-400" />
+        <h1 className="text-xl sm:text-2xl md:text-[28px] dark:text-green-500  text-gray-700 font-semibold font-serif">
           Mobile Banking
         </h1>
       </div>
@@ -106,7 +125,7 @@ const MobileBanking = () => {
 
       {/* Analytics Columns */}
       <div className="flex flex-col md:flex-row gap-4 p-4 sm:p-5">
-        {/* Feature Usage Analytics */}
+        {/* Feature Usage Analytics - Now with equal width constraints */}
         <div className="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-5">
           <h1 className="text-lg sm:text-xl md:text-[23px] mb-4 sm:mb-6 text-gray-600 dark:text-white font-semibold font-serif">
             Feature Usage Analytics
@@ -136,30 +155,89 @@ const MobileBanking = () => {
           </div>
         </div>
 
-        {/* System Performance */}
+        {/* System Performance - Now matching the first card's width */}
         <div className="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-5">
           <h1 className="text-lg sm:text-xl md:text-[23px] mb-4 sm:mb-6 text-gray-600 dark:text-white font-semibold font-serif">
             System Performance
           </h1>
           <div className="space-y-3 sm:space-y-4">
-            {featureUsageAnalytics.map((item, index) => (
+            {systemPerformance.map((item, index) => (
               <div key={index} className="space-y-1">
                 <div className="flex justify-between items-center">
                   <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                     {item.title}
                   </span>
                   <span className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white">
-                    {item.value}
+                    {item.rate}
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: item.value }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="h-2 rounded-full bg-blue-600"
-                    style={{ width: item.value }}
+                  <div
+                    className="h-2 rounded-full transition-all duration-300"
+                    style={{
+                      width: `${getProgressValue(item.rate)}%`,
+                      backgroundColor:
+                        getProgressValue(item.rate) > 90
+                          ? '#10B981' // green
+                          : getProgressValue(item.rate) > 70
+                            ? '#F59E0B' // yellow
+                            : '#EF4444' // red
+                    }}
                   />
+                </div>
+              </div>
+            ))}
+            <div>
+              <div>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-3 sm:p-4">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
+          <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-white">
+            Recent High Value Transactions
+          </h3>
+          <div className="space-y-3 sm:space-y-4">
+            {recentMobileTransanction.map((transaction) => (
+              <div
+                key={transaction.id}
+                className="flex flex-col sm:flex-row sm:items-center justify-between p-2 sm:p-3 bg-gray-50 dark:bg-gray-700/50 rounded-md sm:rounded-lg hover:shadow-sm transition-all"
+              >
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 mb-2 sm:mb-0">
+                  <div className="p-1 sm:p-2 bg-blue-100 dark:bg-blue-900/30 rounded-md sm:rounded-lg text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    {transaction.type === 'Wire Transfer' ? (
+                      <ArrowRightLeft className="w-4 h-4" />
+                    ) : transaction.type === 'Bulk Payment' ? (
+                      <Landmark className="w-4 h-4" />
+                    ) : (
+                      <Globe className="w-4 h-4" />
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-medium text-sm text-gray-800 dark:text-gray-100 truncate">
+                      {transaction.type}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                      {transaction.id} • {transaction.type}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-4">
+                  <span className="text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                    {transaction.value}
+                  </span>
+                  <span className={`px-2 py-1 text-xs font-medium rounded-md min-w-[80px] text-center ${transaction.status === 'completed'
+                    ? 'text-white bg-green-500 dark:text-white dark:bg-green-600'
+                    : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
+                    }`}>
+                    {transaction.status.charAt(0).toUpperCase() + transaction.status.slice(1)}
+                  </span>
                 </div>
               </div>
             ))}

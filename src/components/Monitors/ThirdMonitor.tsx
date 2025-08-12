@@ -131,7 +131,7 @@ const activeAlerts = [
 
 const ThirdMonitor = () => {
     return (
-        <div className="flex max-h-[630px] flex-col lg:flex-row gap-4 lg:gap-5 p-2 dark:bg-black sm:p-4">
+        <div className="flex max-h-[630px] flex-col lg:flex-row gap-4 bg-white lg:gap-5 p-2 dark:bg-black sm:p-4">
             {/* First Column */}
             <div className="space-y-3 sm:space-y-4 w-full p-4 sm:p-6 rounded-md shadow-sm dark:bg-gray-800 mt-1">
                 {/* Header */}
@@ -242,7 +242,7 @@ const ThirdMonitor = () => {
             </div>
 
             {/* Active Alert */}
-            <div className="space-y-4 w-full p-6 rounded-md shadow-2xl dark:bg-gray-800">
+            <div className="space-y-4 w-full p-6 rounded-md shadow-sm dark:bg-gray-800">
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-2">
                         <BellRing className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
@@ -260,7 +260,7 @@ const ThirdMonitor = () => {
                     {activeAlerts.map((alert, index) => (
                         <div
                             key={`alert-${index}`}
-                            className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow border-l-4 mb-3 ${
+                            className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm border-l-4 mb-3 ${
                                        alert.actionStatus === 'CRITICAL' ? 'border-red-500' :
                                        alert.actionStatus === 'WARNING' ? 'border-yellow-500' :
                                        alert.actionStatus === 'MEDIUM' ? 'border-orange-500' : 'border-blue-400/50'
@@ -313,7 +313,7 @@ const ThirdMonitor = () => {
                             )}
                         </div>
                     ))}
-                    <button className="flex items-center gap-2  bg-white dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                    <button className="flex items-center gap-2 text-white  bg-blue-600 dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
                         <Eye className="w-4 h-4" />
                         View Full Logs
                     </button>
