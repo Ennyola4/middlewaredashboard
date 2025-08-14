@@ -120,10 +120,10 @@ const GoldBucks = () => {
             </div>
           ))}
         </div>
-        <div className="flex bg-white dark:bg-black flex-col md:flex-row gap-6 p-4">
+        <div className="flex flex-col lg:flex-row bg-white dark:bg-black gap-4 sm:gap-6 p-3 sm:p-4">
           {/* First Container - Redemption Stats */}
-          <div className="w-full md:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-4">
-            <h2 className="text-lg p-2 font-semibold mb-4 text-gray-700 dark:text-white">
+          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-3 sm:p-4">
+            <h2 className="text-base sm:text-lg p-2 font-semibold mb-3 sm:mb-4 text-gray-700 dark:text-white">
               Redemption Statistics
             </h2>
             {rewardCategoryUsage.map((gift, index) => {
@@ -134,22 +134,22 @@ const GoldBucks = () => {
                     "bg-blue-500";
 
               return (
-                <div key={index} className="mb-4 shadow-sm p-2 dark:bg-gray-900/100 rounded-md last:mb-0">
+                <div key={index} className="mb-3 sm:mb-4 shadow-sm p-2 sm:p-3 dark:bg-gray-900/100 rounded-md last:mb-0">
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-sm text-[15px] p-1 font-medium text-gray-700 dark:text-white">
+                    <span className="text-xs sm:text-sm md:text-[15px] font-medium text-gray-700 dark:text-white truncate">
                       {gift.title}
                     </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-300">
+                    <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-300">
                       {gift.titlePoint}
                     </span>
                   </div>
-                  <div className="w-full bg-gray-100 dark:bg-gray-600 rounded-full h-2 mb-1">
+                  <div className="w-full bg-gray-100 dark:bg-gray-600 rounded-full h-1.5 sm:h-2 mb-1">
                     <div
-                      className={`h-2 rounded-full ${barColor}`}
+                      className={`h-full rounded-full ${barColor}`}
                       style={{ width: `${progressBar}%` }}
                     ></div>
                   </div>
-                  <div className="text-[9.5px]  text-gray-700/50 dark:text-gray-400">
+                  <div className="text-[10px] sm:text-[9.5px] text-gray-700/50 dark:text-gray-400">
                     {gift.totalRedemptions}
                   </div>
                 </div>
@@ -157,52 +157,51 @@ const GoldBucks = () => {
             })}
           </div>
 
-          {/*  System Performance*/}
-          <div className="w-full md:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-4">
-            <h2 className="text-lg font-semibold mb-4 text-gray-700 dark:text-white">
+          {/* Second Container - System Performance */}
+          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-3 sm:p-4">
+            <h2 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-700 dark:text-white">
               System Performance
             </h2>
-            {
-              systemPreference.map((preference, index) => {
-                const progressBar = parseFloat(preference.titleRate)
-                const barColor = progressBar > 75 ? "bg-green-500" : progressBar < 95 ? "bg-red-500" : "bg-red-500"
+            {systemPreference.map((preference, index) => {
+              const progressBar = parseFloat(preference.titleRate);
+              const barColor = progressBar > 75 ? "bg-green-500" : "bg-red-500";
 
-                return (
-                  <div key={index} className="w-full p-4 ">
-                    <div className="flex justify-between items-center mb-1 p-2">
-                      <span className="dark:text-white">
-                        {preference.title}
-                      </span>
-                      <span className="dark:text-white">
-                        {preference.titleRate}
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-100 dark:bg-gray-600 rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full ${barColor}`}
-                        style={{ width: `${progressBar}%` }}
-                      >
-                      </div>
-                    </div>
+              return (
+                <div key={index} className="w-full p-2 sm:p-4 mb-2 sm:mb-0">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-xs sm:text-sm dark:text-white truncate">
+                      {preference.title}
+                    </span>
+                    <span className="text-xs sm:text-sm dark:text-white">
+                      {preference.titleRate}
+                    </span>
                   </div>
-                )
-              })}
-            <div className="flex gap-6 items-center mt-4 justify-center">
-              <div className="shadow-sm p-5 w-full dark:bg-gray-900/100 rounded-md ">
-                <p className="text-gray-500 text-[12px] dark:text-white">Active Members</p>
-                <span className="font-semibold text[16px] dark:text-white">18,450</span>
+                  <div className="w-full bg-gray-100 dark:bg-gray-600 rounded-full h-1.5 sm:h-2">
+                    <div
+                      className={`h-full rounded-full ${barColor}`}
+                      style={{ width: `${progressBar}%` }}
+                    ></div>
+                  </div>
+                </div>
+              )
+            })}
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center mt-3 sm:mt-4">
+              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-900/100 rounded-md">
+                <p className="text-[11px] sm:text-[12px] text-gray-500 dark:text-gray-300">Active Members</p>
+                <span className="font-semibold text-sm sm:text-[16px] dark:text-white">18,450</span>
               </div>
-              <div className="shadow-sm p-5 w-full dark:bg-gray-900/100 rounded-md">
-                <p className="text-gray-500 text-[12px] dark:text-white">Avg Points/User</p>
-                <span className="font-semibold text[16px] dark:text-white">1980</span>
+              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-900/100 rounded-md">
+                <p className="text-[11px] sm:text-[12px] text-gray-500 dark:text-gray-300">Avg Points/User</p>
+                <span className="font-semibold text-sm sm:text-[16px] dark:text-white">1,980</span>
               </div>
             </div>
           </div>
         </div>
         <div className="m-3 p-5 dark:bg-gray-800/90 shadow-sm rounded-md">
           <h2 className="text-lg p-2 font-semibold mb-4 text-gray-700 dark:text-white">
-              Recent Gold Bucks Activities
-            </h2>
+            Recent Gold Bucks Activities
+          </h2>
           {recentGoldBucksActivities.map((bonus, index) => (
             <div key={index} className="mb-4 shadow-sm  dark:bg-gray-900/90 p-1 rounded-md last:mb-0">
               <div className="flex  justify-between gap-2 px-2 py-1">
