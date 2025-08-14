@@ -83,9 +83,9 @@ const AnalyticsCard = () => {
 
       ))}
 
-      <div className="flex items-center gap-2 shadow-xl p-2  text-yellow-600 dark:text-yellow-500 whitespace-nowrap overflow-hidden">
+      <div className="flex items-center gap-2 shadow-sm p-2  text-yellow-600 dark:text-yellow-500 ">
         <TriangleAlert size={20} className="flex-shrink-0" />
-        <span className="text-xs truncate">High alert volume detected: 12 active alerts require attention.</span>
+        <span className="text-xs truncate">12 active alerts require attention.</span>
       </div>
 
 

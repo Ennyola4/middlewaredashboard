@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-lg dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-7 ">
+    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-7 ">
       <div className="flex  sm:flex-row items-start sm:items-center justify-between gap-4">
         {/* Left side - Title, status, and clock */}
         <div className="flex flex-col xs:flex-row items-start xs:items-center gap-2 sm:gap-4 w-full sm:w-auto">

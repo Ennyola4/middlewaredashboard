@@ -49,14 +49,14 @@ const Pagination = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center justify-center gap-1 sm:gap-2 p-4 flex-wrap bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 dark:border-gray-800"
+      className="flex items-center justify-center gap-1 sm:gap-2 p-4 flex-wrap bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-sm  dark:border-gray-800"
     >
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => handlePageChange(Math.max(currentPage - 1, 0))}
         disabled={currentPage === 0}
-        className="p-1 dark:text-white rounded-full disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        className="p-1 dark:text-white rounded-md disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       >
         <ChevronLeft className="h-4 w-4" />
       </motion.button>

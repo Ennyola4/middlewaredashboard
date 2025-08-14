@@ -8,6 +8,7 @@ import MobileBanking from './pages/Dashboard/Product/MobileBanking.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
 import Navbar from './components/Navbar/Navbar.js';
 import GoldBucks from './pages/Dashboard/Product/GoldBucks.js';
+import Ecam from './pages/Dashboard/Product/Ecam.js';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/gold-bucks",
         element : <GoldBucks/>
+      },
+       {
+        path: "/e-cam",
+        element : <Ecam/>
       },
     ]
   }

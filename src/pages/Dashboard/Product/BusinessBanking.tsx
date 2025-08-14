@@ -43,7 +43,7 @@ const systemHealthAndPerfomance = [
   },
   {
     barTitle: "Error Rate",
-    barValue: "0.05%"
+    barValue: "5.9%"
   },
 ]
 
@@ -123,25 +123,25 @@ const BusinessBanking = () => {
           </div>
         ))}
       </div>
+      
 
       {/* System Health & Performance */}
       <div className="p-3 sm:p-4">
         <div className="mt-6 sm:mt-8 dark:bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-5 w-full">
-          <h1 className="text-xl sm:text-2xl md:text-[28px] font-serif dark:text-green-500  p-3 sm:p-4">
+          <h1 className="text-sm sm:text-2xl md:text-[28px] font-serif text-green-500 p-3 sm:p-4">
             System Health & Performance
           </h1>
 
           <div className="flex flex-col md:flex-row gap-4 sm:gap-5 w-full">
             {/* System Performance */}
-            <div className="w-full md:w-1/2 dark:bg-gray-700 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
+            <div className="w-full md:w-1/2 dark:bg-gray-700/30 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-white">
                 System Performance
               </h3>
               <div className="space-y-4 sm:space-y-5">
                 {systemHealthAndPerfomance.map((item, index) => {
                   const progress = parseFloat(item.barValue);
-                  const barColor = progress > 95 ? 'bg-green-500' :
-                    progress > 85 ? 'bg-blue-500' : 'bg-red-500';
+                  const barColor = progress > 95 ? 'bg-green-500' :  progress > 95 ? 'bg-blue-500' : 'bg-red-500';
 
                   return (
                     <div key={index} className="space-y-1 sm:space-y-2">

@@ -152,7 +152,14 @@ const MobileBanking = () => {
                 </div>
               </div>
             ))}
+
+
           </div>
+        </div>
+
+
+        <div>
+
         </div>
 
         {/* System Performance - Now matching the first card's width */}
@@ -187,6 +194,16 @@ const MobileBanking = () => {
                 </div>
               </div>
             ))}
+            <div className="flex gap-6 items-center mt-4 justify-center">
+              <div className="shadow-sm p-5 w-full dark:bg-gray-900/100 rounded-md ">
+                <p className="text-gray-500 text-[11px] dark:text-white">Active Members</p>
+                <span className="font-semibold text[15px] dark:text-white">18,450</span>
+              </div>
+              <div className="shadow-sm p-5 w-full dark:bg-gray-900/100 rounded-md">
+                <p className="text-gray-500 text-[11px] dark:text-white">Avg Points/User</p>
+                <span className="font-semibold text[15px] dark:text-white">1980</span>
+              </div>
+            </div>
             <div>
               <div>
 
