@@ -8,7 +8,7 @@ import {
   Globe, UserX, UserPlus, UserRoundCheck, X, House
 } from "lucide-react";
 import { type NavSection } from "../Sidebar/types";
-import imageOne from "../../image/imageOne.jpg";
+import imageOne from "../../assets/image/imageOne.jpg";
 
 export const Sidebar = () => {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({

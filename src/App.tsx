@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard/Dashboard.js';
 import Navbar from './components/Navbar/Navbar.js';
 import GoldBucks from './pages/Dashboard/Product/GoldBucks.js';
 import Ecam from './pages/Dashboard/Product/Ecam.js';
+import PosSystem from './pages/Dashboard/Product/PosSystem.js';
 
 const router = createBrowserRouter([
   {
@@ -29,16 +30,21 @@ const router = createBrowserRouter([
       },
       {
         path: 'navbar',
-        element : <Navbar/>
+        element: <Navbar />
       },
       {
         path: "/gold-bucks",
-        element : <GoldBucks/>
+        element: <GoldBucks />
       },
-       {
+      {
         path: "/e-cam",
-        element : <Ecam/>
+        element: <Ecam />
       },
+      {
+        path: "/pos",
+        element: <PosSystem />
+      },
+
     ]
   }
 ])

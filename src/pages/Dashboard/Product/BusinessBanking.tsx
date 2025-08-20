@@ -185,10 +185,7 @@ const BusinessBanking = () => {
                           {item.log}
                         </p>
                       </div>
-                      <span className={`px-2 py-1 text-[10px] sm:text-xs rounded-md flex-shrink-0 ${item.status === 'Active'
-                          ? 'text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800'
-                          : 'bg-gray-100 text-gray-600 dark:bg-gray-600 dark:text-gray-300'
-                        }`}>
+                      <span className="px-2 py-1 bg-gray-300 text-xs rounded-md dark:bg-gray-500 dark:text-white">
                         {item.status}
                       </span>
                     </div>

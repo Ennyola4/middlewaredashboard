@@ -49,7 +49,7 @@ const Pagination = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center justify-center gap-1 sm:gap-2 p-4 flex-wrap bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-sm  dark:border-gray-800"
+      className="flex items-center  justify-center gap-1 sm:gap-2 p-4 flex-wrap bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-sm  dark:border-gray-800"
     >
       <motion.button
         whileHover={{ scale: 1.1 }}
@@ -87,7 +87,7 @@ const Pagination = () => {
                 <Link
                   to={pageData[pageIndex as number].path}
                   onClick={() => handlePageChange(pageIndex as number)}
-                  className={`relative flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-8 px-3 rounded-full text-xs font-medium transition-all duration-300 ${
+                  className={`relative flex items-center  justify-center min-w-[90px] sm:min-w-[110px] h-7 px-2 rounded-md text-xs font-medium transition-all duration-300 ${
                     currentPage === pageIndex
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
                       : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 shadow-sm'
