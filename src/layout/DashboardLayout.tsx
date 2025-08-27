@@ -1,7 +1,13 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Sidebar } from '../components/Sidebar/Sidebar';
+import { useEffect } from 'react';
 
 const DashboardLayout = () => {
+  const location = useLocation();
+    
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location.pathname]); 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-900">
       <Sidebar />

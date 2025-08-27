@@ -313,7 +313,7 @@ const ThirdMonitor = () => {
                             )}
                         </div>
                     ))}
-                    <button className="flex items-center gap-2 text-white  bg-blue-600 dark:bg-gray-200 px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
+                    <button className="flex items-center gap-2 text-white dark:text-gray-900 bg-blue-600 dark:bg-gray-200  px-4 py-2 rounded-md text-sm font-serif cursor-pointer shadow-sm hover:bg-gray-500 hover:text-white dark:hover:bg-gray-600 transition-colors">
                         <Eye className="w-4 h-4" />
                         View Full Logs
                     </button>

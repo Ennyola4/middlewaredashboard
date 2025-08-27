@@ -1,4 +1,6 @@
 import Navbar from "../../../components/Navbar/Navbar"
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Tablets, Users, Sparkles, Gift, TrendingUp } from "lucide-react"
 
 
@@ -62,7 +64,7 @@ const systemPreference = [
 const recentGoldBucksActivities = [
   {
     id: "GB-001",
-    title: "Yamin Lamal",
+    title: "Lamine Yamal",
     idStatus: "Earned",
     points: "50 pts",
     event: "Transaction Bonus",
@@ -88,6 +90,12 @@ const recentGoldBucksActivities = [
 
 
 const GoldBucks = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); 
+
   return (
     <div>
       <div className="bg-white dark:bg-black">

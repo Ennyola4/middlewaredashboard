@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
+
+    const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); 
 
   // Update time every second
   useEffect(() => {

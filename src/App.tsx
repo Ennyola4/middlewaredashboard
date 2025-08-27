@@ -10,6 +10,8 @@ import Navbar from './components/Navbar/Navbar.js';
 import GoldBucks from './pages/Dashboard/Product/GoldBucks.js';
 import Ecam from './pages/Dashboard/Product/Ecam.js';
 import PosSystem from './pages/Dashboard/Product/PosSystem.js';
+import LiveTransaction from './pages/Dashboard/Transaction/LiveTransaction.js';
+import HighRiskTransaction from './pages/Dashboard/Transaction/HighRiskTransaction.js';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
         path: "/pos",
         element: <PosSystem />
       },
+      {
+        path: "/live-transaction",
+        element: <LiveTransaction/>
+      },
+      {
+        path : "/high-risk-transaction",
+        element : <HighRiskTransaction/>
+      }
 
     ]
   }
