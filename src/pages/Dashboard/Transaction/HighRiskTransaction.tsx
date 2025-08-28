@@ -258,8 +258,6 @@ const HighRiskTransaction = () => {
         {/* High Risk Transaction Queue Section */}
         {highRiskTransactionQueue.map((transaction, index) => (
           <div key={index} className="p-3 sm:p-4 flex flex-col lg:flex-row lg:gap-6 shadow-sm rounded-md mb-3 sm:mb-4 dark:bg-gray-950">
-
-            {/* Main Content Section */}
             <div className="flex-1 space-y-3">
 
               {/* Header with ID, Risk Score and Status */}
