@@ -12,6 +12,7 @@ import Ecam from './pages/Dashboard/Product/Ecam.js';
 import PosSystem from './pages/Dashboard/Product/PosSystem.js';
 import LiveTransaction from './pages/Dashboard/Transaction/LiveTransaction.js';
 import HighRiskTransaction from './pages/Dashboard/Transaction/HighRiskTransaction.js';
+import RiskUsers from './pages/Dashboard/RiskManagement/RiskUsers.js';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,11 @@ const router = createBrowserRouter([
       {
         path : "/high-risk-transaction",
         element : <HighRiskTransaction/>
-      }
+      },
+       {
+        path : "/risk-users",
+        element : <RiskUsers/>
+      },
 
     ]
   }

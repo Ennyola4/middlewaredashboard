@@ -71,7 +71,7 @@ export const Sidebar = () => {
       title: "Risk Management",
       icon: <Building2 className="w-5 h-5" />,
       links: [
-        { title: "Risk Users", href: "/risk/users", icon: <Users className="w-5 h-5" /> },
+        { title: "Risk Users", href: "/risk-users", icon: <Users className="w-5 h-5" /> },
         { title: "Risk Transaction", href: "/risk/transactions", icon: <Shield className="w-5 h-5" /> },
         { title: "Fraud Alert", href: "/risk/fraud-alert", icon: <TriangleAlert className="w-5 h-5" /> },
         { title: "Recurring Execptions", href: "/risk/exceptions", icon: <RefreshCcw className="w-5 h-5" /> },

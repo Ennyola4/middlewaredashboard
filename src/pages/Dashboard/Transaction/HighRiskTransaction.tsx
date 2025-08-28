@@ -1,4 +1,4 @@
-import { CircleAlert, DollarSign, Shield, TrendingUp } from "lucide-react"
+import { CircleAlert, DollarSign, Download, Filter, Search, Shield, TrendingUp } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import { time } from "framer-motion"
 
@@ -184,7 +184,7 @@ const HighRiskTransaction = () => {
               const barColor = progressBar < 40 ? "bg-blue-500" : progressBar > 20 ? "bg-green-500" : "bg-red-500"
 
               return (
-                <div key={index} className="dark:text-white dark:bg-gray-950 bg-gray-50 p-3 rounded-lg">
+                <div key={index} className="dark:text-white dark:bg-gray-950 shadow-sm p-3 rounded-md">
                   <div className="flex flex-col xs:flex-row xs:justify-between xs:items-center gap-2 mb-3">
                     <span className="font-semibold text-sm sm:text-base">
                       {riskDistribution.title}
@@ -212,7 +212,7 @@ const HighRiskTransaction = () => {
             {riskScoreDistribution.map((riskScore, index) => (
               <div
                 key={index}
-                className="flex dark:bg-gray-950 flex-col xs:flex-row xs:justify-between xs:items-center gap-2 p-3 bg-gray-50  rounded-lg border-l-4 border-blue-400 dark:text-white"
+                className="flex dark:bg-gray-950 flex-col xs:flex-row xs:justify-between xs:items-center gap-2 p-3 shadow-sm rounded-md border-l-4 border-blue-400 dark:text-white"
               >
                 <span className="font-semibold text-sm sm:text-base">
                   {riskScore.title}
@@ -225,8 +225,36 @@ const HighRiskTransaction = () => {
           </div>
         </div>
       </div>
-      <div className="p-3 dark:text-white shadow-sm dark:bg-gray-800 m-3 rounded-xl">
-        <h1 className="p-3 text-lg">High Risk Transaction Queue</h1>
+      <div className="p-3  dark:text-white shadow-sm dark:bg-gray-800 m-3 rounded-xl">
+        <div className="flex mb-3 flex-col xs:flex-row xs:items-center xs:justify-between gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+          {/* Header Title */}
+          <h1 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white">
+            High Risk Transaction Queue
+          </h1>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap xs:flex-nowrap gap-2 sm:gap-3">
+
+            {/* Search Button */}
+            <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 rounded-lg transition-colors duration-200 text-sm font-medium">
+              <Search className="h-4 w-4" />
+              <span className="hidden sm:inline">Search</span>
+            </button>
+
+            {/* Filter Button */}
+            <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-800/40 text-blue-700 dark:text-blue-300 rounded-lg transition-colors duration-200 text-sm font-medium">
+              <Filter className="h-4 w-4" />
+              <span className="hidden sm:inline">Filter</span>
+            </button>
+
+            {/* Export Button */}
+            <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-green-100 hover:bg-green-200 dark:bg-green-900/30 dark:hover:bg-green-800/40 text-green-700 dark:text-green-300 rounded-lg transition-colors duration-200 text-sm font-medium">
+              <Download className="h-4 w-4" />
+              <span className="hidden sm:inline">Export</span>
+            </button>
+
+          </div>
+        </div>
         {/* High Risk Transaction Queue Section */}
         {highRiskTransactionQueue.map((transaction, index) => (
           <div key={index} className="p-3 sm:p-4 flex flex-col lg:flex-row lg:gap-6 shadow-sm rounded-md mb-3 sm:mb-4 dark:bg-gray-950">
@@ -301,7 +329,7 @@ const HighRiskTransaction = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 mt-4 lg:mt-0 lg:flex-col lg:justify-center lg:w-32">
-              <button className="flex-1 dark:text-black cursor-pointer lg:flex-none bg-gray-200 hover:bg-blue-600 text-black px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200">
+              <button className="flex-1 dark:text-black cursor-pointer lg:flex-none bg-gray-200 hover:bg-blue-600 hover:text-white text-black px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200">
                 {transaction.firstButton}
               </button>
               <button className="flex-1 cursor-pointer  lg:flex-none bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200">
