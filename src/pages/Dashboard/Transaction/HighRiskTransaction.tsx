@@ -1,4 +1,4 @@
-import { CircleAlert, DollarSign, Download, Filter, Search, Shield, TrendingUp } from "lucide-react"
+import { AlertOctagon, CircleAlert, DollarSign, Download, Filter, Pen, Search, Shield, TrendingUp } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import { time } from "framer-motion"
 
@@ -87,14 +87,14 @@ const highRiskTransactionQueue = [
     riskFcatorStatusThree: "New Recipient",
     location: "Lagos → London ",
     time: "2024-01-15 14:30",
-    firstButton: "Review",
-    secondButton: "Block"
+    firstButton: "REVIEW",
+    secondButton: "BLOCK"
   },
   {
     id: "HRT-002",
     riskScore: "Risk Score:",
     riskScoreStatusOne: "87%",
-    riskScoreStatusTwo: "Under Review",
+    riskScoreStatusTwo: "Under REVIEW",
     event: "Transaction Details:",
     value: "₦2,500,000",
     account: "-****5678 → Account-****9012",
@@ -103,8 +103,8 @@ const highRiskTransactionQueue = [
     riskFactorStatusTwo: "Round Number",
     location: "Abuja → Dubai ",
     time: "2024-01-15 13:45",
-    firstButton: "Review",
-    secondButton: "Block"
+    firstButton: "REVIEW",
+    secondButton: "BLOCK"
   },
   {
     id: "HRT-003",
@@ -119,8 +119,8 @@ const highRiskTransactionQueue = [
     riskFactorStatusTwo: "Unusual Time",
     location: "Port Harcourt → Unknown",
     time: "2024-01-15 12:20",
-    firstButton: "Review",
-    secondButton: "Block"
+    firstButton: "REVIEW",
+    secondButton: "BLOCK"
   },
   {
     id: "HRT-004",
@@ -135,8 +135,8 @@ const highRiskTransactionQueue = [
     riskFactorStatusTwo: "High Amount",
     location: "Kano → Singapore ",
     time: "2024-01-15 11:10",
-    firstButton: "Review",
-    secondButton: "Block"
+    firstButton: "REVIEW",
+    secondButton: "BLOCK"
   },
 ]
 
@@ -314,26 +314,29 @@ const HighRiskTransaction = () => {
 
             {/* Location & Time Section */}
             <div className="flex-shrink-0 lg:w-48 mt-10 lg:mt-0">
-              <div className="space-y-2 p-3  rounded-lg">
+              <div className="space-y-1 p-1">
                 <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                   Location and Time
                 </span>
                 <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                   {transaction.location}
                 </div>
-                <span>{transaction.time}</span>
+                <span className="text-gray-500 dark:text-gray-400 text-[12px]">{transaction.time}</span>
               </div>
+                {/* Action Buttons */}
+            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 mt-4 lg:mt-0 lg:flex-col lg:justify-center lg:w-32 w-fit">
+              <button className="flex cursor-pointer items-center gap-2 lg:gap-3 px-2 py-1 bg-gray-400 hover:bg-blue-500 dark:bg-blue-900/80 dark:hover:bg-blue-800/20 text-white dark:text-blue-500 rounded-md transition-colors duration-200 text-[14px] font-medium">
+                 <Pen className="h-4 w-4 ml-2" />
+                 <span className="sm:inline">{transaction.firstButton}</span>
+              </button>
+              <button className="flex cursor-pointer items-center gap-3 px-2 py-1 bg-red-500 hover:bg-red-300 dark:bg-red-900/60 dark:hover:bg-red-800/40 text-white dark:text-red-300 rounded-md transition-colors duration-200 text-[14px] font-medium">
+                <AlertOctagon className="h-4 w-4 ml-2" />
+              <span className=" sm:inline">{transaction.secondButton}</span>
+              </button>
+            </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 mt-4 lg:mt-0 lg:flex-col lg:justify-center lg:w-32">
-              <button className="flex-1 dark:text-black cursor-pointer lg:flex-none bg-gray-200 hover:bg-blue-600 hover:text-white text-black px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200">
-                {transaction.firstButton}
-              </button>
-              <button className="flex-1 cursor-pointer  lg:flex-none bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors duration-200">
-                {transaction.secondButton}
-              </button>
-            </div>
+          
 
           </div>
 
