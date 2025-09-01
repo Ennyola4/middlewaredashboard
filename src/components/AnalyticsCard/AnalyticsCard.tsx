@@ -44,7 +44,7 @@ const AnalyticsCard = () => {
           }}
           className="bg-white dark:bg-gray-950  p-3 transition-all duration-200 "
         >
-          <div className="flex flex-col space-y-4 rounded-2xl shadow-sm p-4 dark:bg-gray-900">
+          <div className="flex flex-col space-y-4 rounded-xl shadow-sm p-4 dark:bg-gray-900">
             <div className="flex items-center justify-between">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -83,7 +83,7 @@ const AnalyticsCard = () => {
 
       ))}
 
-      <div className="flex items-center gap-2 shadow-sm p-2 rounded-md w-fit  text-yellow-600 dark:text-yellow-500 ">
+      <div className="flex items-center bg-red-600/70 dark:bg-red-600/20 gap-2 shadow-sm p-2 rounded-md w-fit  text-red-50 dark:text-red-500 ">
         <TriangleAlert size={20} className="flex-shrink-0" />
         <span className="text-xs truncate">12 active alerts require attention.</span>
       </div>

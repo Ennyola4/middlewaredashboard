@@ -86,7 +86,7 @@ const RiskUsers = () => {
         {riskUsers.map((user, index) => (
           <div key={index} className="shadow-sm p-4 dark:bg-gray-800 rounded-md mb-4">
             <div className="flex items-center gap-4">
-              <div className="bg-gray-200 p-2 dark:bg-gray-950  text-green-500 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+              <div className="bg-gray-200 p-2 dark:bg-gray-950  text-gray-500 rounded-full w-10 h-10 flex items-center justify-center mb-2">
                 {user.icon}
               </div>
               <div className="flex flex-col mt-10">
@@ -97,14 +97,13 @@ const RiskUsers = () => {
             </div>
             <div className="p-2">
               <p className="text-gray-400">Account Details:</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 font-mono text-[10px] text-gray-500 dark:text-gray-400 mt-2">
-                Balance - {user.amount}
+              <div className=" grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 font-mono text-[10px] text-gray-500 dark:text-gray-400 mt-2">
+                <div>Balance -<span className="text-[12px] text-green-500">{user.amount}</span></div>
+                <span>Joined - {user.joined}</span>
                 <br />
-                Joined - {user.joined}
+                <span>Devices - {user.devices}</span>
                 <br />
-                Devices - {user.devices}
-                <br />
-                Last Login - {user.lastLogin}
+                <span>Last Login - {user.lastLogin}</span>
               </div>
             </div>
           </div>
