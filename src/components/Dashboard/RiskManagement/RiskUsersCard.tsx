@@ -41,7 +41,7 @@ const RiskUsersCard = () => {
             {riskUsers.map((user, index) => (
                 <div
                     key={index}
-                    className="flex flex-col lg:flex-row gap-4 lg:gap-6 shadow-sm p-3 sm:p-4 dark:bg-gray-800 rounded-md mb-3 sm:mb-4 border-l-4 border-r-4 border-gray-300 hover:shadow-md transition-shadow duration-300"
+                    className="flex flex-col lg:flex-row gap-4 lg:gap-6 shadow-sm p-3 sm:p-4 dark:bg-gray-900 rounded-md mb-3 sm:mb-4 hover:shadow-md transition-shadow duration-300"
                 >
 
                     {/* Main User Info Section */}
@@ -133,7 +133,7 @@ const RiskUsersCard = () => {
                     <div className="flex flex-col sm:flex-row lg:flex-col gap-4 lg:w-64">
 
                         {/* Location Info */}
-                        <div className="flex-1 bg-white dark:bg-gray-900 rounded-md shadow-sm p-3 space-y-2  dark:border-gray-700">
+                        <div className="flex-1 bg-white dark:bg-gray-950 rounded-md shadow-sm p-3 space-y-2  dark:border-gray-700">
                             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center gap-2">
                                 <MapPin className="h-4 w-4" />
                                 Last Login Location :
@@ -147,7 +147,7 @@ const RiskUsersCard = () => {
                         </div>
 
                         {/* Risk Status Info */}
-                        <div className="flex-1 bg-white dark:bg-gray-900 rounded-md shadow-sm p-3 space-y-2">
+                        <div className="flex-1 bg-white dark:bg-gray-950 rounded-md shadow-sm p-3 space-y-2">
                             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center gap-2">
                                 <AlertTriangle className="h-4 w-4 text-orange-500" />
                                 Risk Status
