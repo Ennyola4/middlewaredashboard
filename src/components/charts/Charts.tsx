@@ -40,18 +40,18 @@ const transactionData: TransactionData[] = [
 ];
 
 const apiPerformanceData = [
-  { hour: '00:00', performance: 95.2 },
-  { hour: '02:00', performance: 98.1 },
-  { hour: '04:00', performance: 97.5 },
-  { hour: '06:00', performance: 96.8 },
-  { hour: '08:00', performance: 94.3 },
-  { hour: '10:00', performance: 99.0 },
-  { hour: '12:00', performance: 98.7 },
-  { hour: '14:00', performance: 97.2 },
-  { hour: '16:00', performance: 96.5 },
-  { hour: '18:00', performance: 95.8 },
-  { hour: '20:00', performance: 98.4 },
-  { hour: '22:00', performance: 97.9 },
+    { hour: '00:00', performance: 95.2 },
+    { hour: '02:00', performance: 98.1 },
+    { hour: '04:00', performance: 97.5 },
+    { hour: '06:00', performance: 96.8 },
+    { hour: '08:00', performance: 94.3 },
+    { hour: '10:00', performance: 99.0 },
+    { hour: '12:00', performance: 98.7 },
+    { hour: '14:00', performance: 97.2 },
+    { hour: '16:00', performance: 96.5 },
+    { hour: '18:00', performance: 95.8 },
+    { hour: '20:00', performance: 98.4 },
+    { hour: '22:00', performance: 97.9 },
 ];
 
 type TooltipProps = {

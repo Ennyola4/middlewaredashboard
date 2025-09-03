@@ -1,7 +1,7 @@
 import Navbar from "../../../components/Navbar/Navbar"
-import RiskSummaryCard from "../../../components/Dashboard/Transactions/RiskSummaryCard"
-import RiskCategoryDistrubution from "../../../components/Dashboard/Transactions/RiskCategoryDistrubution"
-import HighRiskTransactionQueue from "../../../components/Dashboard/Transactions/HighRiskTransactionQueue"
+import RiskSummaryCard from "../../../components/Dashboard/TransactionsCards/RiskSummaryCard"
+import RiskCategoryDistrubution from "../../../components/Dashboard/TransactionsCards/RiskCategoryDistrubution"
+import HighRiskTransactionQueue from "../../../components/Dashboard/TransactionsCards/HighRiskTransactionQueue"
 
 
 

@@ -1,8 +1,8 @@
 import { Activity } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
-import LiveTransactionCard from "../../../components/Dashboard/Transactions/LiveTransactionCard"
-import HourlyTransactionVolume from "../../../components/Dashboard/Transactions/HourlyTransactionVolume"
-import LiveTransactionStream from "../../../components/Dashboard/Transactions/LiveTransactionStream"
+import LiveTransactionCard from "../../../components/Dashboard/TransactionsCards/LiveTransactionCard"
+import HourlyTransactionVolume from "../../../components/Dashboard/TransactionsCards/HourlyTransactionVolume"
+import LiveTransactionStream from "../../../components/Dashboard/TransactionsCards/LiveTransactionStream"
 
 
 
