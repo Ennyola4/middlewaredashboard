@@ -15,7 +15,7 @@ const RiskUsersCard = () => {
                     {riskUsers.length}
                 </span>
             </div>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-between w-full mb-4 p-2 sm:p-4 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-between w-full mb-4 p-2 sm:p-4 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-950">
 
                 {/* Search Input with Icon */}
                 <div className="relative flex-1 max-w-full">
@@ -30,9 +30,9 @@ const RiskUsersCard = () => {
                 </div>
 
                 {/* Export Button */}
-                <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-green-100 hover:bg-green-200 dark:bg-green-900/30 dark:hover:bg-green-800/40 text-green-700 dark:text-green-300 rounded-lg transition-colors duration-200 text-sm font-medium">
+                <button className="flex cursor-pointer justify-center items-center gap-2 px-3 py-2 bg-green-100 hover:bg-green-200 dark:bg-green-900/30 dark:hover:bg-green-800/40 text-green-700 dark:text-green-300 rounded-lg transition-colors duration-200 text-sm font-medium">
                     <Download className="h-4 w-4" />
-                    <span className="hidden sm:inline">Export Risk Reports</span>
+                    <span className="sm:w-fit">Export Risk Reports</span>
                 </button>
 
             </div>
