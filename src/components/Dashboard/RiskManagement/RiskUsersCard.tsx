@@ -24,7 +24,7 @@ const RiskUsersCard = () => {
                     </div>
                     <input
                         type="text"
-                        className="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-950 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
+                        className="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
                         placeholder="Search users by name, email or ID..."
                     />
                 </div>
@@ -49,23 +49,23 @@ const RiskUsersCard = () => {
 
                         {/* User Header - Avatar and Basic Info */}
                         <div className="flex flex-col xs:flex-row xs:items-start gap-3 sm:gap-4">
-                            <p className="text-gray-400">Risk Factors</p>
+                            <p className="text-gray-400">Risk Factors :</p>
                             <div className="flex gap-3">
-                                <div className="text-xs px-2 py-1 bg-red-500/20 text-red-600 rounded-md w-fit">
+                                <div className="text-xs px-2 py-1 bg-red-500/20 font-mono text-red-800 dark:bg-red-600/30 dark:text-red-400 rounded-md w-fit">
                                     {user.riskFactors[0]}
 
                                 </div>
-                                <div className="text-xs px-2 py-1 bg-red-500/20 text-red-600 rounded-md">
+                                <div className="text-xs px-2 py-1 bg-red-500/20 font-mono dark:bg-red-600/30 dark:text-red-400  text-red-700 rounded-md">
                                     {user.riskFactors[2]}
                                 </div>
-                                <div className="text-xs px-2 py-1 bg-red-500/20 text-red-600 rounded-md">
+                                <div className="text-xs px-2 py-1 bg-red-500/20 font-mono dark:bg-red-600/30 dark:text-red-400  text-red-700 rounded-md">
                                     {user.riskFactors[1]}
                                 </div>
                             </div>
 
                             {/* Avatar */}
-                            <div className="bg-gray-200 dark:bg-gray-950 text-gray-500 dark:text-gray-400 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center flex-shrink-0">
-                                <user.icon size={24} className="sm:w-7 sm:h-7" />
+                            <div className="bg-gray-200 dark:bg-gray-800 text-gray-500 dark:text-gray-300 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center flex-shrink-0">
+                                <user.icon size={24} className="sm:w-7 sm:h-7 " />
                             </div>
 
 
@@ -76,11 +76,11 @@ const RiskUsersCard = () => {
                                         <h3 className="font-semibold text-base sm:text-lg text-gray-800 dark:text-white">
                                             {user.name}
                                         </h3>
-                                        <span className="bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 text-xs px-2 py-1 rounded w-fit">
+                                        <span className="bg-red-100 text-red-800 dark:bg-red-600/30 font-mono dark:text-red-400 text-xs px-2 py-1 rounded w-fit">
                                             High Risk
                                         </span>
                                     </div>
-                                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-600">
                                         {user.email}
                                     </p>
                                     <div className="inline-block text-xs font-mono text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-950 rounded px-2 py-1">
@@ -93,7 +93,7 @@ const RiskUsersCard = () => {
                         {/* Account Details */}
                         <div className="space-y-3">
                             <div className="mb-2">
-                                <span className="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-600 rounded-md">{user.status}</span>
+                                <span className="text-xs px-2 py-1 bg-yellow-500/10 text-yellow-700 dark:bg-yellow-600/30 dark:text-yellow-400  rounded-md">{user.status}</span>
                             </div>
                             <p className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center gap-2">
                                 <Shield className="h-4 w-4" />
@@ -168,13 +168,13 @@ const RiskUsersCard = () => {
 
                     {/* Action Buttons */}
                     <div className="flex xs:flex-row lg:flex-col lg:justify-end gap-2 lg:w-32 ">
-                        <button className="flex-1 cursor-pointer  lg:flex-none bg-gray-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">
+                        <button className="flex-1 cursor-pointer  lg:flex-none bg-gray-600 hover:bg-blue-700 text-white px-2 py-1 rounded-md font-medium transition-colors duration-200 text-sm">
                             View Details
                         </button>
-                        <button className="flex-1 cursor-pointer lg:flex-none bg-gray-600 hover:bg-yellow-500 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">
+                        <button className="flex-1 cursor-pointer lg:flex-none bg-gray-600 hover:bg-yellow-500 text-white px-2 py-1 rounded-md font-medium transition-colors duration-200 text-sm">
                             Review Risks
                         </button>
-                        <button className="flex-1 cursor-pointer lg:flex-none bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">
+                        <button className="flex-1 cursor-pointer lg:flex-none bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded-md font-medium transition-colors duration-200 text-sm">
                             Block User
                         </button>
                     </div>

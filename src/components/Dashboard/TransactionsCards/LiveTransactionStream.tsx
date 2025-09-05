@@ -16,9 +16,9 @@ const LiveTransactionStream = () => {
               </div>
               <div >
                 <div>
-                  <span className="text-[11px] px-2 py-1 text-green-800 dark:text-green-500 rounded-md bg-green-400/20 ">{stream.status}</span>
+                  <span  className= {`px-1 py-1 text-[12px] w-fit rounded-md ${stream.textColor} ${stream.bgColor}`}>{stream.status}</span>
                 </div>
-                <span className="text-xs ml-3">{stream.value}</span>
+                <span className="text-xs font-semibold">{stream.value}</span>
               </div>
             </div>
           </div>

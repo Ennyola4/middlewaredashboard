@@ -4,7 +4,7 @@ import { highRiskTransactionQueue } from '../../../utils'
 const HighRiskTransactionQueue = () => {
   return (
     <div>
-        <div className="p-3  dark:text-white shadow-sm dark:bg-gray-800 m-3 rounded-xl">
+      <div className="p-3  dark:text-white shadow-sm dark:bg-gray-800 m-3 rounded-xl">
         <div className="flex mb-3 flex-col xs:flex-row xs:items-center xs:justify-between gap-3 p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
           {/* Header Title */}
           <h1 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white">
@@ -12,24 +12,24 @@ const HighRiskTransactionQueue = () => {
           </h1>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap xs:flex-nowrap gap-2 sm:gap-3">
+          <div className="flex  flex-wrap xs:flex-nowrap gap-2 sm:gap-3">
 
             {/* Search Button */}
             <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 rounded-lg transition-colors duration-200 text-sm font-medium">
               <Search className="h-4 w-4" />
-              <span className="hidden sm:inline">Search</span>
+              <span className=" sm:inline">Search</span>
             </button>
 
             {/* Filter Button */}
             <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-800/40 text-blue-700 dark:text-blue-300 rounded-lg transition-colors duration-200 text-sm font-medium">
               <Filter className="h-4 w-4" />
-              <span className="hidden sm:inline">Filter</span>
+              <span className=" sm:inline">Filter</span>
             </button>
 
             {/* Export Button */}
             <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-green-100 hover:bg-green-200 dark:bg-green-900/30 dark:hover:bg-green-800/40 text-green-700 dark:text-green-300 rounded-lg transition-colors duration-200 text-sm font-medium">
               <Download className="h-4 w-4" />
-              <span className="hidden sm:inline">Export</span>
+              <span className=" sm:inline">Export</span>
             </button>
 
           </div>
@@ -62,11 +62,11 @@ const HighRiskTransactionQueue = () => {
                 <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium">
                   {transaction.event}
                 </div>
-                <div className="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
+                <div className="text-lg sm:text-xl font-semibold text-green-500  dark:text-green-500">
                   {transaction.value}
                 </div>
                 <div className="">
-                  <span className="text-xs sm:text-sm text-gray-400 dark:text-gray-200 font-mono break-all"> Account {transaction.account}</span>
+                  <span className="text-xs sm:text-sm text-gray-400 dark:text-gray-400 font-mono break-all"> Account {transaction.account}</span>
                 </div>
               </div>
 

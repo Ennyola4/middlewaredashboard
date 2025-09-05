@@ -31,7 +31,8 @@ const RiskSummaryCard = () => {
                 </div>
               </div>
             ))}
-          </div></>
+          </div>
+          </>
   )
 }
 

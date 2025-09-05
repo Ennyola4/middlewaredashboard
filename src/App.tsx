@@ -13,6 +13,8 @@ import PosSystem from './pages/Dashboard/Product/PosSystem.js';
 import LiveTransaction from './pages/Dashboard/Transaction/LiveTransaction.js';
 import HighRiskTransaction from './pages/Dashboard/Transaction/HighRiskTransaction.js';
 import RiskUsers from './pages/Dashboard/RiskManagement/RiskUsers.js';
+import RiskTransaction from './pages/Dashboard/RiskManagement/RiskTransaction.js';
+import FraudAlert from './pages/Dashboard/RiskManagement/FraudAlert.js';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,15 @@ const router = createBrowserRouter([
         path : "/risk-users",
         element : <RiskUsers/>
       },
+        {
+        path : "/risk-transactions",
+        element : <RiskTransaction/>
+      },
+         {
+        path : "/fraud-alert",
+        element : <FraudAlert/>
+      },
+      
 
     ]
   }
