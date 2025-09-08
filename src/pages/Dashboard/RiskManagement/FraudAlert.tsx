@@ -2,6 +2,7 @@ import { TriangleAlert } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import FraudAlertCards from "../../../components/Dashboard/RiskManagement/FraudAlertCards"
 import AlertCategoriesCard from "../../../components/Dashboard/RiskManagement/AlertCategoriesCard"
+import RecentFraudAlert from "../../../components/Dashboard/RiskManagement/RecentFraudAlert"
 
 const FraudAlert = () => {
   return (
@@ -15,6 +16,7 @@ const FraudAlert = () => {
       </div>
       <FraudAlertCards/>
       <AlertCategoriesCard/>
+      <RecentFraudAlert/>
     </div>
   )
 }

@@ -5,7 +5,7 @@ const RCU = () => {
     <div>
          <div className="flex flex-col lg:flex-row bg-white dark:bg-black gap-4 sm:gap-6 p-3 sm:p-4">
           {/* First Container - Redemption Stats */}
-          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-3 sm:p-4">
+          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-900 rounded-lg shadow p-3 sm:p-4">
             <h2 className="text-base sm:text-lg p-2 font-semibold mb-3 sm:mb-4 text-gray-700 dark:text-white">
               Redemption Statistics
             </h2>
@@ -17,7 +17,7 @@ const RCU = () => {
                     "bg-blue-500";
 
               return (
-                <div key={index} className="mb-3 sm:mb-4 shadow-sm p-2 sm:p-3 dark:bg-gray-900/100 rounded-md last:mb-0">
+                <div key={index} className="mb-3 sm:mb-4 shadow-sm p-2 sm:p-3 dark:bg-gray-950 rounded-md last:mb-0">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-xs sm:text-sm md:text-[15px] font-medium text-gray-700 dark:text-white truncate">
                       {gift.title}
@@ -41,7 +41,7 @@ const RCU = () => {
           </div>
 
           {/* Second Container - System Performance */}
-          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-800/90 rounded-lg shadow p-3 sm:p-4">
+          <div className="w-full lg:w-1/2 bg-white dark:bg-gray-900 rounded-lg shadow p-3 sm:p-4">
             <h2 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-700 dark:text-white">
               System Performance
             </h2>
@@ -70,11 +70,11 @@ const RCU = () => {
             })}
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center mt-3 sm:mt-4">
-              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-900/100 rounded-md">
+              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-950 rounded-md">
                 <p className="text-[11px] sm:text-[12px] text-gray-500 dark:text-gray-300">Active Members</p>
                 <span className="font-semibold text-sm sm:text-[16px] dark:text-white">18,450</span>
               </div>
-              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-900/100 rounded-md">
+              <div className="shadow-sm p-3 sm:p-5 w-full dark:bg-gray-950 rounded-md">
                 <p className="text-[11px] sm:text-[12px] text-gray-500 dark:text-gray-300">Avg Points/User</p>
                 <span className="font-semibold text-sm sm:text-[16px] dark:text-white">1,980</span>
               </div>

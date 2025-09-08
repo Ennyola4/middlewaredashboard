@@ -5,7 +5,7 @@ const RMT = () => {
   return (
     <div>
         <div className="p-3 sm:p-4">
-        <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
+        <div className="bg-white dark:bg-gray-900 p-4 sm:p-5 rounded-lg sm:rounded-xl shadow-lg">
           <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-white">
             Recent High Value Transactions
           </h3>

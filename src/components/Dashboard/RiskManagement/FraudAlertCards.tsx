@@ -7,7 +7,7 @@ const FraudAlertCards = () => {
         {fraudAlertSummaryCard.map((item, index) => (
           <div
             key={index}
-            className="flex items-center p-4 sm:p-5 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+            className="flex items-center p-4 sm:p-5 bg-white dark:bg-gray-900 rounded-lg shadow hover:shadow-md transition-shadow"
           >
             <div className="p-2">
               {<item.icon className={`${item.textColor}`} size={30} />}

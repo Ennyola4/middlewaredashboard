@@ -19,7 +19,8 @@ import {
     Store,
     Wifi,
     Bell,
-    CircleCheckBig
+    CircleCheckBig,
+    RefreshCcw
 } from "lucide-react"
 
 
@@ -1067,5 +1068,170 @@ export const alertCategoriesCard = [
         status: "-3%",
         value: "23 Alerts",
         textColor: "text-green-500"
+    },
+]
+
+export const alertDistribution = [
+    {
+        title: "Critical",
+        value: "23",
+        bar: "20%",
+        textColor: "text-red-500"
+    },
+    {
+        title: "High Priority",
+        value: "45",
+        bar: "40%",
+        textColor: "text-yellow-500"
+    },
+    {
+        title: "Medium Priority",
+        value: "67",
+        bar: "50%",
+        textColor: "text-green-500"
+    },
+]
+
+export const recentFraudAlerts = [
+    {
+        id: "FA-001",
+        status: ["Critical", "Active"],
+        account: "Account Takeover - Account ****8901",
+        event: "Multiple failed login attempts from different locations",
+        time: "2024-10-01 14:30",
+        buttonOne: "Investigate",
+        buttonTwo: "Block",
+        textColor: "text-red-500",
+        textColorTwo: "text-red-500"
+    },
+    {
+        id: "FA-002",
+        status: ["High", "Investigating"],
+        account: "Card Fraud - Account ****2345",
+        event: "Suspicious transactions in foreign country",
+        time: "2024-10-01 14:30",
+        buttonOne: "Investigate",
+        buttonTwo: "Block",
+        textColor: "text-yellow-500",
+        textColorTwo: "text-yellow-500"
+    },
+    {
+        id: "FA-003",
+        status: ["Critical", "Resolved"],
+        account: "Identity Theft - Account ****5678",
+        event: "Document verification mismatch detected",
+        time: "2024-10-01 14:30",
+        buttonOne: "Investigate",
+        buttonTwo: "Block",
+        textColor: "text-red-500",
+        textColorTwo: "text-green-500"
+    },
+]
+
+export const recurringSummaryCard = [
+    {
+        title: "Total Exceptions",
+        icon: RefreshCcw,
+        value: "89",
+        textColor: "text-purple-500"
+    },
+    {
+        title: "Active Patterns",
+        icon: CircleAlert,
+        value: "34",
+        textColor: "text-yellow-500"
+    },
+    {
+        title: "Auto-Resolved",
+        icon: CircleCheckBig,
+        value: "45",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Avg Frequency/Day",
+        icon: TrendingUp,
+        value: "4.2",
+        textColor: "text-blue-500"
+    },
+]
+
+export const recurringCard = [
+    {
+        title: "Amount Thresholds",
+        event: "Auto-resolved: 18",
+        total: "23 total",
+        status: "78%",
+        textColor: "text-blue-500",
+        textColorTwo: "text-green-500"
+    },
+    {
+        title: "Geographic Patterns",
+        event: "Auto-resolved: 8",
+        total: "15 total",
+        status: "53%",
+         textColor: "text-blue-500",
+        textColorTwo: "text-green-500"
+    },
+    {
+        title: "Time-based Anomalies",
+        event: "Auto-resolved: 14",
+        total: "19 total",
+        status: "74%",
+         textColor: "text-blue-500",
+        textColorTwo: "text-green-500"
+    },
+    {
+        title: "Frequency Violations",
+        event: "Auto-resolved: 5",
+        total: "19 total",
+        status: "42%",
+         textColor: "text-blue-500",
+        textColorTwo: "text-green-500"
+    },
+    {
+        title: "Merchant Categories",
+        event: "Auto-resolved: 15",
+        total: "20 total",
+        status: "80%",
+         textColor: "text-blue-500",
+        textColorTwo: "text-green-500"
+    },
+
+
+]
+
+export const recurringExceptionPattern = [
+    {
+        id : "RE-001",
+        status : ["Low",  "Whitelisted"],
+        event : "Daily Salary Transfers > ₦500K",
+        frequency : "Daily",
+        occurances : "28",
+        time : "2024-01-15 09:00",
+        button : "Configure",
+        buttonTwo : "Whitelist",
+        textColor : "text-green-500"
+    },
+      {
+        id : "RE-002",
+        status : ["Medium", "Monitoring"],
+        event : "Cross-border transfers to UAE",
+        frequency : "Weekly",
+        occurances : "12",
+        time : "2024-01-14 16:30",
+        button : "Configure",
+        buttonTwo : "Whitelist",
+        textColor : "text-yellow-500"
+    },
+      {
+        id : "RE-003",
+        status : ["High", "Flagged"],
+        event : "Round amount transfers (₦1M)",
+        frequency : "Bi-weekly",
+        occurances : "8",
+        time : "2024-01-15 09:00",
+        button : "Configure",
+        buttonTwo : "Whitelist",
+        textColor : "text-red-500"
     },
 ]

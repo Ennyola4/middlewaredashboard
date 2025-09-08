@@ -20,7 +20,7 @@ const TerminalStatusRegion = () => {
               }
 
               return (
-                <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 transition-all hover:shadow-md">
+                <div key={index} className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 transition-all hover:shadow-md">
                   {/* Card Header */}
                   <div className="flex justify-between items-start mb-3">
                     <div>

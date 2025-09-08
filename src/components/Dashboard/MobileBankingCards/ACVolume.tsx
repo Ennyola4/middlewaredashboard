@@ -12,7 +12,7 @@ const ACVolume = () => {
             {/* Analytics Columns */}
             <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 p-3 sm:p-4">
                 {/* Feature Usage Analytics */}
-                <div className="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow p-3 sm:p-4">
+                <div className="flex-1 bg-white dark:bg-gray-900 rounded-lg shadow p-3 sm:p-4">
                     <h1 className="text-base sm:text-lg md:text-xl lg:text-[23px] mb-3 sm:mb-4 md:mb-5 text-gray-600 dark:text-white font-semibold">
                         Feature Usage Analytics
                     </h1>
@@ -42,7 +42,7 @@ const ACVolume = () => {
                 </div>
 
                 {/* System Performance */}
-                <div className="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow p-3 sm:p-4 mt-3 sm:mt-0">
+                <div className="flex-1 bg-white dark:bg-gray-900 rounded-lg shadow p-3 sm:p-4 mt-3 sm:mt-0">
                     <h1 className="text-base sm:text-lg md:text-xl lg:text-[23px] mb-3 sm:mb-4 md:mb-5 text-gray-600 dark:text-white font-semibold">
                         System Performance
                     </h1>
@@ -76,11 +76,11 @@ const ACVolume = () => {
 
                         {/* Stats Cards */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center mt-3 sm:mt-4">
-                            <div className="shadow-sm p-3 sm:p-4 w-full dark:bg-gray-900/90 rounded-md">
+                            <div className="shadow-sm p-3 sm:p-4 w-full dark:bg-gray-950 rounded-md">
                                 <p className="text-[10px] sm:text-[11px] text-gray-500 dark:text-gray-300">Active Members</p>
                                 <span className="font-semibold text-sm sm:text-[15px] dark:text-white">18,450</span>
                             </div>
-                            <div className="shadow-sm p-3 sm:p-4 w-full dark:bg-gray-900/90 rounded-md">
+                            <div className="shadow-sm p-3 sm:p-4 w-full dark:bg-gray-950 rounded-md">
                                 <p className="text-[10px] sm:text-[11px] text-gray-500 dark:text-gray-300">Avg Points/User</p>
                                 <span className="font-semibold text-sm sm:text-[15px] dark:text-white">1,980</span>
                             </div>

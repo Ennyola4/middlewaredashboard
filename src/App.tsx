@@ -15,6 +15,7 @@ import HighRiskTransaction from './pages/Dashboard/Transaction/HighRiskTransacti
 import RiskUsers from './pages/Dashboard/RiskManagement/RiskUsers.js';
 import RiskTransaction from './pages/Dashboard/RiskManagement/RiskTransaction.js';
 import FraudAlert from './pages/Dashboard/RiskManagement/FraudAlert.js';
+import RecurringExceptions from './pages/Dashboard/RiskManagement/RecurringExceptions.js';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
          {
         path : "/fraud-alert",
         element : <FraudAlert/>
+      },
+          {
+        path : "/recurring-exceptions",
+        element : <RecurringExceptions/>
       },
       
 

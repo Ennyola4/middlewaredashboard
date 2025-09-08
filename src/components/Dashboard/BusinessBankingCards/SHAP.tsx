@@ -5,7 +5,7 @@ const SHAP = () => {
     <div>
         {/* System Health & Performance */}
       <div className="p-2 sm:p-3 md:p-4">
-        <div className="mt-4 sm:mt-6 md:mt-8 dark:bg-gray-800 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 w-full">
+        <div className="mt-4 sm:mt-6 md:mt-8 dark:bg-gray-900 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 w-full">
           <h1 className="text-base sm:text-xl md:text-2xl lg:text-[28px] font-serif text-green-500 p-2 sm:p-3 md:p-4">
             System Health & Performance
           </h1>

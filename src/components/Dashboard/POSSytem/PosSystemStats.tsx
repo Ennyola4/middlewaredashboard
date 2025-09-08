@@ -3,7 +3,7 @@ import { systemStats } from "../../../utils"
 const PosSystemStats = () => {
   return (
     <div>
-       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5 mb-6">
+       <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-5 mb-6">
             <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">System Overview</h2>
 
             <div className="space-y-4">
