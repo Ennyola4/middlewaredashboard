@@ -1,3 +1,4 @@
+import { RefreshCcw } from "lucide-react"
 import { recurringExceptionPattern } from "../../../utils"
 
 const REP = () => {
@@ -5,11 +6,15 @@ const REP = () => {
 
         <div className="px-4 sm:px-5 mt-6">
 
-            <div className="p-3 sm:p-5 shadow-sm bg-white dark:bg-gray-800 rounded-md">
-                <div>
-                    <h3 className="text-[20px] p-5 font-semibold text-gray-600 dark:text-gray-300  border-gray-200 dark:border-gray-700 pb-2">
+            <div className="p-3 sm:p-5 shadow-sm bg-white dark:bg-gray-900 rounded-md">
+                <div className="flex items-center justify-between mb-5">
+                    <h3 className="text-[20px]  p-5 font-semibold text-gray-600 dark:text-gray-300  border-gray-200 dark:border-gray-700 pb-2">
                         Recurring Exception Patterns
                     </h3>
+                    <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-500 hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-100 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium">
+                        <RefreshCcw className="h-4 w-4" />
+                        <span className=" sm:inline">Refresh Rules</span>
+                    </button>
                 </div>
                 {recurringExceptionPattern.map((item, index) => (
                     <div key={index}>

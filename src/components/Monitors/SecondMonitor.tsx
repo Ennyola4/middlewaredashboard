@@ -70,7 +70,7 @@ const SecondMonitor = () => {
                     <div className="shadow-sm p-4 dark:bg-gray-800 rounded-md">
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
-                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 shadow-sm dark:bg-gray-900 dark:text-white rounded-md">
 
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">154,234</h1>
@@ -105,8 +105,8 @@ const SecondMonitor = () => {
                         <div className="space-y-4 mt-1">
                             {recentAuthEvents.map((event, index) => (
                                 <div
-                                    key={`event-${index}`}
-                                    className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 border-l-4 border-blue-400"
+                                    key={index}
+                                    className="bg-white dark:bg-gray-900 rounded-md shadow-md p-4 border-l-2 border-blue-400"
                                 >
                                     <div className="flex flex-col sm:flex-row justify-between gap-3">
                                         <div className="flex-1">
@@ -117,9 +117,9 @@ const SecondMonitor = () => {
                                                     {event.event}
                                                 </p>
 
-                                                <span className={`text-[10px] px-1.5 py-0.5 rounded-md ${event.status === 'blocked' ? 'border-[0.5px] text-red-600  dark:text-red-400' :
-                                                    event.status === 'success' ? 'border-[0.5px] text-green-700  dark:text-green-400' :
-                                                        'border-[0.5px] text-yellow-700 dark:text-yellow-400'
+                                                <span className={`text-[9px] px-2 py-1 rounded-md ${event.status === 'blocked' ? ' text-red-600 bg-red-400/20  dark:text-red-400' :
+                                                    event.status === 'success' ? ' text-green-600 bg-green-400/20  dark:text-green-400' :
+                                                        ' text-yellow-600 bg-yellow-400/20 dark:text-yellow-400'
                                                     }`}>
                                                     {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
                                                 </span>
@@ -156,7 +156,7 @@ const SecondMonitor = () => {
                     <div className="shadow-sm p-4 dark:bg-gray-800 rounded-md">
 
                         <h1 className=" text-xl p-2 font-semibold text-black dark:text-white mb-4">Logging & Monitoring</h1>
-                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-2xl shadow-lg">
+                        <div className="grid grid-cols-2 gap-4 mb-6 p-3 dark:bg-gray-900 dark:text-white rounded-md shadow-sm">
 
                             <div className="flex flex-col items-center col-span-1">
                                 <h1 className="text-xl font-extrabold text-green-400">2,449,877</h1>
@@ -204,11 +204,11 @@ const SecondMonitor = () => {
                             {logAndmon.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                                    className="flex items-center justify-between p-3 bg-white dark:bg-gray-900 rounded-md shadow-sm hover:shadow-md transition-shadow"
                                 >
             
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+                                        <div className="p-2 bg-blue-400/20 dark:bg-blue-400/20 rounded-lg text-blue-700 dark:text-blue-700">
                                             {item.icon}
                                         </div>
                                         <p className="font-serif text-sm text-gray-800 dark:text-gray-100">
@@ -217,10 +217,7 @@ const SecondMonitor = () => {
                                     </div>
 
                                     
-                                    <span className={`px-2 py-1 text-[10px] font-serif rounded-md ${item.status === 'Active'
-                                        ? 'border-[0.5px] text-green-500 dark:text-green-500'
-                                        : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
-                                        }`}>
+                                    <span className="text-[10px] text-green-600 bg-green-400/10 px-2 py-1 rounded-md  ">
                                         {item.status}
                                     </span>
                                 </div>

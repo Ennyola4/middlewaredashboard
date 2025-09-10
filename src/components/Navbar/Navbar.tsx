@@ -30,7 +30,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <div className="flex flex-col xs:flex-row xs:items-center gap-1 xs:gap-2">
-              <span className="px-4 py-1 xs:px-3 xs:py-1 text-xs text-green-700 font-serif bg-green-300/45 rounded-md dark:text-green-100 whitespace-nowrap dark:bg-green-900">
+              <span className="px-3 py-1 xs:px-3 xs:py-1 text-xs text-green-700  font-serif bg-green-300/20 rounded-md dark:text-green-100 whitespace-nowrap dark:bg-green-900">
                 Operational
               </span>
 

@@ -1,4 +1,4 @@
-import { Monitor } from "lucide-react";
+import { Camera, CreditCard, DatabaseIcon, Monitor, Smartphone, Tablets } from "lucide-react";
 import { Database } from 'lucide-react'
 import { Activity } from "lucide-react";
 import { AlertTriangle } from "lucide-react"
@@ -12,7 +12,7 @@ import { Eye } from 'lucide-react';
 const systemHealth = [
     {
         name: "Business Banking API",
-        icon: <Database className="w-4 h-4" />,
+        icon: Database,
         status: "HEALTHY",
         uptime: "Uptime",
         uptimeRate: "99.98%",
@@ -25,6 +25,7 @@ const systemHealth = [
     },
     {
         name: "Mobile Banking API",
+        icon: Smartphone,
         status: "HEALTHY",
         uptime: "Uptime",
         uptimeRate: "99.95%",
@@ -37,6 +38,7 @@ const systemHealth = [
     },
     {
         name: "Gold Bucks System",
+        icon: Tablets,
         status: "WARNING",
         uptime: "Uptime",
         uptimeRate: "99.87%",
@@ -49,6 +51,7 @@ const systemHealth = [
     },
     {
         name: "E-Cam Service",
+        icon: Camera,
         status: "HEALTHY",
         uptime: "Uptime",
         uptimeRate: "99.99%",
@@ -61,6 +64,7 @@ const systemHealth = [
     },
     {
         name: "POS Integration",
+        icon : CreditCard,
         status: "CRITICAL",
         uptime: "Uptime",
         uptimeRate: "98.12%",
@@ -73,6 +77,7 @@ const systemHealth = [
     },
     {
         name: "Core Database",
+        icon : DatabaseIcon,
         status: "HEALTHY",
         uptime: "Uptime",
         uptimeRate: "99.99%",
@@ -145,13 +150,13 @@ const ThirdMonitor = () => {
                     {systemHealth.map((service, index) => (
                         <div
                             key={`service-${index}`}
-                            className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-3 sm:p-4 border-l-4 border-blue-400 mb-3"
+                            className="bg-white dark:bg-gray-700 rounded-md shadow-md p-3 sm:p-4 border-l-2 border-blue-400 mb-3"
                         >
                             <div className="flex flex-col gap-3">
                                 {/* Header - Service name and Status */}
                                 <div className="flex xs:flex-row justify-between items-center gap-1 w-full">
                                     <div className="flex items-center gap-1">
-                                        <Database className="text-gray-400" />
+                                        <service.icon className="text-gray-400 w-4 h-4" />
                                         <p className="font-semibold text-sm sm:text-base text-gray-700 dark:text-white">
                                             {service.name}
                                         </p>

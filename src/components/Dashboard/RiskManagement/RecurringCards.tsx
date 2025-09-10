@@ -15,7 +15,7 @@ const RecurringCards = () => {
                             <div className=" mb-3 p-5 shadow-sm rounded-md bg-white dark:bg-gray-950">
                                 <div className="flex justify-between items-center dark:text-white ">
                                     <span>{item.title}</span>
-                                    <span className={`text-[10px] mb-2 border rounded-full px-1 py-1 ${item.textColor}`}>{item.total}</span>
+                                    <span className={`text-[10px] mb-2 border rounded-full px-2 py-1 ${item.textColor}`}>{item.total}</span>
                                 </div>
                                 <div className="flex justify-between items-center dark:text-white ">
                                     <span className="text-[12px] text-gray-400">{item.event}</span>

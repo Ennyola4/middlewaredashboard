@@ -80,18 +80,18 @@ const Monitor = () => {
 
                 {/* High Risk Users*/}
                 <div className="flex-1">
-                    <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5  dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5  dark:bg-gray-900 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3">
                             <div className="flex items-center gap-2">
                                 <Users className="h-6 w-6 text-red-500" />
                                 <h1 className="font-bold text-lg dark:text-white">High Risk Users</h1>
                             </div>
-                            <p className="bg-red-500/70 text-white rounded-md px-3 py-1 text-[12px] font-medium">
+                            <p className="bg-red-500/70 dark:bg-red-500/30 text-white rounded-md px-3 py-1 text-[12px] font-medium">
                                 3 Active
                             </p>
                         </div>
                         {highRiskUser.map((user, index) => (
-                            <div key={`left-${index}`} className="bg-white dark:bg-gray-700 rounded-lg shadow-md mb-4 p-4 border-l-4 border-red-400/70">
+                            <div key={`left-${index}`} className="bg-white dark:bg-gray-950 rounded-lg shadow-md mb-4 p-4 border-l-4 border-red-400/70">
 
                                 <div className="flex justify-between items-start">
                                     <div className="flex items-center text-xs">
@@ -129,7 +129,7 @@ const Monitor = () => {
 
                 {/* High Risk Transactions */}
                 <div className="flex-1">
-                    <div className=" md:grid-cols-2 shadow-sm p-5 bg-white dark:bg-gray-800 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" md:grid-cols-2 shadow-sm p-5 bg-white dark:bg-gray-900 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3 sm:p-4 col-span-full">
                             <div className="flex items-center gap-2">
                                 <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
@@ -137,7 +137,7 @@ const Monitor = () => {
                                     High Risk Transactions
                                 </h1>
                             </div>
-                            <p className="bg-red-500/70 text-white rounded-md px-3 py-1 text-[12px] font-medium">
+                            <p className="bg-red-500/70 dark:bg-red-500/30 text-white rounded-md px-3 py-1 text-[12px] font-medium">
                                 3 Active
                             </p>
                         </div>
@@ -145,7 +145,7 @@ const Monitor = () => {
                         {highRiskTransaction.map((transaction, index) => (
                             <div
                                 key={`transaction-${index}`}
-                                className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-3 mb-5 border-l-4 border-blue-400/70"
+                                className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-3 mb-5 border-l-4 border-blue-400/70"
                             >
                                 <div className="flex justify-between text-[10px] items-start">
                                     <div className="flex flex-col gap-1">

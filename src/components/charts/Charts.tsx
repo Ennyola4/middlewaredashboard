@@ -132,7 +132,7 @@ export const Charts = () => {
         <div className='w-full  p-5 bg-white  dark:bg-gray-950 '>
             <div className="grid  grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Line Chart Card */}
-                <Card className="bg-white dark:bg-gray-800 border-none shadow-lg h-[400px]">
+                <Card className="bg-white dark:bg-gray-900 border-none shadow-lg h-[400px]">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
                         <CardTitle className="text-lg font-semibold dark:text-white">
                             24-Hour Transaction Status Trend (Last 24 Hours)
@@ -199,7 +199,7 @@ export const Charts = () => {
                 </Card>
 
                 {/* Pie Chart Card */}
-                <Card className="bg-white dark:bg-gray-800 border-none shadow-lg h-[400px]">
+                <Card className="bg-white dark:bg-gray-900 border-none shadow-lg h-[400px]">
                     <CardHeader className="flex flex-row items-center justify-between  p-6 pb-2">
                         <CardTitle className="text-lg font-semibold dark:text-white">
                             Transaction Distribution
@@ -244,7 +244,7 @@ export const Charts = () => {
                 </Card>
 
                 {/* Bar Chart Card */}
-                <Card className="bg-white dark:bg-gray-800 border-none shadow-lg h-[400px]">
+                <Card className="bg-white dark:bg-gray-900 border-none shadow-lg h-[400px]">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
                         <CardTitle className="text-lg font-semibold dark:text-white">
                             24-Hour Transaction Status Trend (Last 24 Hours)
@@ -304,7 +304,7 @@ export const Charts = () => {
                 </Card>
 
                 {/* API Performance Line Chart Card */}
-                <Card className="bg-white dark:bg-gray-800 border-none shadow-lg h-[400px]">
+                <Card className="bg-white dark:bg-gray-900 border-none shadow-lg h-[400px]">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
                         <CardTitle className="text-lg font-semibold dark:text-white">
                             API Performance (Last 24 Hours)

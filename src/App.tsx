@@ -16,6 +16,7 @@ import RiskUsers from './pages/Dashboard/RiskManagement/RiskUsers.js';
 import RiskTransaction from './pages/Dashboard/RiskManagement/RiskTransaction.js';
 import FraudAlert from './pages/Dashboard/RiskManagement/FraudAlert.js';
 import RecurringExceptions from './pages/Dashboard/RiskManagement/RecurringExceptions.js';
+import RecommendationBoard from './pages/Dashboard/RiskManagement/RecommendationBoard.js';
 
 const router = createBrowserRouter([
   {
@@ -52,29 +53,33 @@ const router = createBrowserRouter([
       },
       {
         path: "/live-transaction",
-        element: <LiveTransaction/>
+        element: <LiveTransaction />
       },
       {
-        path : "/high-risk-transaction",
-        element : <HighRiskTransaction/>
+        path: "/high-risk-transaction",
+        element: <HighRiskTransaction />
       },
-       {
-        path : "/risk-users",
-        element : <RiskUsers/>
+      {
+        path: "/risk-users",
+        element: <RiskUsers />
       },
-        {
-        path : "/risk-transactions",
-        element : <RiskTransaction/>
+      {
+        path: "/risk-transactions",
+        element: <RiskTransaction />
       },
-         {
-        path : "/fraud-alert",
-        element : <FraudAlert/>
+      {
+        path: "/fraud-alert",
+        element: <FraudAlert />
       },
-          {
-        path : "/recurring-exceptions",
-        element : <RecurringExceptions/>
+      {
+        path: "/recurring-exceptions",
+        element: <RecurringExceptions />
       },
-      
+      {
+        path: "/recommendation-board",
+        element: <RecommendationBoard/>
+      },
+
 
     ]
   }

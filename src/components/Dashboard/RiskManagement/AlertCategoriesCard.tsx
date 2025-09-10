@@ -19,7 +19,7 @@ const AlertCategoriesCard = () => {
             <div className="flex flex-col p-2 lg:flex-row gap-4 sm:gap-6 w-full">
 
                 {/* Alert Categories*/}
-                <div className="flex-1 p-5 space-y-3 sm:space-y-4 shadow-sm bg-white dark:bg-gray-800 rounded-md">
+                <div className="flex-1 p-5 space-y-3 sm:space-y-4 shadow-sm bg-white dark:bg-gray-900 rounded-md">
                     <h3 className="text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-300  border-gray-200 dark:border-gray-700 pb-2">
                         Alert Categories
                     </h3>
@@ -48,7 +48,7 @@ const AlertCategoriesCard = () => {
                 </div>
 
                 {/* Alert Distribution */}
-                <div className="flex-1 space-y-3 dark:bg-gray-800 p-4 rounded-md shadow-sm sm:space-y-4">
+                <div className="flex-1 space-y-3 dark:bg-gray-900 p-4 rounded-md shadow-sm sm:space-y-4">
                     <h3 className="text-base sm:text-lg font-semibold text-gray-600 dark:text-gray-300  border-gray-200 dark:border-gray-700 pb-2">
                         Alert Distribution
                     </h3>
