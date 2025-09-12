@@ -17,6 +17,7 @@ import RiskTransaction from './pages/Dashboard/RiskManagement/RiskTransaction.js
 import FraudAlert from './pages/Dashboard/RiskManagement/FraudAlert.js';
 import RecurringExceptions from './pages/Dashboard/RiskManagement/RecurringExceptions.js';
 import RecommendationBoard from './pages/Dashboard/RiskManagement/RecommendationBoard.js';
+import UnusualUserActivity from './pages/Dashboard/RiskManagement/UnusualUserActivity.js';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/recommendation-board",
         element: <RecommendationBoard/>
+      },
+       {
+        path: "/unusual-activities",
+        element: <UnusualUserActivity/>
       },
 
 

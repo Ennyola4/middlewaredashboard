@@ -1,5 +1,8 @@
 import { Brain } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
+import AiSummaryCard from "../../../components/Dashboard/RiskManagement/AiSummaryCard"
+import RecommendationCards from "../../../components/Dashboard/RiskManagement/RecommendationCards"
+import GeneratedRecommendations from "../../../components/Dashboard/RiskManagement/GeneratedRecommendations"
 
 const RecommendationBoard = () => {
   return (
@@ -11,6 +14,9 @@ const RecommendationBoard = () => {
          AI Recommendation Board
         </h1>
       </div>
+      <AiSummaryCard/>
+      <RecommendationCards/>
+      <GeneratedRecommendations/>
       
     </div>
   )

@@ -2,7 +2,7 @@ import { recurringCard } from "../../../utils"
 
 const RecurringCards = () => {
     return (
-        <div className="w-full bg-white dark:bg-black p-2 sm:p-4 rounded-lg">
+        <div className="w-full bg-white dark:bg-black p-2 sm:p-4 rounded-md">
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="p-4 dark:bg-gray-900 shadow-sm  rounded-md">
                     <div>

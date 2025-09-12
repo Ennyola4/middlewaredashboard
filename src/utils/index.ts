@@ -20,7 +20,9 @@ import {
     Wifi,
     Bell,
     CircleCheckBig,
-    RefreshCcw
+    RefreshCcw,
+    Lightbulb,
+    Star
 } from "lucide-react"
 
 
@@ -1233,5 +1235,158 @@ export const recurringExceptionPattern = [
         button : "Configure",
         buttonTwo : "Whitelist",
         textColor : "text-red-500"
+    },
+]
+
+export const aiSummaryCard = [
+    {
+        title: "Total Recommendations",
+        icon: Lightbulb,
+        value: "45",
+        textColor: "text-blue-300"
+    },
+    {
+        title: "Implemented",
+        icon: CircleCheckBig,
+        value: "28",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Accuracy Rate",
+        icon: Star,
+        value: "89.5%",
+        textColor: "text-yellow-500"
+    },
+    {
+        title: "Avg Impact Score",
+        icon: TrendingUp,
+        value: "23.4%",
+        textColor: "text-blue-500"
+    },
+]
+
+export const recommendationCategoriesCard = [
+    {
+        title : "Risk Management",
+        value : "15 total",
+        total : "Implemented: 9",
+        status : "Pending 4",
+        bar : "40"
+    },
+     {
+        title : "User Experience",
+        value : "12 total",
+        total : "Implemented: 8",
+        status : "Pending: 3",
+         bar : "50"
+    },
+     {
+        title : "Risk Management",
+        value : "10 total",
+        total : "Implemented: 7",
+        status : "Pending: 2",
+         bar : "30"
+    },
+     {
+        title : "Risk Management",
+        value : "8 total",
+        total : "Implemented: 4",
+        status : "Pending: 3",
+         bar : "60"
+    },
+]
+export const generatedRecommendations = [
+    {
+        id : "REC-001",
+        status : [ "HIGH", "Risk Management", "pending"],
+        purpose : "Increase fraud detection threshold for salary transfers",
+        analysis : "ML analysis shows salary transfers over ₦500K are flagged unnecessarily 40% of the time.",
+        high : "High - Reduce false positives by 35%",
+        confidence : "Confidence: 92%",
+        annually : "₦2.3M annually",
+        button : [ "Approve", "Review"],
+        textColor : [ "text-yellow-600", "text-blue-500","text-yellow-600"],
+        bgColor : [ "bg-yellow-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
+    },
+     {
+        id : "REC-002",
+        status : [ "MEDIUM", "User Experience", "implemented"],
+        purpose : "Optimize mobile app authentication flow",
+        analysis : "Users abandon authentication process at step 3. Simplifying can reduce drop-offs.",
+        high : "Medium - Improve login success rate by 15%",
+        confidence : "Confidence: 87%",
+        annually : "₦890K annually",
+        button : [ "Approve", "Review"],
+        textColor : [ "text-blue-600", "text-blue-500", "text-green-600"],
+        bgColor : [ "bg-blue-400/20", "bg-blue-400/20", "bg-green-400/20"]
+       
+    },
+     {
+        id : "REC-003",
+        status : [ "CRITICAL", "Fraud Prevention", "pending"],
+        purpose : "Deploy advanced pattern recognition for POS transactions",
+        analysis : "New ML model can detect card cloning patterns with 95% accuracy.",
+        high : "Very High - Prevent ₦15M+ fraudulent transactions",
+        confidence : "Confidence: 95%",
+        annually : "₦15M+ annually",
+        button : [ "Approve", "Review"],
+        textColor : [ "text-red-500", "text-blue-500", "text-yellow-500"],
+        bgColor : [ "bg-red-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
+    },
+    
+]
+
+export const unusualUserAct = [
+    {
+        title : "Total Transaction",
+        icon : Activity,
+        value : "245,890",
+        textColor : "text-blue-500"
+    },
+     {
+        title : "Flagged Transaction",
+        icon : TriangleAlert,
+        value : "3,456",
+        textColor : "text-red-500"
+    },
+     {
+        title : "Resolved Today",
+        icon : TrendingUp,
+        value : "89",
+        textColor : "text-green-500"
+    },
+     {
+        title : "Avg Resolution Time",
+        icon : Shield,
+        value : "2.3h",
+        textColor : "text-yellow-500"
+    },
+]
+
+export const activityPatternAnalysis = [
+    {
+        title : "Unusual Login Locations",
+        value : "89",
+        bar : "20"
+    },
+    {
+        title : "Spending Pattern Changes",
+        value : "67",
+        bar : "30"
+    },
+    {
+        title : "Multiple Device Access",
+        value : "89",
+        bar : "40"
+    },
+    {
+        title : "Off-hours Activity",
+        value : "78",
+        bar : "20"
+    },
+    {
+        title : "Failed Authentication",
+        value : "54",
+        bar : "10"
     },
 ]
