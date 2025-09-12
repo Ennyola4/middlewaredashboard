@@ -1,4 +1,4 @@
-import { TriangleAlert, UserX } from "lucide-react"
+import {  UserX } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import UserActivitySummaryCard from "../../../components/Dashboard/RiskManagement/UserActivitySummaryCard"
 import APAandResolutionCard from "../../../components/Dashboard/RiskManagement/APAandResolutionCard"
