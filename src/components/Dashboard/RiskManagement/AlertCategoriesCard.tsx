@@ -24,7 +24,7 @@ const AlertCategoriesCard = () => {
                         Alert Categories
                     </h3>
                     {alertCategoriesCard.map((item, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-950 rounded-md p-2 sm:p-4 shadow-sm hover:shadow-md border-l-2 border-gray-400 transition-all duration-300">
+                        <div key={index} className="bg-white dark:bg-gray-950 rounded-md p-3 sm:p-4 shadow-sm hover:shadow-md border-l-2 border-gray-400 transition-all duration-300">
                             <div className="flex justify-between items-start gap-3">
                                 {/* Title and Value */}
                                 <div className="flex-1">
