@@ -2,6 +2,7 @@ import {  UserX } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import UserActivitySummaryCard from "../../../components/Dashboard/RiskManagement/UserActivitySummaryCard"
 import APAandResolutionCard from "../../../components/Dashboard/RiskManagement/APAandResolutionCard"
+import RecentUnusualActivity from "../../../components/Dashboard/RiskManagement/RecentUnusualActivity"
 
 const UnusualUserActivity = () => {
   return (
@@ -15,6 +16,7 @@ const UnusualUserActivity = () => {
       </div>
       <UserActivitySummaryCard/>
       <APAandResolutionCard/>
+      <RecentUnusualActivity/>
     </div>
   )
 }

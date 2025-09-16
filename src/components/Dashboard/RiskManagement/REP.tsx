@@ -30,9 +30,8 @@ const REP = () => {
                                 <span className={`${item.textColor} font-semibold text-[11px] border rounded-md px-2 py-1 `}>
                                     {item.status[1]}
                                 </span>
-
-
                             </div>
+                            
                             <div className="text-sm text-gray-400 dark:text-gray-300">
                                 {item.event}
                             </div>

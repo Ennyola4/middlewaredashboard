@@ -22,7 +22,12 @@ import {
     CircleCheckBig,
     RefreshCcw,
     Lightbulb,
-    Star
+    Star,
+    UserX,
+    Clock4,
+    Eye,
+    MapPin,
+    UserPlus
 } from "lucide-react"
 
 
@@ -1171,7 +1176,7 @@ export const recurringCard = [
         event: "Auto-resolved: 8",
         total: "15 total",
         status: "53%",
-         textColor: "text-blue-500",
+        textColor: "text-blue-500",
         textColorTwo: "text-green-500"
     },
     {
@@ -1179,7 +1184,7 @@ export const recurringCard = [
         event: "Auto-resolved: 14",
         total: "19 total",
         status: "74%",
-         textColor: "text-blue-500",
+        textColor: "text-blue-500",
         textColorTwo: "text-green-500"
     },
     {
@@ -1187,7 +1192,7 @@ export const recurringCard = [
         event: "Auto-resolved: 5",
         total: "19 total",
         status: "42%",
-         textColor: "text-blue-500",
+        textColor: "text-blue-500",
         textColorTwo: "text-green-500"
     },
     {
@@ -1195,7 +1200,7 @@ export const recurringCard = [
         event: "Auto-resolved: 15",
         total: "20 total",
         status: "80%",
-         textColor: "text-blue-500",
+        textColor: "text-blue-500",
         textColorTwo: "text-green-500"
     },
 
@@ -1204,37 +1209,37 @@ export const recurringCard = [
 
 export const recurringExceptionPattern = [
     {
-        id : "RE-001",
-        status : ["Low",  "Whitelisted"],
-        event : "Daily Salary Transfers > ₦500K",
-        frequency : "Daily",
-        occurances : "28",
-        time : "2024-01-15 09:00",
-        button : "Configure",
-        buttonTwo : "Whitelist",
-        textColor : "text-green-500"
+        id: "RE-001",
+        status: ["Low", "Whitelisted"],
+        event: "Daily Salary Transfers > ₦500K",
+        frequency: "Daily",
+        occurances: "28",
+        time: "2024-01-15 09:00",
+        button: "Configure",
+        buttonTwo: "Whitelist",
+        textColor: "text-green-500"
     },
-      {
-        id : "RE-002",
-        status : ["Medium", "Monitoring"],
-        event : "Cross-border transfers to UAE",
-        frequency : "Weekly",
-        occurances : "12",
-        time : "2024-01-14 16:30",
-        button : "Configure",
-        buttonTwo : "Whitelist",
-        textColor : "text-yellow-500"
+    {
+        id: "RE-002",
+        status: ["Medium", "Monitoring"],
+        event: "Cross-border transfers to UAE",
+        frequency: "Weekly",
+        occurances: "12",
+        time: "2024-01-14 16:30",
+        button: "Configure",
+        buttonTwo: "Whitelist",
+        textColor: "text-yellow-500"
     },
-      {
-        id : "RE-003",
-        status : ["High", "Flagged"],
-        event : "Round amount transfers (₦1M)",
-        frequency : "Bi-weekly",
-        occurances : "8",
-        time : "2024-01-15 09:00",
-        button : "Configure",
-        buttonTwo : "Whitelist",
-        textColor : "text-red-500"
+    {
+        id: "RE-003",
+        status: ["High", "Flagged"],
+        event: "Round amount transfers (₦1M)",
+        frequency: "Bi-weekly",
+        occurances: "8",
+        time: "2024-01-15 09:00",
+        button: "Configure",
+        buttonTwo: "Whitelist",
+        textColor: "text-red-500"
     },
 ]
 
@@ -1267,126 +1272,362 @@ export const aiSummaryCard = [
 
 export const recommendationCategoriesCard = [
     {
-        title : "Risk Management",
-        value : "15 total",
-        total : "Implemented: 9",
-        status : "Pending 4",
-        bar : "40"
+        title: "Risk Management",
+        value: "15 total",
+        total: "Implemented: 9",
+        status: "Pending 4",
+        bar: "40"
     },
-     {
-        title : "User Experience",
-        value : "12 total",
-        total : "Implemented: 8",
-        status : "Pending: 3",
-         bar : "50"
+    {
+        title: "User Experience",
+        value: "12 total",
+        total: "Implemented: 8",
+        status: "Pending: 3",
+        bar: "50"
     },
-     {
-        title : "Risk Management",
-        value : "10 total",
-        total : "Implemented: 7",
-        status : "Pending: 2",
-         bar : "30"
+    {
+        title: "Risk Management",
+        value: "10 total",
+        total: "Implemented: 7",
+        status: "Pending: 2",
+        bar: "30"
     },
-     {
-        title : "Risk Management",
-        value : "8 total",
-        total : "Implemented: 4",
-        status : "Pending: 3",
-         bar : "60"
+    {
+        title: "Risk Management",
+        value: "8 total",
+        total: "Implemented: 4",
+        status: "Pending: 3",
+        bar: "60"
     },
 ]
 export const generatedRecommendations = [
     {
-        id : "REC-001",
-        status : [ "HIGH", "Risk Management", "pending"],
-        purpose : "Increase fraud detection threshold for salary transfers",
-        analysis : "ML analysis shows salary transfers over ₦500K are flagged unnecessarily 40% of the time.",
-        high : "High - Reduce false positives by 35%",
-        confidence : "Confidence: 92%",
-        annually : "₦2.3M annually",
-        button : [ "Approve", "Review"],
-        textColor : [ "text-yellow-600", "text-blue-500","text-yellow-600"],
-        bgColor : [ "bg-yellow-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
+        id: "REC-001",
+        status: ["HIGH", "Risk Management", "pending"],
+        purpose: "Increase fraud detection threshold for salary transfers",
+        analysis: "ML analysis shows salary transfers over ₦500K are flagged unnecessarily 40% of the time.",
+        high: "High - Reduce false positives by 35%",
+        confidence: "Confidence: 92%",
+        annually: "₦2.3M annually",
+        button: ["Approve", "Review"],
+        textColor: ["text-yellow-600", "text-blue-500", "text-yellow-600"],
+        bgColor: ["bg-yellow-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
     },
-     {
-        id : "REC-002",
-        status : [ "MEDIUM", "User Experience", "implemented"],
-        purpose : "Optimize mobile app authentication flow",
-        analysis : "Users abandon authentication process at step 3. Simplifying can reduce drop-offs.",
-        high : "Medium - Improve login success rate by 15%",
-        confidence : "Confidence: 87%",
-        annually : "₦890K annually",
-        button : [ "Approve", "Review"],
-        textColor : [ "text-blue-600", "text-blue-500", "text-green-600"],
-        bgColor : [ "bg-blue-400/20", "bg-blue-400/20", "bg-green-400/20"]
-       
+    {
+        id: "REC-002",
+        status: ["MEDIUM", "User Experience", "implemented"],
+        purpose: "Optimize mobile app authentication flow",
+        analysis: "Users abandon authentication process at step 3. Simplifying can reduce drop-offs.",
+        high: "Medium - Improve login success rate by 15%",
+        confidence: "Confidence: 87%",
+        annually: "₦890K annually",
+        button: ["Approve", "Review"],
+        textColor: ["text-blue-600", "text-blue-500", "text-green-600"],
+        bgColor: ["bg-blue-400/20", "bg-blue-400/20", "bg-green-400/20"]
+
     },
-     {
-        id : "REC-003",
-        status : [ "CRITICAL", "Fraud Prevention", "pending"],
-        purpose : "Deploy advanced pattern recognition for POS transactions",
-        analysis : "New ML model can detect card cloning patterns with 95% accuracy.",
-        high : "Very High - Prevent ₦15M+ fraudulent transactions",
-        confidence : "Confidence: 95%",
-        annually : "₦15M+ annually",
-        button : [ "Approve", "Review"],
-        textColor : [ "text-red-500", "text-blue-500", "text-yellow-500"],
-        bgColor : [ "bg-red-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
+    {
+        id: "REC-003",
+        status: ["CRITICAL", "Fraud Prevention", "pending"],
+        purpose: "Deploy advanced pattern recognition for POS transactions",
+        analysis: "New ML model can detect card cloning patterns with 95% accuracy.",
+        high: "Very High - Prevent ₦15M+ fraudulent transactions",
+        confidence: "Confidence: 95%",
+        annually: "₦15M+ annually",
+        button: ["Approve", "Review"],
+        textColor: ["text-red-500", "text-blue-500", "text-yellow-500"],
+        bgColor: ["bg-red-400/20", "bg-blue-400/20", "bg-yellow-400/20"]
     },
-    
+
 ]
 
 export const unusualUserAct = [
     {
-        title : "Total Transaction",
-        icon : Activity,
-        value : "245,890",
-        textColor : "text-blue-500"
+        title: "Total Transaction",
+        icon: TriangleAlert,
+        value: "245,890",
+        textColor: "text-orange-500"
     },
-     {
-        title : "Flagged Transaction",
-        icon : TriangleAlert,
-        value : "3,456",
-        textColor : "text-red-500"
+    {
+        title: "Flagged Transaction",
+        icon: UserX,
+        value: "3,456",
+        textColor: "text-red-500"
     },
-     {
-        title : "Resolved Today",
-        icon : TrendingUp,
-        value : "89",
-        textColor : "text-green-500"
+    {
+        title: "Resolved Today",
+        icon: Clock4,
+        value: "89",
+        textColor: "text-blue-500"
     },
-     {
-        title : "Avg Resolution Time",
-        icon : Shield,
-        value : "2.3h",
-        textColor : "text-yellow-500"
+    {
+        title: "Avg Resolution Time",
+        icon: Eye,
+        value: "2.3h",
+        textColor: "text-green-500"
     },
 ]
 
 export const activityPatternAnalysis = [
     {
-        title : "Unusual Login Locations",
-        value : "89",
-        bar : "20"
+        title: "Unusual Login Locations",
+        value: "89",
+        bar: "20"
     },
     {
-        title : "Spending Pattern Changes",
-        value : "67",
-        bar : "30"
+        title: "Spending Pattern Changes",
+        value: "67",
+        bar: "30"
     },
     {
-        title : "Multiple Device Access",
-        value : "89",
-        bar : "40"
+        title: "Multiple Device Access",
+        value: "89",
+        bar: "40"
     },
     {
-        title : "Off-hours Activity",
-        value : "78",
-        bar : "20"
+        title: "Off-hours Activity",
+        value: "78",
+        bar: "20"
     },
     {
-        title : "Failed Authentication",
-        value : "54",
-        bar : "10"
+        title: "Failed Authentication",
+        value: "54",
+        bar: "10"
+    },
+]
+
+export const resolutionStatus = [
+    {
+        title: "Resolved",
+        value: "198",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Under Review",
+        value: "198",
+        textColor: "text-yellow-500"
+    },
+    {
+        title: "Pending",
+        value: "198",
+        textColor: "text-blue-500"
+    },
+    {
+        title: "High Priority",
+        value: "198",
+        textColor: "text-red-500"
+    },
+]
+
+export const recentUnusualActivity = [
+    {
+        id: "UA-001",
+        status: ["HIGH", "INVESTIGATING"],
+        userName: "john.doe (USR-8901)",
+        narration: "Multiple login attempts from different countries",
+        location: "Lagos, Nigeria → London, UK",
+        time: "2024-01-15 14:30",
+        icon: [MapPin, Clock4],
+        textColor: "text-blue-500",
+        bgColor: "bg-blue-400/10"
+    },
+    {
+        id: "UA-002",
+        status: ["MEDIUM", "PENDING"],
+        userName: "Enitan.Ajayi (USR-8902)",
+        narration: "Unusual spending pattern - 500% increase",
+        location: "Abuja, Nigeria",
+        time: "2024-01-15 13:45",
+        icon: [MapPin, Clock4],
+        textColor: "text-yellow-500",
+        bgColor: "bg-yellow-400/10"
+    },
+    {
+        id: "UA-003",
+        status: ["LOW", "RESOLVED"],
+        userName: "Kolade.Ajayi (USR-8903)",
+        narration: "Login from previously unknown device",
+        location: "Port Harcourt, Nigeria",
+        time: "2024-01-15 12:20",
+        icon: [MapPin, Clock4],
+        textColor: "text-green-500",
+        bgColor: "bg-green-400/10"
+    },
+    {
+        id: "UA-004",
+        status: ["HIGH", "BLOCKED"],
+        userName: "Alex.Isak (USR-8904)",
+        narration: "Multiple failed password attempts",
+        location: "Kano, Nigeria",
+        time: "2024-01-15 11:15",
+        icon: [MapPin, Clock4],
+        textColor: "text-red-500",
+        bgColor: "bg-red-400/10"
+    },
+]
+
+export const unusualUserOnboardingCard = [
+    {
+        title: "Total Onboarded",
+        icon: UserPlus,
+        value: "456",
+        textColor: "text-blue-300"
+    },
+    {
+        title: "Flagged Users",
+        icon: TriangleAlert,
+        value: "23",
+        textColor: "text-yellow-300"
+    },
+    {
+        title: "Pending Review",
+        icon: Eye,
+        value: "8",
+        textColor: "text-purple-500"
+    },
+    {
+        title: "Blocked Users",
+        icon: Shield,
+        value: "4",
+        textColor: "text-orange-500"
+    },
+]
+
+export const unusualPatternDetected = [
+    {
+        title : "Rapid Completion (<3 min)",
+        value : "12",
+        bar : "50%",
+        textColor : "text-yellow-500",
+
+    },
+     {
+        title : "VPN/Proxy Usage",
+        value : "8",
+        bar : "40%",
+        textColor : "text-yellow-500"
+    },
+     {
+        title : "Duplicate Information",
+        value : "6",
+        bar : "30%",
+        textColor : "text-yellow-500"
+    },
+     {
+        title : "High Initial Deposit",
+        value : "5",
+        bar : "20%",
+        textColor : "text-yellow-500"
+    },
+     {
+        title : "Off-hours Registration",
+        value : "4",
+        bar : "15%",
+        textColor : "text-yellow-500"
+    },
+]
+
+export const hourlyOnboardingActivity = [
+    {
+        time : "00:00",
+        title : ["Normal", "Flagged"],
+        value : [ "2", "3"],
+        textColor : ["text-green-500", "text-red-400"]
+    },
+    {
+        time : "06:00",
+        title : ["Normal", "Flagged"],
+        value : [ "15", "1"],
+        textColor : ["text-green-500", "text-red-400"]
+    },
+    {
+        time : "12:00",
+        title : ["Normal", "Flagged"],
+        value : [ "54", "2"],
+        textColor : ["text-green-500", "text-red-400"]
+    },
+    {
+        time : "18:00",
+        title : ["Normal", "Flagged"],
+        value : [ "38", "4"],
+        textColor : ["text-green-500", "text-red-400"]
+    },
+    {
+        time : "22:00",
+        title : ["Normal", "Flagged"],
+        value : [ "8", "6"],
+        textColor : ["text-green-500", "text-red-400"]
+    },
+]
+
+export const flaggedUserOnboardings = [
+   
+    {
+        id : "UU0-001",
+        riskScore : [ "85%", "FLAGGED"],
+        name : "Oluwaseyifunmi Adebayo",
+        email : "seyi.ad****@gmail.com",
+        phone : "+234-81****-6508",
+        riskFlags : [ "Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
+        time : "2024-01-15 14:30",
+        duration : "Completed in 2 minutes",
+        location : "Lagos, Nigeria",
+        device : "iPhone 14 Pro",
+        button : ["Review", "Approve", "Block"],
+        textColor : "text-orange-600",
+        bgColor : "bg-orange-500/20",
+        textColorTwo : "text-yellow-500",
+        bgColorTwo : "bg-yellow-400/10"
+    },
+     {
+        id : "UU0-002",
+        riskScore : [ "92%", "BLOCKED"],
+        name : "Allison Becker",
+        email : "allison.bec****@gmail.com",
+        phone : "+234-70****-7541",
+        riskFlags : [ "Duplicate Documents", "Suspicious Email", "Multiple Attempts"],
+        time : "2024-01-15 13:15",
+        duration : "Completed in 45 seconds",
+        location : "Abuja, Nigeria",
+        device : "Samsung Galaxy S23",
+        button : ["Review", "Approve", "Block"],
+        textColor : "text-orange-600",
+        bgColor : "bg-orange-500/20",
+        textColorTwo : "text-yellow-500",
+        bgColorTwo : "bg-yellow-400/10"
+    },
+     {
+        id : "UU0-003",
+        riskScore : [ "78%", "UNDER REVIEW"],
+        name : "Luiz Ali",
+        email : "luis.ali****@gmail.com",
+        phone : "+234-80****-8778",
+        riskFlags : [ "Unusual Pattern", "Off-hours Registration", "Multiple Attempts"],
+        time : "2024-01-15 12:45",
+        duration : "Completed in 3 minutes",
+        location : "Port Harcourt, Nigeria",
+        device : "Xiaomi Redmi Note 12",
+        button : ["Review", "Approve", "Block"],
+        textColor : "text-orange-600",
+        bgColor : "bg-orange-500/20",
+        textColorTwo : "text-yellow-500",
+        bgColorTwo : "bg-yellow-400/10"
+    },
+     {
+        id : "UU0-004",
+        riskScore : [ "85%", "FLAGGED"],
+        name : "Syid Ali",
+        email : "john.s****@gmail.com",
+        phone : "+234-80****-4567",
+        riskFlags : [ "Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
+        time : "2024-01-15 14:30",
+        duration : "Completed in 2 minutes",
+        location : "Lagos, Nigeria",
+        device : "iPhone 14 Pro",
+        button : ["Review", "Approve", "Block"],
+        textColor : "text-orange-600",
+        bgColor : "bg-orange-500/20",
+        textColorTwo : "text-yellow-500",
+        bgColorTwo : "bg-yellow-400/10"
     },
 ]

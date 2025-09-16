@@ -77,7 +77,7 @@ export const Sidebar = () => {
         { title: "Recurring Execptions", href: "/recurring-exceptions", icon: <RefreshCcw className="w-5 h-5" /> },
         { title: "Recommendation Board", href: "/recommendation-board", icon: <Brain className="w-5 h-5" /> },
         { title: "Unusual User Activity", href: "/unusual-activities", icon: <UserX className="w-5 h-5" /> },
-        { title: "Unusual User Onboarding", href: "/risk/unusual-onboarding", icon: <UserPlus className="w-5 h-5" /> },
+        { title: "Unusual User Onboarding", href: "/unusual-onboarding", icon: <UserPlus className="w-5 h-5" /> },
       ]
     },
     {

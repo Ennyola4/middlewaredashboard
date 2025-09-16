@@ -18,6 +18,7 @@ import FraudAlert from './pages/Dashboard/RiskManagement/FraudAlert.js';
 import RecurringExceptions from './pages/Dashboard/RiskManagement/RecurringExceptions.js';
 import RecommendationBoard from './pages/Dashboard/RiskManagement/RecommendationBoard.js';
 import UnusualUserActivity from './pages/Dashboard/RiskManagement/UnusualUserActivity.js';
+import UnusualUserOnboarding from './pages/Dashboard/RiskManagement/UnusualUserOnboarding.js';
 
 const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
        {
         path: "/unusual-activities",
         element: <UnusualUserActivity/>
+      },
+       {
+        path: "/unusual-onboarding",
+        element: <UnusualUserOnboarding/>
       },
 
 

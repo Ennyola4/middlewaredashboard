@@ -9,7 +9,7 @@ const UserActivitySummaryCard = () => {
                key={index}
                className="flex items-center p-4 sm:p-5 bg-white dark:bg-gray-900 rounded-lg shadow hover:shadow-md transition-shadow"
              >
-               <div className="p-2">
+               <div className="p-3 shadow-sm rounded-lg">
                  {<item.icon className={`${item.textColor}`} size={30} />}
                </div>
                <div className="ml-auto text-right">
