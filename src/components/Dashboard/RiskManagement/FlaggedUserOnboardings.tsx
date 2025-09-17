@@ -1,19 +1,34 @@
-import { Clock4,  MapPin, NotebookPen, Shield, Smartphone } from "lucide-react"
+import { Clock4, MapPin, NotebookPen, Shield, Smartphone } from "lucide-react"
 import { flaggedUserOnboardings } from "../../../utils"
 
 const FlaggedUserOnboardings = () => {
     return (
         <div className="m-3 sm:m-4 md:m-5">
             <div className="shadow-sm rounded-md p-3 sm:p-4 md:p-5">
-                <div className="flex flex-wrap gap-2 sm:gap-3 items-center w-full mb-4 sm:mb-5">
-                    <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-500/10 hover:bg-blue-500 hover:text-white dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-blue-500 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium">
-                        <NotebookPen className="h-4 w-4" />
-                        <span className="sm:inline"> Export Report</span>
-                    </button>
-                    <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-500/10 hover:bg-blue-500 hover:text-white dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-blue-500 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium">
-                        <Shield className="h-4 w-4" />
-                        <span className="sm:inline">Bulk Review</span>
-                    </button>
+                <div className="flex mb-3 flex-col xs:flex-row xs:items-center xs:justify-between gap-3 p-3 ">
+                    {/* Header Title */}
+                    <h1 className="text-lg sm:text-xl mb-5 font-semibold text-gray-800 dark:text-white">
+                       Flagged User Onboardings
+                    </h1>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap xs:flex-nowrap gap-2 sm:gap-3">
+
+                        {/* Search Button */}
+                        <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 rounded-lg transition-colors duration-200 text-sm font-medium">
+                            <NotebookPen className="h-4 w-4" />
+                            <span className=" sm:inline">Export Report</span>
+                        </button>
+
+                        {/* Filter Button */}
+                        <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-800/40 text-blue-700 dark:text-blue-300 rounded-lg transition-colors duration-200 text-sm font-medium">
+                            <Shield className="h-4 w-4" />
+                            <span className=" sm:inline">Bulk Review</span>
+                        </button>
+
+                        
+
+                    </div>
                 </div>
                 {flaggedUserOnboardings.map((user, index) => (
                     <div key={index} className="flex flex-col lg:flex-row gap-3 shadow-sm rounded-md mt-4 sm:mt-5 dark:bg-gray-900 p-3 sm:p-4">

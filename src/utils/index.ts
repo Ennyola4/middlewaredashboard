@@ -27,7 +27,13 @@ import {
     Clock4,
     Eye,
     MapPin,
-    UserPlus
+    UserPlus,
+    UsersRound,
+    UserCheck,
+    Plus,
+    DatabaseZap,
+    ChartColumnDecreasing,
+    Calendar
 } from "lucide-react"
 
 
@@ -1629,5 +1635,189 @@ export const flaggedUserOnboardings = [
         bgColor : "bg-orange-500/20",
         textColorTwo : "text-yellow-500",
         bgColorTwo : "bg-yellow-400/10"
+    },
+]
+
+export const customerManagementSummaryCard = [
+    {
+        title: "Total customers",
+        icon: UsersRound,
+        value: "156,789",
+        textColor: "text-green-300"
+    },
+    {
+        title: "Active Customers",
+        icon: UserCheck,
+        value: "134,567",
+        textColor: "text-green-300"
+    },
+    {
+        title: "New This Month",
+        icon: Plus,
+        value: "2,345",
+        textColor: "text-blue-500"
+    },
+    {
+        title: "KYC Pending",
+        icon: DatabaseZap,
+        value: "234",
+        textColor: "text-orange-500"
+    },
+]
+
+export const accountTypeDistribution = [
+    {
+        title : "Standard",
+        value : "89,567",
+        performance : "(57.1%)",
+        bar : "70%"
+    },
+     {
+        title : "Premium",
+        value : "34,567",
+        performance : "(22%)",
+        bar : "40%"
+    },
+     {
+        title : "Business",
+        value : "23,456",
+        performance : "(15%)",
+        bar : "30%"
+    },
+     {
+        title : "Coporate",
+        value : "9,199",
+        performance : "(5.9%)",
+        bar : "10%"
+    },
+]
+
+export const customerStatusOverview = [
+    {
+        value : "134,567",
+        status : "Active",
+        textColor : "text-green-500",
+        bgColor : "bg-green-400/10"
+    },
+    {
+        value : "567",
+        status : "Suspended",
+        textColor : "text-red-500",
+        bgColor : "bg-red-400/10"
+    },
+    {
+        value : "13",
+        status : "KYC Pending",
+        textColor : "text-yellow-500",
+        bgColor : "bg-yellow-400/10"
+    },
+    {
+        value : "1234",
+        status : "High Value",
+        textColor : "text-blue-500",
+        bgColor : "bg-blue-400/10", 
+    },
+]
+
+export const customerDatabase = [
+    {
+      id : "CUST-001",
+      status : [ "Active", "Premium", "Low Risk"],
+      name : "Adebayo Johnson",
+      email : "adebayo.johnson@email.com ",
+      phone : " +234-801-234-5678",
+      balance : " ₦15,600,000",
+      kysStatus : "Verified",
+      time : " 2024-01-15 14:30",
+      textColor : [ "text-green-500", "text-blue-500", "text-green-500"],
+      bgColor : [ "bg-green-500/10", "bg-blue-500/10", "bg-green-500/10"]  
+    },
+      {
+      id : "CUST-002",
+      status : [ "Active", "Business", "Medium Risk"],
+      name : "Adebayo Seyifunmi",
+      email : "adebayo.seyifunmi@email.com ",
+      phone : " +234-911-344-5118",
+      balance : " ₦45,600,000",
+      kysStatus : "Pending",
+      time : "2024-01-15 12:15",
+      textColor : [ "text-green-500", "text-blue-500", "text-yellow-400"],
+      bgColor : [ "bg-green-500/10", "bg-blue-500/10", "bg-yellow-500/10"]  
+    },
+      {
+      id : "CUST-003",
+      status : [ "Suspended", "Standard", "High Risk"],
+      name : "Adebayo Kafaya",
+      email : "adebayo.Kafaya@email.com ",
+      phone : " +234-701-321-6547",
+      balance : " ₦50,600,000",
+      kysStatus : "Verified",
+      time : "2024-01-10 09:45",
+      textColor : [ "text-red-500", "text-blue-500", "text-red-400"],
+      bgColor : [ "bg-red-500/10", "bg-blue-500/10", "bg-red-500/10"]
+    },
+]
+export const transactionReportCard = [
+     {
+        title: "Total Transactions",
+        icon: ChartColumnDecreasing,
+        value: "2,456,789",
+        textColor: "text-purple-500"
+    },
+    {
+        title: "Total Volume",
+        icon: TrendingUp,
+        value: "₦89.5B",
+        textColor: "text-green-300"
+    },
+    {
+        title: "Avg Transaction",
+        icon: CircleCheckBig,
+        value: "₦36,400",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Monthly Growth",
+        icon: Calendar,
+        value: "+18.7%",
+        textColor: "text-orange-500"
+    },
+]
+
+export const transactionChannels = [
+    {
+        title : "Mobile Banking",
+        value : "892,345",
+        performance : "(36.3%)",
+        volume : "₦23.4B",
+        bar : "40%"
+    },
+     {
+        title : "Internet Banking",
+        value : "567,890",
+        performance : "(23.1%)",
+        volume : "₦18.9B",
+        bar : "30%"
+    },
+     {
+        title : "POS Terminals",
+        value : "445,632",
+        performance : "(18.1%)",
+        volume : "₦15.6B",
+        bar : "20%"
+    },
+     {
+        title : "ATM",
+        value : "334,567",
+        performance : "(13.6%)",
+        volume : "₦12.2B",
+        bar : "10%"
+    },
+     {
+        title : "Branch",
+        value : "216,355",
+        performance : "(8.9%)",
+        volume : "₦19.4B",
+        bar : "5%"
     },
 ]

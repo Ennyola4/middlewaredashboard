@@ -84,8 +84,8 @@ export const Sidebar = () => {
       title: "Management",
       icon: <BarChart2 className="w-5 h-5" />,
       links: [
-        { title: "Customer Management", href: "/analytics/traffic", icon: <UserRoundCheck className="w-5 h-5" /> },
-        { title: "Transaction Report", href: "/management/transaction-report", icon: <ClipboardMinus className="w-5 h-5" /> },
+        { title: "Customer Management", href: "/customer-management", icon: <UserRoundCheck className="w-5 h-5" /> },
+        { title: "Transaction Report", href: "/transaction-report", icon: <ClipboardMinus className="w-5 h-5" /> },
         { title: "Third Party Integrations", href: "/management/integrations", icon: <Globe className="w-5 h-5" /> }
       ]
     },

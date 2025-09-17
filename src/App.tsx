@@ -19,6 +19,8 @@ import RecurringExceptions from './pages/Dashboard/RiskManagement/RecurringExcep
 import RecommendationBoard from './pages/Dashboard/RiskManagement/RecommendationBoard.js';
 import UnusualUserActivity from './pages/Dashboard/RiskManagement/UnusualUserActivity.js';
 import UnusualUserOnboarding from './pages/Dashboard/RiskManagement/UnusualUserOnboarding.js';
+import CustomerManagement from './pages/Dashboard/Management/CustomerManagement.js';
+import TransactionReport from './pages/Dashboard/Management/TransactionReport.js';
 
 const router = createBrowserRouter([
   {
@@ -89,8 +91,14 @@ const router = createBrowserRouter([
         path: "/unusual-onboarding",
         element: <UnusualUserOnboarding/>
       },
-
-
+       {
+        path: "/customer-management",
+        element: <CustomerManagement/>
+      },
+       {
+        path: "/transaction-report",
+        element: <TransactionReport/>
+      },
     ]
   }
 ])
