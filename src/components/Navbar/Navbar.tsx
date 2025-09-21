@@ -4,11 +4,11 @@ import { useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
-    const location = useLocation();
-  
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]); 
+  }, [location.pathname]);
 
   // Update time every second
   useEffect(() => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-7 ">
+    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-5 ">
       <div className="flex  sm:flex-row items-start sm:items-center justify-between gap-4">
         {/* Left side - Title, status, and clock */}
         <div className="flex flex-col xs:flex-row items-start xs:items-center gap-2 sm:gap-4 w-full sm:w-auto">
@@ -112,8 +112,8 @@ const Navbar = () => {
             </span>
           </button>
         </div>
-      </div> 
-      
+      </div>
+
     </div>
   )
 }

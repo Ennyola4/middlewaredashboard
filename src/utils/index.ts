@@ -1501,140 +1501,140 @@ export const unusualUserOnboardingCard = [
 
 export const unusualPatternDetected = [
     {
-        title : "Rapid Completion (<3 min)",
-        value : "12",
-        bar : "50%",
-        textColor : "text-yellow-500",
+        title: "Rapid Completion (<3 min)",
+        value: "12",
+        bar: "50%",
+        textColor: "text-yellow-500",
 
     },
-     {
-        title : "VPN/Proxy Usage",
-        value : "8",
-        bar : "40%",
-        textColor : "text-yellow-500"
+    {
+        title: "VPN/Proxy Usage",
+        value: "8",
+        bar: "40%",
+        textColor: "text-yellow-500"
     },
-     {
-        title : "Duplicate Information",
-        value : "6",
-        bar : "30%",
-        textColor : "text-yellow-500"
+    {
+        title: "Duplicate Information",
+        value: "6",
+        bar: "30%",
+        textColor: "text-yellow-500"
     },
-     {
-        title : "High Initial Deposit",
-        value : "5",
-        bar : "20%",
-        textColor : "text-yellow-500"
+    {
+        title: "High Initial Deposit",
+        value: "5",
+        bar: "20%",
+        textColor: "text-yellow-500"
     },
-     {
-        title : "Off-hours Registration",
-        value : "4",
-        bar : "15%",
-        textColor : "text-yellow-500"
+    {
+        title: "Off-hours Registration",
+        value: "4",
+        bar: "15%",
+        textColor: "text-yellow-500"
     },
 ]
 
 export const hourlyOnboardingActivity = [
     {
-        time : "00:00",
-        title : ["Normal", "Flagged"],
-        value : [ "2", "3"],
-        textColor : ["text-green-500", "text-red-400"]
+        time: "00:00",
+        title: ["Normal", "Flagged"],
+        value: ["2", "3"],
+        textColor: ["text-green-500", "text-red-400"]
     },
     {
-        time : "06:00",
-        title : ["Normal", "Flagged"],
-        value : [ "15", "1"],
-        textColor : ["text-green-500", "text-red-400"]
+        time: "06:00",
+        title: ["Normal", "Flagged"],
+        value: ["15", "1"],
+        textColor: ["text-green-500", "text-red-400"]
     },
     {
-        time : "12:00",
-        title : ["Normal", "Flagged"],
-        value : [ "54", "2"],
-        textColor : ["text-green-500", "text-red-400"]
+        time: "12:00",
+        title: ["Normal", "Flagged"],
+        value: ["54", "2"],
+        textColor: ["text-green-500", "text-red-400"]
     },
     {
-        time : "18:00",
-        title : ["Normal", "Flagged"],
-        value : [ "38", "4"],
-        textColor : ["text-green-500", "text-red-400"]
+        time: "18:00",
+        title: ["Normal", "Flagged"],
+        value: ["38", "4"],
+        textColor: ["text-green-500", "text-red-400"]
     },
     {
-        time : "22:00",
-        title : ["Normal", "Flagged"],
-        value : [ "8", "6"],
-        textColor : ["text-green-500", "text-red-400"]
+        time: "22:00",
+        title: ["Normal", "Flagged"],
+        value: ["8", "6"],
+        textColor: ["text-green-500", "text-red-400"]
     },
 ]
 
 export const flaggedUserOnboardings = [
-   
+
     {
-        id : "UU0-001",
-        riskScore : [ "85%", "FLAGGED"],
-        name : "Oluwaseyifunmi Adebayo",
-        email : "seyi.ad****@gmail.com",
-        phone : "+234-81****-6508",
-        riskFlags : [ "Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
-        time : "2024-01-15 14:30",
-        duration : "Completed in 2 minutes",
-        location : "Lagos, Nigeria",
-        device : "iPhone 14 Pro",
-        button : ["Review", "Approve", "Block"],
-        textColor : "text-orange-600",
-        bgColor : "bg-orange-500/20",
-        textColorTwo : "text-yellow-500",
-        bgColorTwo : "bg-yellow-400/10"
+        id: "UU0-001",
+        riskScore: ["85%", "FLAGGED"],
+        name: "Oluwaseyifunmi Adebayo",
+        email: "seyi.ad****@gmail.com",
+        phone: "+234-81****-6508",
+        riskFlags: ["Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
+        time: "2024-01-15 14:30",
+        duration: "Completed in 2 minutes",
+        location: "Lagos, Nigeria",
+        device: "iPhone 14 Pro",
+        button: ["Review", "Approve", "Block"],
+        textColor: "text-orange-600",
+        bgColor: "bg-orange-500/20",
+        textColorTwo: "text-yellow-500",
+        bgColorTwo: "bg-yellow-400/10"
     },
-     {
-        id : "UU0-002",
-        riskScore : [ "92%", "BLOCKED"],
-        name : "Allison Becker",
-        email : "allison.bec****@gmail.com",
-        phone : "+234-70****-7541",
-        riskFlags : [ "Duplicate Documents", "Suspicious Email", "Multiple Attempts"],
-        time : "2024-01-15 13:15",
-        duration : "Completed in 45 seconds",
-        location : "Abuja, Nigeria",
-        device : "Samsung Galaxy S23",
-        button : ["Review", "Approve", "Block"],
-        textColor : "text-orange-600",
-        bgColor : "bg-orange-500/20",
-        textColorTwo : "text-yellow-500",
-        bgColorTwo : "bg-yellow-400/10"
+    {
+        id: "UU0-002",
+        riskScore: ["92%", "BLOCKED"],
+        name: "Allison Becker",
+        email: "allison.bec****@gmail.com",
+        phone: "+234-70****-7541",
+        riskFlags: ["Duplicate Documents", "Suspicious Email", "Multiple Attempts"],
+        time: "2024-01-15 13:15",
+        duration: "Completed in 45 seconds",
+        location: "Abuja, Nigeria",
+        device: "Samsung Galaxy S23",
+        button: ["Review", "Approve", "Block"],
+        textColor: "text-orange-600",
+        bgColor: "bg-orange-500/20",
+        textColorTwo: "text-yellow-500",
+        bgColorTwo: "bg-yellow-400/10"
     },
-     {
-        id : "UU0-003",
-        riskScore : [ "78%", "UNDER REVIEW"],
-        name : "Luiz Ali",
-        email : "luis.ali****@gmail.com",
-        phone : "+234-80****-8778",
-        riskFlags : [ "Unusual Pattern", "Off-hours Registration", "Multiple Attempts"],
-        time : "2024-01-15 12:45",
-        duration : "Completed in 3 minutes",
-        location : "Port Harcourt, Nigeria",
-        device : "Xiaomi Redmi Note 12",
-        button : ["Review", "Approve", "Block"],
-        textColor : "text-orange-600",
-        bgColor : "bg-orange-500/20",
-        textColorTwo : "text-yellow-500",
-        bgColorTwo : "bg-yellow-400/10"
+    {
+        id: "UU0-003",
+        riskScore: ["78%", "UNDER REVIEW"],
+        name: "Luiz Ali",
+        email: "luis.ali****@gmail.com",
+        phone: "+234-80****-8778",
+        riskFlags: ["Unusual Pattern", "Off-hours Registration", "Multiple Attempts"],
+        time: "2024-01-15 12:45",
+        duration: "Completed in 3 minutes",
+        location: "Port Harcourt, Nigeria",
+        device: "Xiaomi Redmi Note 12",
+        button: ["Review", "Approve", "Block"],
+        textColor: "text-orange-600",
+        bgColor: "bg-orange-500/20",
+        textColorTwo: "text-yellow-500",
+        bgColorTwo: "bg-yellow-400/10"
     },
-     {
-        id : "UU0-004",
-        riskScore : [ "85%", "FLAGGED"],
-        name : "Syid Ali",
-        email : "john.s****@gmail.com",
-        phone : "+234-80****-4567",
-        riskFlags : [ "Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
-        time : "2024-01-15 14:30",
-        duration : "Completed in 2 minutes",
-        location : "Lagos, Nigeria",
-        device : "iPhone 14 Pro",
-        button : ["Review", "Approve", "Block"],
-        textColor : "text-orange-600",
-        bgColor : "bg-orange-500/20",
-        textColorTwo : "text-yellow-500",
-        bgColorTwo : "bg-yellow-400/10"
+    {
+        id: "UU0-004",
+        riskScore: ["85%", "FLAGGED"],
+        name: "Syid Ali",
+        email: "john.s****@gmail.com",
+        phone: "+234-80****-4567",
+        riskFlags: ["Rapid Completion", "VPN Usage", "High-Value Initial Deposit"],
+        time: "2024-01-15 14:30",
+        duration: "Completed in 2 minutes",
+        location: "Lagos, Nigeria",
+        device: "iPhone 14 Pro",
+        button: ["Review", "Approve", "Block"],
+        textColor: "text-orange-600",
+        bgColor: "bg-orange-500/20",
+        textColorTwo: "text-yellow-500",
+        bgColorTwo: "bg-yellow-400/10"
     },
 ]
 
@@ -1667,98 +1667,98 @@ export const customerManagementSummaryCard = [
 
 export const accountTypeDistribution = [
     {
-        title : "Standard",
-        value : "89,567",
-        performance : "(57.1%)",
-        bar : "70%"
+        title: "Standard",
+        value: "89,567",
+        performance: "(57.1%)",
+        bar: "70%"
     },
-     {
-        title : "Premium",
-        value : "34,567",
-        performance : "(22%)",
-        bar : "40%"
+    {
+        title: "Premium",
+        value: "34,567",
+        performance: "(22%)",
+        bar: "40%"
     },
-     {
-        title : "Business",
-        value : "23,456",
-        performance : "(15%)",
-        bar : "30%"
+    {
+        title: "Business",
+        value: "23,456",
+        performance: "(15%)",
+        bar: "30%"
     },
-     {
-        title : "Coporate",
-        value : "9,199",
-        performance : "(5.9%)",
-        bar : "10%"
+    {
+        title: "Coporate",
+        value: "9,199",
+        performance: "(5.9%)",
+        bar: "10%"
     },
 ]
 
 export const customerStatusOverview = [
     {
-        value : "134,567",
-        status : "Active",
-        textColor : "text-green-500",
-        bgColor : "bg-green-400/10"
+        value: "134,567",
+        status: "Active",
+        textColor: "text-green-500",
+        bgColor: "bg-green-400/10"
     },
     {
-        value : "567",
-        status : "Suspended",
-        textColor : "text-red-500",
-        bgColor : "bg-red-400/10"
+        value: "567",
+        status: "Suspended",
+        textColor: "text-red-500",
+        bgColor: "bg-red-400/10"
     },
     {
-        value : "13",
-        status : "KYC Pending",
-        textColor : "text-yellow-500",
-        bgColor : "bg-yellow-400/10"
+        value: "13",
+        status: "KYC Pending",
+        textColor: "text-yellow-500",
+        bgColor: "bg-yellow-400/10"
     },
     {
-        value : "1234",
-        status : "High Value",
-        textColor : "text-blue-500",
-        bgColor : "bg-blue-400/10", 
+        value: "1234",
+        status: "High Value",
+        textColor: "text-blue-500",
+        bgColor: "bg-blue-400/10",
     },
 ]
 
 export const customerDatabase = [
     {
-      id : "CUST-001",
-      status : [ "Active", "Premium", "Low Risk"],
-      name : "Adebayo Johnson",
-      email : "adebayo.johnson@email.com ",
-      phone : " +234-801-234-5678",
-      balance : " ₦15,600,000",
-      kysStatus : "Verified",
-      time : " 2024-01-15 14:30",
-      textColor : [ "text-green-500", "text-blue-500", "text-green-500"],
-      bgColor : [ "bg-green-500/10", "bg-blue-500/10", "bg-green-500/10"]  
+        id: "CUST-001",
+        status: ["Active", "Premium", "Low Risk"],
+        name: "Adebayo Johnson",
+        email: "adebayo.johnson@email.com ",
+        phone: " +234-801-234-5678",
+        balance: " ₦15,600,000",
+        kysStatus: "Verified",
+        time: " 2024-01-15 14:30",
+        textColor: ["text-green-500", "text-blue-500", "text-green-500"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10", "bg-green-500/10"]
     },
-      {
-      id : "CUST-002",
-      status : [ "Active", "Business", "Medium Risk"],
-      name : "Adebayo Seyifunmi",
-      email : "adebayo.seyifunmi@email.com ",
-      phone : " +234-911-344-5118",
-      balance : " ₦45,600,000",
-      kysStatus : "Pending",
-      time : "2024-01-15 12:15",
-      textColor : [ "text-green-500", "text-blue-500", "text-yellow-400"],
-      bgColor : [ "bg-green-500/10", "bg-blue-500/10", "bg-yellow-500/10"]  
+    {
+        id: "CUST-002",
+        status: ["Active", "Business", "Medium Risk"],
+        name: "Adebayo Seyifunmi",
+        email: "adebayo.seyifunmi@email.com ",
+        phone: " +234-911-344-5118",
+        balance: " ₦45,600,000",
+        kysStatus: "Pending",
+        time: "2024-01-15 12:15",
+        textColor: ["text-green-500", "text-blue-500", "text-yellow-400"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10", "bg-yellow-500/10"]
     },
-      {
-      id : "CUST-003",
-      status : [ "Suspended", "Standard", "High Risk"],
-      name : "Adebayo Kafaya",
-      email : "adebayo.Kafaya@email.com ",
-      phone : " +234-701-321-6547",
-      balance : " ₦50,600,000",
-      kysStatus : "Verified",
-      time : "2024-01-10 09:45",
-      textColor : [ "text-red-500", "text-blue-500", "text-red-400"],
-      bgColor : [ "bg-red-500/10", "bg-blue-500/10", "bg-red-500/10"]
+    {
+        id: "CUST-003",
+        status: ["Suspended", "Standard", "High Risk"],
+        name: "Adebayo Kafaya",
+        email: "adebayo.Kafaya@email.com ",
+        phone: " +234-701-321-6547",
+        balance: " ₦50,600,000",
+        kysStatus: "Verified",
+        time: "2024-01-10 09:45",
+        textColor: ["text-red-500", "text-blue-500", "text-red-400"],
+        bgColor: ["bg-red-500/10", "bg-blue-500/10", "bg-red-500/10"]
     },
 ]
 export const transactionReportCard = [
-     {
+    {
         title: "Total Transactions",
         icon: ChartColumnDecreasing,
         value: "2,456,789",
@@ -1786,38 +1786,108 @@ export const transactionReportCard = [
 
 export const transactionChannels = [
     {
-        title : "Mobile Banking",
-        value : "892,345",
-        performance : "(36.3%)",
-        volume : "₦23.4B",
-        bar : "40%"
+        title: "Mobile Banking",
+        value: "892,345",
+        performance: "(36.3%)",
+        volume: "₦23.4B",
+        bar: "40%"
     },
-     {
-        title : "Internet Banking",
-        value : "567,890",
-        performance : "(23.1%)",
-        volume : "₦18.9B",
-        bar : "30%"
+    {
+        title: "Internet Banking",
+        value: "567,890",
+        performance: "(23.1%)",
+        volume: "₦18.9B",
+        bar: "30%"
     },
-     {
-        title : "POS Terminals",
-        value : "445,632",
-        performance : "(18.1%)",
-        volume : "₦15.6B",
-        bar : "20%"
+    {
+        title: "POS Terminals",
+        value: "445,632",
+        performance: "(18.1%)",
+        volume: "₦15.6B",
+        bar: "20%"
     },
-     {
-        title : "ATM",
-        value : "334,567",
-        performance : "(13.6%)",
-        volume : "₦12.2B",
-        bar : "10%"
+    {
+        title: "ATM",
+        value: "334,567",
+        performance: "(13.6%)",
+        volume: "₦12.2B",
+        bar: "10%"
     },
-     {
-        title : "Branch",
-        value : "216,355",
-        performance : "(8.9%)",
-        volume : "₦19.4B",
-        bar : "5%"
+    {
+        title: "Branch",
+        value: "216,355",
+        performance: "(8.9%)",
+        volume: "₦19.4B",
+        bar: "5%"
+    },
+]
+
+export const recentDownload = [
+    {
+        title: "Fraud Detection Summary",
+        time: "2024-01-15 14:30",
+        size: "2.3 MB",
+        downloads: "45 downloads",
+        button: "Download"
+    },
+    {
+        title: "Customer Transaction Analysis",
+        time: "2024-01-15 12:00",
+        size: "5.7 MB",
+        downloads: "23 downloads",
+        button: "Download"
+    },
+    {
+        title: "Fraud Detection Summary",
+        time: "2024-01-15 14:30",
+        size: "2.3 MB",
+        downloads: "45 downloads",
+        button: "Download"
+    },
+    {
+        title: "Regional Performance Report",
+        time: "2024-01-15 09:15",
+        size: "1.8 MB",
+        downloads: "67 downloads",
+        button: "Download"
+    },
+]
+
+export const scheduledReports = [
+    {
+        id: "RPT-001",
+        status: ["Completed", "Automated"],
+        narration: "Daily Transaction Summary",
+        frequency: "Daily",
+        format: "PDF, Excel",
+        recipients: "12",
+        button: ["Download", "Configure"],
+        time: " 2024-01-15 06:00",
+        textColor: ["text-green-500", "text-blue-500"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10"]
+    },
+    {
+        id: "RPT-002",
+        status: ["Completed", "Scheduled"],
+        narration: "Weekly Risk Analysis",
+        frequency: "Weekly",
+        format: "PDF, Excel",
+        recipients: "8",
+        button: ["Download", "Configure"],
+        time: " 2024-01-15 06:00",
+        textColor: ["text-green-500", "text-blue-500"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10"]
+    },
+    {
+        id: "RPT-003",
+        status: ["Pending", "Manual"],
+        narration: "Monthly Compliance Report",
+        frequency: "Monthly",
+        format: "PDF, CSV",
+        recipients: "15",
+        button: ["Download", "Configure"],
+        time: " 2024-01-15 06:00",
+        textColor: ["text-yellow-500", "text-blue-500"],
+        bgColor: ["bg-yellow-500/10", "bg-blue-500/10"]
     },
 ]

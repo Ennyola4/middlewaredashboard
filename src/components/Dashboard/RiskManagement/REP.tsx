@@ -7,14 +7,17 @@ const REP = () => {
         <div className="px-4 sm:px-5 mt-6">
 
             <div className="p-3 sm:p-5 shadow-sm bg-white dark:bg-gray-900 rounded-md">
-                <div className="flex items-center justify-between mb-5">
-                    <h3 className="text-[20px]  p-5 font-semibold text-gray-600 dark:text-gray-300  border-gray-200 dark:border-gray-700 pb-2">
+                <div className="flex  xs:flex-row xs:items-center xs:justify-between gap-3 sm:gap-4 mb-4 sm:mb-5 items-center justify-between">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl p-3 sm:p-4 lg:p-5 font-semibold text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 pb-2">
                         Recurring Exception Patterns
                     </h3>
-                    <button className="flex cursor-pointer items-center gap-2 px-3 py-2 bg-blue-500 hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-100 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium">
-                        <RefreshCcw className="h-4 w-4" />
-                        <span className=" sm:inline">Refresh Rules</span>
-                    </button>
+                    <div className="flex-shrink-0">
+                        <button className="flex cursor-pointer items-center gap-2 px-2 py-1 bg-blue-500 hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-100 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium whitespace-nowrap">
+                            <RefreshCcw className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="hidden xs:inline">Refresh Rules</span>
+                            <span className="xs:hidden">Refresh Rules</span>
+                        </button>
+                    </div>
                 </div>
                 {recurringExceptionPattern.map((item, index) => (
                     <div key={index}>
@@ -31,7 +34,7 @@ const REP = () => {
                                     {item.status[1]}
                                 </span>
                             </div>
-                            
+
                             <div className="text-sm text-gray-400 dark:text-gray-300">
                                 {item.event}
                             </div>

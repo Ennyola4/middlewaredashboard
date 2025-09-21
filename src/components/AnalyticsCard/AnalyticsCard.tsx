@@ -48,7 +48,7 @@ const AnalyticsCard = () => {
             <div className="flex items-center justify-between">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="p-3 rounded-full  bg-gray-50 dark:bg-gray-700"
+                className="p-3 rounded-lg bg-gray-50 shadow-sm dark:bg-gray-700"
               >
                 {stat.icon}
               </motion.div>
@@ -67,7 +67,7 @@ const AnalyticsCard = () => {
             <div className="space-y-1">
               <motion.h3
                 whileHover={{ x: 2 }}
-                className="text-2xl font-semibold text-gray-900 dark:text-white"
+                className="text-2xl  font-semibold text-gray-900 dark:text-white"
               >
                 {stat.value}
               </motion.h3>

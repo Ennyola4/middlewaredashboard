@@ -2,6 +2,7 @@ import { NotebookText } from "lucide-react"
 import Navbar from "../../../components/Navbar/Navbar"
 import TRSummaryCard from "../../../components/Dashboard/Management/TRSummaryCard"
 import TransactionChannels from "../../../components/Dashboard/Management/TransactionChannels"
+import ScheduledReports from "../../../components/Dashboard/Management/ScheduledReports"
 
 
 const TransactionReport = () => {
@@ -17,6 +18,7 @@ const TransactionReport = () => {
       </div>
       <TRSummaryCard/>
       <TransactionChannels/>
+      <ScheduledReports/>
      
     </div>
   )
