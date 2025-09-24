@@ -86,7 +86,7 @@ export const Sidebar = () => {
       links: [
         { title: "Customer Management", href: "/customer-management", icon: <UserRoundCheck className="w-5 h-5" /> },
         { title: "Transaction Report", href: "/transaction-report", icon: <ClipboardMinus className="w-5 h-5" /> },
-        { title: "Third Party Integrations", href: "/management/integrations", icon: <Globe className="w-5 h-5" /> }
+        { title: "Third Party Integrations", href: "/third-party-integration", icon: <Globe className="w-5 h-5" /> }
       ]
     },
     {
@@ -94,7 +94,7 @@ export const Sidebar = () => {
       icon: <TabletSmartphone className="w-5 h-5" />,
       links: [
         { title: "System Health", href: "/system-health", icon: <MonitorCheck className="w-5 h-5" /> },
-        { title: "Security Overview", href: "/settings/security", icon: <Lock className="w-5 h-5" /> }
+        { title: "Security Overview", href: "/security-overview", icon: <Lock className="w-5 h-5" /> }
       ]
     }
   ];

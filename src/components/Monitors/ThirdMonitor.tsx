@@ -150,7 +150,7 @@ const ThirdMonitor = () => {
                     {systemHealth.map((service, index) => (
                         <div
                             key={`service-${index}`}
-                            className="bg-white dark:bg-gray-700 rounded-md shadow-md p-3 sm:p-4 border-l-2 border-blue-400 mb-3"
+                            className="bg-white dark:bg-gray-700 rounded-md shadow-md p-3 sm:p-4 border-l-2 border-blue-300 mb-3"
                         >
                             <div className="flex flex-col gap-3">
                                 {/* Header - Service name and Status */}

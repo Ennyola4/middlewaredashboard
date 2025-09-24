@@ -5,17 +5,17 @@ const GeneratedRecommendations = () => {
     return (
         <div className="p-3 sm:p-5 m-2 sm:m-5 shadow-sm rounded-md dark:bg-gray-900">
             <div className="flex  xs:flex-row xs:items-center xs:justify-between gap-3 sm:gap-4 mb-4 sm:mb-5 items-center justify-between">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl p-3 sm:p-4 lg:p-5 font-semibold text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 pb-2">
-                        AI-Generated Recommendations
-                    </h3>
-                    <div className="flex-shrink-0">
-                        <button className="flex cursor-pointer items-center gap-2 px-2 py-1 bg-blue-500 hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-100 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium whitespace-nowrap">
-                            <RefreshCcw className="h-3 w-3 sm:h-4 sm:w-4" />
-                            <span className="hidden xs:inline">Genrate New</span>
-                            <span className="xs:hidden">Generate New</span>
-                        </button>
-                    </div>
+                <h3 className="text-lg sm:text-xl lg:text-2xl p-3 sm:p-4 lg:p-5 font-semibold text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 pb-2">
+                    AI-Generated Recommendations
+                </h3>
+                <div className="flex-shrink-0">
+                    <button className="flex cursor-pointer items-center gap-2 px-2 py-1 bg-blue-500 hover:bg-gray-700 dark:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-100 dark:text-gray-800 rounded-md transition-colors duration-200 text-sm font-medium whitespace-nowrap">
+                        <RefreshCcw className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span className="hidden xs:inline">Genrate New</span>
+                        <span className="xs:hidden">Generate New</span>
+                    </button>
                 </div>
+            </div>
             {generatedRecommendations.map((item, index) => (
                 <div key={index}>
                     <div className="shadow-sm rounded-md dark:bg-gray-950">

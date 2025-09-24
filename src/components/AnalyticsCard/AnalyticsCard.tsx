@@ -9,27 +9,35 @@ const AnalyticsCard = () => {
   const stats = [
     {
       value: "1,242,300",
-      icon: <Activity className="h-6 w-6 text-green-500" />,
+      icon: <Activity className="h-6 w-6" />,
       textChange: "Total Transactions",
-      change: "+5.2%"
+      change: "+5.2%",
+      bgColor : "bg-green-400/10",
+      textColor : " text-green-500"
     },
     {
       value: "89,000",
-      icon: <Users className="h-6 w-6 text-blue-500" />,
+      icon: <Users className="h-6 w-6" />,
       textChange: "Active Users",
-      change: "+12.1%"
+      change: "+12.1%",
+      bgColor : "bg-blue-400/10",
+      textColor : " text-blue-600"
     },
     {
       value: "99.97%",
-      icon: <Monitor className="h-6 w-6 text-green-500" />,
+      icon: <Monitor className="h-6 w-6" />,
       textChange: "System Uptime",
-      change: "+0.02%"
+      change: "+0.02%",
+      bgColor : "bg-purple-400/10",
+      textColor : " text-purple-600"
     },
     {
       value: "23",
-      icon: <Shield className="h-6 w-6 text-orange-300" />,
+      icon: <Shield className="h-6 w-6" />,
       textChange: "Risk Events",
-      change: "-8.5%"
+      change: "-8.5%",
+      bgColor : "bg-orange-400/10",
+      textColor : " text-orange-600"
     },
   ];
 
@@ -47,8 +55,8 @@ const AnalyticsCard = () => {
           <div className="flex flex-col space-y-4 rounded-xl shadow-sm p-4 dark:bg-gray-900">
             <div className="flex items-center justify-between">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="p-3 rounded-lg bg-gray-50 shadow-sm dark:bg-gray-700"
+                whileHover={{ scale: 1.15 }}
+                className={`p-3 ${stat.textColor} rounded-lg font-bold ${stat.bgColor}`}
               >
                 {stat.icon}
               </motion.div>

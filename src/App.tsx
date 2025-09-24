@@ -21,6 +21,9 @@ import UnusualUserActivity from './pages/Dashboard/RiskManagement/UnusualUserAct
 import UnusualUserOnboarding from './pages/Dashboard/RiskManagement/UnusualUserOnboarding.js';
 import CustomerManagement from './pages/Dashboard/Management/CustomerManagement.js';
 import TransactionReport from './pages/Dashboard/Management/TransactionReport.js';
+import ThirdPartyIntegrations from './pages/Dashboard/Management/ThirdPartyIntegrations.js';
+import SystemHealth from './pages/Dashboard/Monitoring/SystemHealth.js';
+import SecurityOverview from './pages/Dashboard/Monitoring/SecurityOverview.js';
 
 const router = createBrowserRouter([
   {
@@ -98,6 +101,18 @@ const router = createBrowserRouter([
        {
         path: "/transaction-report",
         element: <TransactionReport/>
+      },
+       {
+        path: "/third-party-integration",
+        element: <ThirdPartyIntegrations/>
+      },
+       {
+        path: "/system-health",
+        element: <SystemHealth/>
+      },
+      {
+        path: "/security-overview",
+        element: <SecurityOverview/>
       },
     ]
   }

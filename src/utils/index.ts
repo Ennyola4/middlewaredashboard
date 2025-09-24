@@ -33,7 +33,10 @@ import {
     Plus,
     DatabaseZap,
     ChartColumnDecreasing,
-    Calendar
+    Calendar,
+    Plug,
+    Server,
+    HardDrive
 } from "lucide-react"
 
 
@@ -1889,5 +1892,404 @@ export const scheduledReports = [
         time: " 2024-01-15 06:00",
         textColor: ["text-yellow-500", "text-blue-500"],
         bgColor: ["bg-yellow-500/10", "bg-blue-500/10"]
+    },
+]
+
+export const thirdPartySummaryCard = [
+    {
+        title: "Total Integrations",
+        icon: Plug,
+        value: "47",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Active",
+        icon: CircleCheckBig,
+        value: "42",
+        textColor: "text-green-500"
+    },
+    {
+        title: "API Calls Today",
+        icon: Activity,
+        value: "1,234,567",
+        textColor: "text-blue-500"
+    },
+    {
+        title: "Overall Uptime",
+        icon: CircleCheckBig,
+        value: "99.7%",
+        textColor: "text-blue-500"
+    },
+]
+
+export const integrationCategories = [
+    {
+        title: "Payment Gateways",
+        status: ["11 active", "1 failed"],
+        bar: "90%",
+        textColor: ["text-green-500", "text-red-500"],
+        bgColor: ["bg-green-500/10", "bg-red-500/10"]
+    },
+    {
+        title: "Identity Verification",
+        status: ["7 active", "1 failed"],
+        bar: "85%",
+        textColor: ["text-green-500", "text-red-500"],
+        bgColor: ["bg-green-500/10", "bg-red-500/10"]
+    },
+    {
+        title: "Credit Scoring",
+        status: ["10 active", "0 failed"],
+        bar: "100%",
+        textColor: ["text-green-500", "text-green-500"],
+        bgColor: ["bg-green-500/10", "bg-green-500/10"]
+    },
+    {
+        title: "Fraud Detection",
+        status: ["4 active", "1 failed"],
+        bar: "70%",
+        textColor: ["text-green-500", "text-red-500"],
+        bgColor: ["bg-green-500/10", "bg-red-500/10"]
+    },
+    {
+        title: "Regulatory Compliance",
+        status: [" 20 active", "1 failed"],
+        bar: "90%",
+        textColor: ["text-green-500", "text-red-500"],
+        bgColor: ["bg-green-500/10", "bg-red-500/10"]
+    },
+    {
+        title: "Data Analytics",
+        status: ["6 active", "1 failed"],
+        bar: "75%",
+        textColor: ["text-green-500", "text-red-500"],
+        bgColor: ["bg-green-500/10", "bg-red-500/10"]
+    },
+]
+
+export const integrationStatus = [
+    {
+        id: "INT-001",
+        status: ["Active", "Payment Gateway"],
+        narration: "NIBSS Instant Payment (NIP)",
+        uptime: "99.9%",
+        apiCalls: "456,789",
+        responseTime: "120ms",
+        errorRate: "0.1%",
+        time: "2024-01-15 15:30",
+        button: ["Configure", "Test"],
+        textColor: ["text-green-500", "text-blue-400"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10"]
+    },
+    {
+        id: "INT-002",
+        status: ["Active", "Payment Processor"],
+        narration: "Flutterwave Payment API",
+        uptime: "99.5%",
+        apiCalls: "234,567",
+        responseTime: "95ms",
+        errorRate: "0.3%",
+        time: "2024-01-15 15:28",
+        button: ["Configure", "Test"],
+        textColor: ["text-green-500", "text-blue-400"],
+        bgColor: ["bg-green-500/10", "bg-blue-500/10"]
+    },
+    {
+        id: "INT-003",
+        status: ["Maintenance", "Identity Verification"],
+        narration: "BVN Verification Service",
+        uptime: "98.2%",
+        apiCalls: " 123,456",
+        responseTime: "200ms",
+        errorRate: "1.2%",
+        time: "2024-01-15 14:00",
+        button: ["Configure", "Test"],
+        textColor: ["text-yellow-500", "text-blue-400"],
+        bgColor: ["bg-yellow-500/10", "bg-blue-500/10"]
+    },
+    {
+        id: "INT-004",
+        status: ["Failded", "International Transfer"],
+        narration: "SWIFT Network",
+        uptime: "97.8%",
+        apiCalls: "56,789",
+        responseTime: "350ms",
+        errorRate: "2.1%",
+        time: "2024-01-15 10:30",
+        button: ["Configure", "Test"],
+        textColor: ["text-red-500", "text-blue-400"],
+        bgColor: ["bg-red-500/10", "bg-blue-500/10"]
+    },
+]
+
+export const systemHealthSummaryCard = [
+    {
+        title: "Healthy Servers",
+        icon: Server,
+        value: "10/12",
+        textColor: "text-blue-500"
+    },
+    {
+        title: "Server Load",
+        icon: HardDrive,
+        value: "67%",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Network Latency",
+        icon: Wifi,
+        value: "23ms",
+        textColor: "text-purple-500"
+    },
+    {
+        title: "DB Connections",
+        icon: CircleCheckBig,
+        value: "245",
+        textColor: "text-orange-500"
+    },
+]
+
+export const serviceStatusMonitor = [
+    {
+        title: "Business Banking API",
+        status: "Healthy",
+        time: "30 sec ago",
+        uptime: "99.98%",
+        uptimeRate: "99.98%",
+        cpu: "45%",
+        cpuRate: "45%",
+        memory: "67%",
+        memoryRate: "67%",
+        responseTime: "120ms",
+        RPM: "1250",
+        textColor: ["text-green-500", "text-green-500", "text-green-500"],
+        bar: ["99.98%", "45%", "67%"],
+        dot: "bg-green-500",
+        bgColor: "bg-green-500/10"
+    },
+    {
+        title: "Mobile Banking Service",
+        status: "Healthy",
+        time: "45 sec ago",
+        uptime: "99.95%",
+        uptimeRate: "99.95%",
+        cpu: "38%",
+        cpuRate: "38%",
+        memory: "45%",
+        memoryRate: "45%",
+        responseTime: "95ms",
+        RPM: "2450",
+        textColor: ["text-green-500", "text-green-500", "text-green-500"],
+        bar: ["99.95%", "38%", "45%"],
+        dot: "bg-green-500",
+        bgColor: "bg-green-500/10"
+    },
+    {
+        title: "Gold Bucks Platform",
+        status: "Warning",
+        time: "30 sec ago",
+        uptime: "99.87%",
+        uptimeRate: "99.87%",
+        cpu: "78%",
+        cpuRate: "78%",
+        memory: "82%",
+        memoryRate: "82%",
+        responseTime: "280ms",
+        RPM: "890",
+        textColor: ["text-green-500", "text-yellow-500", "text-yellow-500"],
+        bar: ["99.87%", "78%", "82%"],
+        dot: "bg-yellow-500",
+        bgColor: "bg-yellow-500/10"
+    },
+    {
+        title: "E-Cam Security System",
+        status: "Healthy",
+        time: "20 sec ago",
+        uptime: "99.99%",
+        uptimeRate: "99.99%",
+        cpu: "25%",
+        cpuRate: "25%",
+        memory: "41%",
+        memoryRate: "41%",
+        responseTime: "65ms",
+        RPM: "450",
+        textColor: ["text-green-500", "text-green-500", "text-green-500"],
+        bar: ["99.99%", "25%", "41"],
+        dot: "bg-green-500",
+        bgColor: "bg-green-500/10"
+    },
+    {
+        title: "POS Processing Engine",
+        status: "Critical",
+        time: "2 min ago",
+        uptime: "98.12%",
+        uptimeRate: "98.12%",
+        cpu: "92%",
+        cpuRate: "92%",
+        memory: "95%",
+        memoryRate: "95%",
+        responseTime: "450ms",
+        RPM: "1680",
+        textColor: ["text-yellow-500", "text-red-500", "text-red-500"],
+        bar: ["98.12%", "92%", "95%"],
+        dot: "bg-red-500",
+        bgColor: "bg-red-500/10"
+    },
+
+]
+
+export const securityOverviewSummaryCard = [
+    {
+        title: "Security Score",
+        icon: Shield,
+        value: "94",
+        textColor: "text-green-500"
+    },
+    {
+        title: "Threats Blocked",
+        icon: TriangleAlert,
+        value: "1,247",
+        textColor: "text-orange-500"
+    },
+    {
+        title: "Active Sessions",
+        icon: Eye,
+        value: "8,934",
+        textColor: "text-blue-500"
+    },
+    {
+        title: "Suspicious Logins",
+        icon: UserX,
+        value: "23",
+        textColor: "text-orange-500"
+    },
+]
+
+export const securityModuleStatus = [
+    {
+        title: "Firewall Protection",
+        status: "active",
+        bar: "98%",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10",
+        date: "2024-01-15"
+    },
+    {
+        title: "DDoS Protection",
+        status: "active",
+        bar: "94%",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10",
+        date: "2024-04-25"
+    },
+    {
+        title: "Anti-Malware",
+        status: "active",
+        bar: "99%",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10",
+        date: "2024-03-10"
+    },
+    {
+        title: "Intrusion Detection",
+        status: "active",
+        bar: "92%",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10",
+        date: "2024-09-12"
+    },
+    {
+        title: "Data Encryption",
+        status: "active",
+        bar: "91%",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10",
+        date: "2023-03-19"
+    },
+    {
+        title: "Access Control",
+        status: "warning",
+        bar: "89%",
+        textColor: "text-yellow-500",
+        bgColor: "bg-yellow-500/10",
+        date: "2024-11-30"
+    },
+]
+
+export const complianceStatus = [
+    {
+        id: "PCI DSS",
+        title: "Compliance Level",
+        status: "complaint",
+        value: "98%",
+        date: "2024-01-01",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10"
+    },
+    {
+        id: "ISO 27001",
+        title: "Compliance Level",
+        status: "complaint",
+        value: "95%",
+        date: "2024-51-12",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10"
+    },
+    {
+        id: "SOX",
+        title: "Compliance Level",
+        status: "minor issue",
+        value: "92%",
+        date: "2024-01-01",
+        textColor: "text-yellow-500",
+        bgColor: "bg-yellow-500/10"
+    },
+    {
+        id: "GDPR",
+        title: "Compliance Level",
+        status: "complaint",
+        value: "97%",
+        date: "2025-03-05",
+        textColor: "text-green-500",
+        bgColor: "bg-green-500/10"
+    },
+]
+
+export const recentSecurityEvent = [
+    {
+        id : "THR-001",
+        status : [ "high", "blocked"],
+        title : "Brute Force Attack",
+        source : "192.168.1.100 ",
+        target : "Login Portal",
+        attempt : "156",
+        time : " 2024-01-15 14:30",
+        button : [ "Investigate", "Block"],
+        textColor : [ "text-yellow-500", "text-green-500"],
+        bgColor : [ "bg-yellow-500/10", "bg-green-500/10"]
+    },
+     {
+        id : "THR-002",
+        status : [ "critical", "blocked"],
+        title : "SQL Injection Attempt",
+        source : "External IP",
+        target : "API Endpoint",
+        attempt : "15",
+        time : "2024-01-15 13:45",
+        button : [ "Investigate", "Block"],
+        textColor : [ "text-red-500", "text-green-500"],
+        bgColor : [ "bg-red-500/10", "bg-green-500/10"]
+    },
+     {
+        id : "THR-003",
+        status : [ "medium", "monitoring"],
+        title : "Suspicious Login Pattern",
+        source : "Mobile App ",
+        target : " User Account",
+        attempt : "5",
+        time : "2024-01-15 12:20",
+        button : [ "Investigate", "Block"],
+        textColor : [ "text-green-500", "text-yellow-500"],
+        bgColor : [ "bg-green-500/10", "bg-yellow-500/10"]
     },
 ]

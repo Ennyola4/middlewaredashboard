@@ -9,7 +9,7 @@ const ScheduledReports = () => {
                 <div className="flex xs:flex-row xs:justify-between xs:items-center gap-3 p-2 sm:p-3 mb-4">
                     <div className="flex-1">
                         <h1 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-800 dark:text-white">
-                            Customer Database
+                            Scheduled Reports
                         </h1>
                     </div>
                     <div className="flex-shrink-0">
