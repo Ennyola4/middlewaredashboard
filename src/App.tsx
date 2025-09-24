@@ -24,6 +24,8 @@ import TransactionReport from './pages/Dashboard/Management/TransactionReport.js
 import ThirdPartyIntegrations from './pages/Dashboard/Management/ThirdPartyIntegrations.js';
 import SystemHealth from './pages/Dashboard/Monitoring/SystemHealth.js';
 import SecurityOverview from './pages/Dashboard/Monitoring/SecurityOverview.js';
+import Transactions from './components/Paginate/Transactions.js';
+import Overview from './components/Paginate/Overview.js';
 
 const router = createBrowserRouter([
   {
@@ -113,6 +115,14 @@ const router = createBrowserRouter([
       {
         path: "/security-overview",
         element: <SecurityOverview/>
+      },
+       {
+        path: "/transactions",
+        element: <Transactions/>
+      },
+       {
+        path: "/overview",
+        element: <Overview/>
       },
     ]
   }

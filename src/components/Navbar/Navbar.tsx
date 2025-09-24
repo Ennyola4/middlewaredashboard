@@ -20,25 +20,25 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex overflow-hidden sticky top-0 z-10 bg-white flex-col shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-5 ">
+    <div className="flex overflow-hidden sticky top-0 z-10 bg-[#0E0C60] flex-col shadow-sm dark:bg-gray-900 dark:text-white p-3 sm:p-5 md:p-6 lg:p-5 ">
       <div className="flex  sm:flex-row items-start sm:items-center justify-between gap-4">
         {/* Left side - Title, status, and clock */}
         <div className="flex flex-col xs:flex-row items-start xs:items-center gap-2 sm:gap-4 w-full sm:w-auto">
-          <h3 className=" xs:text-2xl sm:text-[23px] text-gray-600 font-semibold dark:text-white font-serif">
+          <h3 className=" xs:text-2xl sm:text-[23px] text-gray-100 font-semibold dark:text-white font-serif">
             Dashboard
           </h3>
 
           <div className="flex items-center gap-2">
             <div className="flex flex-col xs:flex-row xs:items-center gap-1 xs:gap-2">
-              <span className="px-3 py-1 xs:px-3 xs:py-1 text-xs text-green-700  font-serif bg-green-300/20 rounded-md dark:text-green-100 whitespace-nowrap dark:bg-green-900">
+              <span className="px-3 py-1 xs:px-3 xs:py-1 text-xs text-green-700  font-serif bg-gray-100 rounded-md dark:text-green-100 whitespace-nowrap dark:bg-green-900">
                 Operational
               </span>
 
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-300 whitespace-nowrap ">
+            <div className="text-xs text-gray-100 dark:text-gray-300 whitespace-nowrap ">
               {currentTime.toLocaleDateString()}
             </div>
-            <div className="text-xs  rounded-md">
+            <div className="text-xs text-gray-50  rounded-md">
               {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
             </div>
           </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="flex items-center justify-end gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
           {/* Notification icon */}
           <button
-            className="bg-blue-300 p-2 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
+            className="bg-blue-50 p-2 dark:bg-gray-300 shadow-sm cursor-pointer text-black rounded-full 
              transition-all duration-300 ease-in-out
              hover:bg-gray-400 dark:hover:bg-gray-700
              hover:scale-110 active:scale-95
@@ -74,7 +74,7 @@ const Navbar = () => {
           {/* Settings button */}
           <button
             className="flex shadow-lg items-center justify-center sm:gap-2 p-2  text-black rounded-full 
-             bg-blue-300 dark:bg-gray-300 dark:text-black
+             bg-blue-50 dark:bg-gray-300 dark:text-black
              transition-all duration-300 ease-out
              hover:bg-gray-400 dark:hover:bg-gray-700
              hover:scale-[1.03] active:scale-[0.98]

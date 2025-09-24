@@ -7,7 +7,7 @@ const Pagination = () => {
   const pageData = [
     { label: "Overview", path: "/overview" },
     { label: "Transactions", path: "/transactions" },
-    { label: "System Health", path: "/system-health" },
+    { label: "System Health", path: "/systems-health" },
     { label: "Active Alerts", path: "/active-alerts" },
     { label: "AI Recommendations", path: "/ai-recommendations" },
     { label: "Control Center", path: "/control-center" },

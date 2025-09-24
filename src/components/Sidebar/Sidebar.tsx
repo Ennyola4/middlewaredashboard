@@ -113,16 +113,16 @@ export const Sidebar = () => {
 
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <div className="w-66 h-screen flex flex-col bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900">
+        <div className="w-66 h-screen flex flex-col bg-[#0E0C60] dark:border-gray-200 dark:bg-gray-900">
           {/* Fixed header */}
-          <div className="flex items-center gap-2 p-2 bg-white dark:bg-white border-b flex-shrink-0">
-            <img src={imageOne} alt="Alert Group Logo" className="w-12 h-12 rounded-lg object-cover" />
+          <div className="flex items-center gap-2 p-4 bg-[#0E0C60] dark:bg-white flex-shrink-0">
+            <img src={imageOne} alt="Alert Group Logo" className="w-14 h-14 rounded-lg object-cover" />
             <div className="flex-1 min-w-0">
-              <h1 className="text-sm font-semibold font-serif text-gray-900 dark:text-black truncate">
+              <h1 className="text-sm font-semibold font-serif text-gray-100 dark:text-black truncate">
                 Alert Group
               </h1>
-              <p className="text-gray-400 dark:text-gray-400 text-xs font-serif">
-                Middleware Dashboard
+              <p className="text-gray-200 dark:text-gray-400 text-xs font-serif">
+                Middleware 
               </p>
             </div>
           </div>
@@ -199,14 +199,14 @@ export const Sidebar = () => {
               className="fixed inset-y-0 left-0 w-64 z-50 bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900 flex flex-col"
             >
               {/* Fixed header */}
-              <div className="flex items-center gap-2 p-2 bg-white dark:bg-white border-b flex-shrink-0">
+              <div className="flex items-center mt-4 gap-2 p-2 bg-[#0E0C60] dark:bg-white flex-shrink-0">
                 <img src={imageOne} alt="Alert Group Logo" className="w-10 h-10 rounded-lg object-cover" />
                 <div className="flex-1 min-w-0">
-                  <h1 className="text-sm font-semibold font-serif text-gray-900 dark:text-black truncate">
+                  <h1 className="text-sm font-semibold font-serif text-gray-100 dark:text-black truncate">
                     Alert Group
                   </h1>
-                  <p className="text-gray-400 dark:text-gray-400 text-xs font-serif">
-                    Middleware Dashboard
+                  <p className="text-gray-400 dark:text-gray-200 text-xs font-serif">
+                    Middleware 
                   </p>
                 </div>
               </div>
