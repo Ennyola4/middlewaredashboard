@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Pagination = () => {
   const pageData = [
-    { label: "Overview", path: "/overview" },
+    { label: "Overview", path: "/" },
     { label: "Transactions", path: "/transactions" },
     { label: "System Health", path: "/systems-health" },
     { label: "Active Alerts", path: "/active-alerts" },
