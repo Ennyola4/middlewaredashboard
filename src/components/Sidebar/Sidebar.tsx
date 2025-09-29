@@ -185,13 +185,14 @@ export const Sidebar = () => {
                             // onClick={() => console.log("clicked")}
                           >                      
                             {section.links.map((link) => (
-                              <div key={link.href} onClick={() => console.log("clicked")}>
+                              <div key={link.href} onClick={() => setIsCollapsed(false)}>
                                 <NavItem
                                   href={link.href}
                                   icon={link.icon}
-                                  className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
+                                  className={'text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md  px-2 py-1.5 transition-colors text-sm'} 
+               
                                 >
-                                  {link.title}nn
+                                  {link.title}
                                 </NavItem>
                               </div>
                             ))}
