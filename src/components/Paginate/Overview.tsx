@@ -3,7 +3,7 @@ import Dashboard from "../../pages/Dashboard/Dashboard"
 const Overview = () => {
   return (
     <div>
-      <Dashboard/>
+      <Dashboard/> 
     </div>
   )
 }

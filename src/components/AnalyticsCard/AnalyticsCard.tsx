@@ -56,7 +56,7 @@ const AnalyticsCard = () => {
             <div className="flex items-center justify-between">
               <motion.div
                 whileHover={{ scale: 1.15 }}
-                className={`p-3 ${stat.textColor} rounded-lg font-bold ${stat.bgColor}`}
+                className={`p-3 ${stat.textColor} animate-pulse  font-bold rounded-xl ${stat.bgColor}`}
               >
                 {stat.icon}
               </motion.div>

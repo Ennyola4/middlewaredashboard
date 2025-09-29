@@ -76,11 +76,11 @@ const Monitor = () => {
     return (
         <div className='w-full grid grid-cols-1 bg-white dark:bg-gray-950'>
             {/* Parent Container */}
-            <div className="flex flex-col p-4 lg:flex-row gap-9">
+            <div className="flex flex-col p-2 lg:flex-row gap-9">
 
                 {/* High Risk Users*/}
                 <div className="flex-1">
-                    <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5  dark:bg-gray-900 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" grid-cols-1 md:grid-cols-2 shadow-sm p-5  dark:bg-gray-900 md lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3">
                             <div className="flex items-center gap-2">
                                 <Users className="h-6 w-6 text-red-500" />
@@ -129,7 +129,7 @@ const Monitor = () => {
 
                 {/* High Risk Transactions */}
                 <div className="flex-1">
-                    <div className=" md:grid-cols-2 shadow-sm p-5 bg-white dark:bg-gray-900 rounded-3xl lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div className=" md:grid-cols-2 shadow-sm  dark:bg-gray-900 rounded-md p-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         <div className="flex items-center justify-between gap-2 p-3 sm:p-4 col-span-full">
                             <div className="flex items-center gap-2">
                                 <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />

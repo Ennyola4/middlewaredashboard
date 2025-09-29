@@ -61,13 +61,13 @@ const logAndmon = [
 
 const SecondMonitor = () => {
     return (
-        <div className="p-4 bg-white  dark:bg-gray-950 space-y-6">
+        <div className="p-2 bg-white  dark:bg-gray-950 space-y-6">
             {/* Main container */}
             <div className="flex flex-col lg:flex-row gap-6">
                 {/*AUTHENTICATION AND AUTHORIZATION*/}
                 <div className="flex-1">
 
-                    <div className="shadow-sm p-4 dark:bg-gray-800 rounded-md">
+                    <div className="shadow-sm p-2 dark:bg-gray-800 rounded-md">
 
                         <h1 className="text-xl sm:text-lg p-2 font-bold text-black dark:text-white mb-4">Authentication & Authorization</h1>
                         <div className="grid grid-cols-2 gap-4 mb-6 p-3 shadow-sm dark:bg-gray-900 dark:text-white rounded-md">

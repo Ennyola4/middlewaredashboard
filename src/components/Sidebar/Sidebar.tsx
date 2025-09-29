@@ -8,9 +8,8 @@ import {
   Globe, UserX, UserPlus, UserRoundCheck, X, House,
   PanelRight,
   PanelLeft,
-  SquaresExclude,
-  MonitorSmartphone,
-  ShieldCheck
+  ShieldAlert,
+  BaggageClaim
 } from "lucide-react";
 import { type NavSection } from "../Sidebar/types";
 import imageOne from "../../assets/image/imageOne.jpg";
@@ -54,7 +53,7 @@ export const Sidebar = () => {
   const navSections: NavSection[] = [
     {
       title: "Product",
-      icon: <SquaresExclude className="w-5 h-5" />,
+      icon: <BaggageClaim className="w-5 h-5" />,
       links: [
         { title: "Home", href: "/", icon: <House className="w-5 h-5" /> },
         { title: "Business Banking", href: "/business-banking", icon: <Building2 className="w-5 h-5" /> },
@@ -74,7 +73,7 @@ export const Sidebar = () => {
     },
     {
       title: "Risk Management",
-      icon: <ShieldCheck className="w-5 h-5" />,
+      icon: <Building2 className="w-5 h-5" />,
       links: [
         { title: "Risk Users", href: "/risk-users", icon: <Users className="w-5 h-5" /> },
         { title: "Risk Transaction", href: "/risk-transactions", icon: <Shield className="w-5 h-5" /> },
@@ -96,7 +95,7 @@ export const Sidebar = () => {
     },
     {
       title: "Monitoring",
-      icon: <MonitorSmartphone className="w-5 h-5" />,
+      icon: <ShieldAlert className="w-5 h-5" />,
       links: [
         { title: "System Health", href: "/system-health", icon: <MonitorCheck className="w-5 h-5" /> },
         { title: "Security Overview", href: "/security-overview", icon: <Lock className="w-5 h-5" /> }
@@ -136,7 +135,7 @@ export const Sidebar = () => {
                 animate={{ x: 0 }}
                 exit={{ x: -280 }}
                 transition={{ type: "spring", stiffness: 150, damping: 30 }}
-                className="fixed inset-y-0 left-0 w-64 z-50 bg-[#0E0C60] border-r dark:border-gray-200 dark:bg-gray-900 flex flex-col"
+                className="fixed inset-y-0 left-0 w-64 z-50 bg-[#0E0C60]  dark:border-gray-200 dark:bg-gray-900 flex flex-col"
               >
                 {/* Fixed header */}
                 <div className="flex items-center mt-4 gap-2 p-2 bg-[#0E0C60] dark:bg-gray-900 dark:text-gray-100 flex-shrink-0">
@@ -156,8 +155,12 @@ export const Sidebar = () => {
                   {navSections.map((section) => (
                     <div key={section.title} className="py-0.5">
                       <button
-                        onClick={() => toggleSection(section.title.toLowerCase())}
+                        onClick={() => setExpandedSections(prev => ({
+                          ...prev,
+                          [section.title.toLowerCase()]: !prev[section.title.toLowerCase()]
+                        }))}
                         className="flex items-center justify-between w-full px-2 py-1.5 text-left hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md transition-colors"
+                        title={isCollapsed ? section.title : undefined}
                       >
                         <div className="flex items-center gap-2">
                           {section.icon}
@@ -179,15 +182,16 @@ export const Sidebar = () => {
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2, ease: "easeInOut" }}
                             className="ml-4 mt-0.5 space-y-0.5 overflow-hidden"
+                            // onClick={() => console.log("clicked")}
                           >                      
                             {section.links.map((link) => (
-                              <div key={link.href} onClick={() => setIsCollapsed(false)}>
+                              <div key={link.href} onClick={() => console.log("clicked")}>
                                 <NavItem
                                   href={link.href}
                                   icon={link.icon}
                                   className="text-amber-50 dark:text-white hover:bg-blue-800 dark:hover:bg-gray-800 rounded-md px-2 py-1.5 transition-colors text-sm"
                                 >
-                                  {link.title}
+                                  {link.title}nn
                                 </NavItem>
                               </div>
                             ))}
@@ -209,7 +213,7 @@ export const Sidebar = () => {
   return (
     <motion.div
       animate={{ width: isCollapsed ? 80 : 264 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       className="h-screen flex flex-col bg-[#0E0C60] dark:border-gray-200 dark:bg-gray-900 relative"
     >
       {/* Toggle Button */}
@@ -217,7 +221,7 @@ export const Sidebar = () => {
         onClick={toggleSidebar}
         className="absolute right-10 top-8 z-10 p-1 dark:text-gray-100 text-white  transition-colors "
       >
-        {isCollapsed ? <PanelRight size={14} /> : <PanelLeft size={14} />}
+        {isCollapsed ? <PanelRight size={18} /> : <PanelLeft size={18} />}
       </button>
 
       {/* Fixed header */}
@@ -256,7 +260,7 @@ export const Sidebar = () => {
                 {section.icon}
                 <motion.span
                   animate={{ opacity: isCollapsed ? 0 : 1, width: isCollapsed ? 0 : "auto" }}
-                  transition={{ duration: 1.5 }}
+                  transition={{ duration: 1 }}
                   className="font-medium text-sm overflow-hidden whitespace-nowrap"
                 >
                   {section.title}
@@ -278,7 +282,7 @@ export const Sidebar = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="ml-4 mt-0.5 space-y-0.5 overflow-hidden"
                 >
                   {section.links.map((link) => (

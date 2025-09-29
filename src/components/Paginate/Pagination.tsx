@@ -1,21 +1,77 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {  ChevronLeft, ChevronRight,  MoreHorizontal,  } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Charts } from '../charts/Charts';
+import Monitor from '../Monitors/Monitor';
+import SecondMonitor from '../Monitors/SecondMonitor';
+import LastMonitor from '../Monitors/LastMonitor';
+import ThirdMonitor from '../Monitors/ThirdMonitor';
+import ServiceStatusMonitor from '../Dashboard/Monitoring/ServiceStatusMonitor';
+import StorageOverviewAndDBhealth from '../Dashboard/Monitoring/StorageOverviewAndDBhealth';
+import Transactions from './Transactions';
+import ActiveAlerts from './ActiveAlerts';
+import AiRecommendation from './AiRecommendation';
+import ControlCenter from './ControlCenter';
+import Products from './Products';
 
-const Pagination = () => {
-  const pageData = [
-    { label: "Overview", path: "/" },
-    { label: "Transactions", path: "/transactions" },
-    { label: "System Health", path: "/systems-health" },
-    { label: "Active Alerts", path: "/active-alerts" },
-    { label: "AI Recommendations", path: "/ai-recommendations" },
-    { label: "Control Center", path: "/control-center" },
-    { label: "Products", path: "/products" }
-  ];
-  
-  const [currentPage, setCurrentPage] = useState<number>(0);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+// Page data structure
+const pageData = [
+  { label: "Overview", path: "/" },
+  { label: "Transactions", path: "/transactions" },
+  { label: "System Health", path: "/systems-health" },
+  { label: "Active Alerts", path: "/active-alerts" },
+  { label: "AI Recommendations", path: "/ai-recommendations" },
+  { label: "Control Center", path: "/control-center" },
+  { label: "Products", path: "/products" }
+];
+
+// Mock page components - replace with your actual page components
+const PageComponents = {
+  '/': () => (
+    <div>
+      <Charts />
+      <Monitor />
+      <SecondMonitor />
+      <LastMonitor />
+      <ThirdMonitor />
+    </div>
+  ),
+  '/transactions': () => (
+    <div className="  bg-white dark:bg-gray-900">
+      <Transactions />
+    </div>
+  ),
+  '/systems-health': () => (
+    <div className="p-2 bg-white dark:bg-black ">
+      <ServiceStatusMonitor />
+      <StorageOverviewAndDBhealth />
+    </div>
+  ),
+  '/active-alerts': () => (
+    <div className="p-4 dark:bg-gray-900">
+      <ActiveAlerts />
+    </div>
+  ),
+  '/ai-recommendations': () => (
+    <div className=" bg-white dark:bg-gray-900 ">
+      <AiRecommendation />
+    </div>
+  ),
+  '/control-center': () => (
+    <div className="p-2 bg-white dark:bg-gray-900">
+     <ControlCenter/>
+    </div>
+  ),
+  '/products': () => (
+    <div className="p-2 dark:bg-gray-900 ">
+      <Products />
+    </div>
+  )
+};
+
+// Pagination Component
+const Pagination = ({ currentPage, onPageChange }: { currentPage: number, onPageChange: (page: number) => void }) => {
+  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 1024);
   const [isHovered, setIsHovered] = useState<number | null>(null);
   const totalPages = pageData.length;
 
@@ -38,25 +94,21 @@ const Pagination = () => {
     }
   };
 
-  const handlePageChange = (pageIndex: number) => {
-    setCurrentPage(pageIndex);
-  };
-
   const visiblePages = getVisiblePages();
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center  justify-center gap-1 sm:gap-2 p-4 flex-wrap bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-sm  dark:border-gray-800"
+      className="flex items-center  justify-center gap-1 sm:gap-2 p-3 flex-wrap bg-white dark:bg-gray-950 backdrop-blur-sm rounded-xl shadow-sm  dark:border-gray-800"
     >
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => handlePageChange(Math.max(currentPage - 1, 0))}
+        onClick={() => onPageChange(Math.max(currentPage - 1, 0))}
         disabled={currentPage === 0}
-        className="p-1 dark:text-white rounded-md disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        className="p-1 dark:text-white  rounded-md disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       >
         <ChevronLeft className="h-4 w-4" />
       </motion.button>
@@ -72,8 +124,8 @@ const Pagination = () => {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {pageIndex === '...' ? (
-              <motion.span 
-                className="flex items-center justify-center h-8 w-8 text-xs"
+              <motion.span
+                className="flex items-center  justify-center h-8 w-8 text-xs"
                 whileHover={{ scale: 1.1 }}
               >
                 <MoreHorizontal className="h-4 w-4 text-gray-500" />
@@ -84,25 +136,24 @@ const Pagination = () => {
                 onHoverEnd={() => setIsHovered(null)}
                 whileHover={{ y: -2 }}
               >
-                <Link
-                  to={pageData[pageIndex as number].path}
-                  onClick={() => handlePageChange(pageIndex as number)}
-                  className={`relative flex items-center  justify-center min-w-[90px] sm:min-w-[110px] h-7 px-2 rounded-md text-xs font-medium transition-all duration-300 ${
-                    currentPage === pageIndex
-                      ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 shadow-sm'
-                  }`}
+                <button
+                  onClick={() => onPageChange(pageIndex as number)}
+                  className={`relative flex items-center justify-center min-w-[90px] sm:min-w-[110px] h-7 px-2 rounded-md text-xs font-medium transition-all duration-300 ${currentPage === pageIndex
+                    ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 shadow-sm'
+                    }`}
                 >
                   {pageData[pageIndex as number].label}
-                  {isHovered === pageIndex && (
-                    <motion.span 
-                      className="absolute -bottom-1 left-1/2 w-1/2 h-0.5 bg-blue-400 rounded-full"
+                  {(isHovered === pageIndex || currentPage === pageIndex) && (
+                    <motion.span
+                      className={`absolute -bottom-1 left-1/2 w-1/2 h-0.5 rounded-full ${currentPage === pageIndex ? 'bg-white' : 'bg-blue-400'
+                        }`}
                       initial={{ width: 0, x: "-50%" }}
                       animate={{ width: "50%", x: "-50%" }}
                       transition={{ duration: 0.3 }}
                     />
                   )}
-                </Link>
+                </button>
               </motion.div>
             )}
           </motion.div>
@@ -112,7 +163,7 @@ const Pagination = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages - 1))}
+        onClick={() => onPageChange(Math.min(currentPage + 1, totalPages - 1))}
         disabled={currentPage === totalPages - 1}
         className="p-2 rounded-full dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       >
@@ -122,4 +173,44 @@ const Pagination = () => {
   );
 };
 
-export default Pagination;
+// Main App Component
+const App = () => {
+  const [currentPage, setCurrentPage] = useState<number>(0);
+
+  const handlePageChange = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
+  };
+
+  const getCurrentPath = () => pageData[currentPage].path;
+  const CurrentPageComponent = PageComponents[getCurrentPath() as keyof typeof PageComponents];
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-950 p-4">
+      <div className="max-w-7xl mx-auto space-y-6">
+         {/* Optional: Page indicator */}
+        <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+          Page {currentPage + 1} of {pageData.length} - {pageData[currentPage].label}
+        </div>
+        {/* Navigation/Pagination stays fixed */}
+        <div>
+          <Pagination currentPage={currentPage} onPageChange={handlePageChange} />
+        </div>
+
+        {/* Dynamic content area */}
+        <motion.div
+          key={currentPage}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -40 }}
+          transition={{ duration: 0.8 }}
+        >
+          <CurrentPageComponent />
+        </motion.div>
+
+       
+      </div>
+    </div>
+  );
+};
+
+export default App;

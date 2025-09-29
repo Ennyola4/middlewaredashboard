@@ -36,7 +36,11 @@ import {
     Calendar,
     Plug,
     Server,
-    HardDrive
+    HardDrive,
+    Settings,
+    Smartphone,
+    Monitor,
+    ActivityIcon
 } from "lucide-react"
 
 
@@ -2291,5 +2295,333 @@ export const recentSecurityEvent = [
         button : [ "Investigate", "Block"],
         textColor : [ "text-green-500", "text-yellow-500"],
         bgColor : [ "bg-green-500/10", "bg-yellow-500/10"]
+    },
+]
+
+export const transactionMonitor = [
+    {
+        id: "TXN-2kmyw14t8",
+        status: "success",
+        via: "Business Banking",
+        action: "withdrawal",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "20%"
+    },
+    {
+        id: "TXN-2kmyw14t9",
+        status: "success",
+        via: "Gold Bucks",
+        action: "withdrawal",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t0",
+        status: "success",
+        via: "E-cam",
+        action: "Transfer",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "76%"
+    },
+    {
+        id: "TXN-2kmyw14t1",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t2",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦35,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t1",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t2",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦35,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t1",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t2",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦35,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t1",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦85,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+    {
+        id: "TXN-2kmyw14t2",
+        status: "success",
+        via: "POS",
+        action: "Transfer",
+        amount: "₦35,319",
+        time: "21:53:35",
+        risk: "56%"
+    },
+
+];
+
+export const activeAlerts = [
+    {
+        action: "High Risk Transaction Detected",
+        actionStatus: "CRITICAL",
+        desc: "Transaction TXN-002-2024 flagged for manual review - ₦1.5M withdrawal from new device",
+        descStatus: "Active",
+        source: "Mobile Banking",
+        time: "15:38:10",
+        buttonOne: "Acknowlegdge",
+        buttonTwo: "Resolve"
+    },
+    {
+        action: "POS System Performance Degraded",
+        actionStatus: "WARNING",
+        desc: "Response times exceeding 1000ms threshold, CPU usage at 92%",
+        descStatus: "Active",
+        source: "POS integration",
+        time: "15:32:10",
+        buttonOne: "Acknowlegdge",
+        buttonTwo: "Resolve"
+    },
+    {
+        action: "Multiple Failed Login Attempts",
+        actionStatus: "MEDIUM",
+        desc: "15 failed login attempts detected from IP 197.xxx.xxx.xxx in 5 minutes",
+        descStatus: "investigating",
+        source: "Business Banking",
+        time: "15:25:10",
+    },
+    {
+        action: "Third-Party API Timeout",
+        actionStatus: "WARNING",
+        desc: "Gold Bucks external payment gateway experiencing intermittent timeouts",
+        descStatus: "resolved",
+        source: "Gold Bucks",
+        time: "15:18:10",
+    },
+
+
+]
+
+export const aiRecommendation = [
+    {
+        action: "Suspend High-Risk User Account",
+        actionStatus: "HIGH",
+        desc: " USR-78432 showing abnormal transaction patterns. Recommend immediate account suspension.",
+        descStatus: "94% confidence",
+        impact: "Prevent potential ₦2.3M fraud loss",
+        actionTitle: "Suspend account for 24 hours",
+        source: "FRAUD",
+        time: "15:38:10",
+        buttonOne: "Dismiss",
+        buttonTwo: "Implement",
+    },
+    {
+        action: "Scale POS Infrastructure",
+        actionStatus: "MEDIUM",
+        desc: "POS system showing performance degradation. Current capacity at 95%. Recommend scaling.",
+        descStatus: "87% confidence",
+        impact: " Prevent service downtime",
+        actionTitle: ": Auto-scale POS containers",
+        source: "performance",
+        time: "13:54:27",
+        buttonOne: "Dismiss",
+        buttonTwo: "Implement"
+    },
+    {
+        action: "Enable Enhanced Monitoring",
+        actionStatus: "LOW",
+        desc: "Gold Bucks API showing increased error rates. Enable detailed logging for root cause analysis.",
+        descStatus: "investigating",
+        impact: "  Improved error tracking",
+        actionTitle: " Enable debug mode: Auto-scale POS containers",
+        source: "monitoring",
+        time: "13:48:27",
+        buttonOne: "Dismiss",
+        buttonTwo: "Implement"
+    },
+    {
+        action: "Fraud Pattern Detected",
+        actionStatus: "CRITICAL",
+        desc: "Multiple accounts from same IP attempting large withdrawals. Pattern matches known fraud vectors.",
+        descStatus: "98% confidence",
+        impact: "Block potential ₦5.8M fraud",
+        actionTitle: " Block IP and flag accounts",
+        source: "fraud",
+        time: "15:18:10",
+
+
+    },
+
+
+]
+
+export const productFeatureControls = [ 
+    {
+        product : "Business Banking",
+        featureOne : "Transfers",
+        featureTwo : "Loans",
+        featureThree : "Statments",
+        featureFour : "Maintenance",
+        icon : Database,
+        textColor : "text-blue-500"
+    },
+     {
+        product : "Mobile Banking",
+        featureOne : "Transfers",
+        featureTwo : "Bill Payments",
+        featureThree : "Card Requests",
+        featureFour : "Maintenance",
+        icon : Smartphone,
+        textColor : "text-green-500"
+    },
+     {
+        product : "Gold Bucks",
+        featureOne : "Purchases",
+        featureTwo : "Redemptions",
+        featureThree : "Partnerships",
+        featureFour : "Maintenance",
+        icon : Shield,
+        textColor : "text-yellow-500"
+    },
+     {
+        product : "E-cam",
+        featureOne : "monitoring",
+        featureTwo : "alerts",
+        featureThree : "Statrecordingments",
+        featureFour : "Maintenance",
+        icon : Monitor,
+        textColor : "text-purple-500"
+    },
+     {
+        product : "POS System",
+        featureOne : "transactions",
+        featureTwo : "settlements",
+        featureThree : "reports",
+        featureFour : "maintenance",
+        icon : Settings,
+        textColor : "text-red-500"
+    },
+]
+
+export const productLists = [
+    {
+        product : "Business Banking",
+        icon : Database,
+        status : "operational",
+        textColor : "text-green-500",
+        bgColor : "bg-green-500/10",
+        notification : "2",
+        narration : "Corporate banking platform for business customers",
+        activeUsers : "12,450",
+        dailyTransactions : "8,923",
+        dailyRevenue : "₦2,340,000",
+        uptime : "99.98%",
+        bar : "99.98%",
+        errorRate : "0.02%",
+        button : "View Detail Dashboard"
+    },
+        {
+        product : "Mobile Banking",
+        icon : Smartphone,
+        status : "operational",
+        textColor : "text-green-500",
+        bgColor : "bg-green-500/10",
+        notification : "5",
+        narration : "Mobile application for retail banking services",
+        activeUsers : "45,230",
+        dailyTransactions : "34,567",
+        dailyRevenue : "₦1,890,000",
+        uptime : "99.95%",
+        bar : "99.95%",
+        errorRate : "0.05%",
+        button : "View Detail Dashboard"
+    },
+        {
+        product : "Gold Bucks",
+        icon : Shield,
+        status : "warning",
+        textColor : "text-yellow-500",
+        bgColor : "bg-yellow-500/10",
+        notification : "4",
+        narration : "Loyalty and rewards program platform",
+        activeUsers : "23,100",
+        dailyTransactions : "12,456",
+        dailyRevenue : "₦890,000",
+        uptime : "99.87%",
+        bar : "99.97%",
+        errorRate : "0.13%",
+        button : "View Detail Dashboard"
+    },
+        {
+        product : "E-Cam",
+        icon : Monitor,
+        status : "operational",
+        textColor : "text-green-500",
+        bgColor : "bg-green-500/10",
+        notification : "1",
+        narration : "Security and monitoring system",
+        activeUsers : "5,670",
+        dailyTransactions : "2,341",
+        dailyRevenue : "₦450,000",
+        uptime : "99.99%",
+        bar : "99.99%",
+        errorRate : "0.01%",
+        button : "View Detail Dashboard"
+    },
+        {
+        product : "POS System",
+        icon : ActivityIcon,
+        status : "critical",
+        textColor : "text-red-500",
+        bgColor : "bg-red-500/10",
+        notification : "8",
+        narration : "Point of sale transaction processing",
+        activeUsers : "8,920",
+        dailyTransactions : "15,678",
+        dailyRevenue : "₦1,230,000",
+        uptime : "98.12%",
+        bar : "98.12%",
+        errorRate : "1.88%",
+        button : "View Detail Dashboard"
     },
 ]

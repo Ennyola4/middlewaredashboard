@@ -1,4 +1,5 @@
 import { Activity, TrendingUp, Eye, BellRing } from "lucide-react";
+import { aiRecommendation } from "../../utils";
 
 const transactionMonitor = [
     {
@@ -103,68 +104,17 @@ const transactionMonitor = [
 
 ];
 
-const activeAlerts = [
-    {
-        action: "Suspend High-Risk User Account",
-        actionStatus: "HIGH",
-        desc: " USR-78432 showing abnormal transaction patterns. Recommend immediate account suspension.",
-        descStatus: "94% confidence",
-        impact: "Prevent potential ₦2.3M fraud loss",
-        actionTitle: "Suspend account for 24 hours",
-        source: "FRAUD",
-        time: "15:38:10",
-        buttonOne: "Dismiss",
-        buttonTwo: "Implement",
-    },
-    {
-        action: "Scale POS Infrastructure",
-        actionStatus: "MEDIUM",
-        desc: "POS system showing performance degradation. Current capacity at 95%. Recommend scaling.",
-        descStatus: "87% confidence",
-        impact: " Prevent service downtime",
-        actionTitle: ": Auto-scale POS containers",
-        source: "performance",
-        time: "13:54:27",
-        buttonOne: "Dismiss",
-        buttonTwo: "Implement"
-    },
-    {
-        action: "Enable Enhanced Monitoring",
-        actionStatus: "LOW",
-        desc: "Gold Bucks API showing increased error rates. Enable detailed logging for root cause analysis.",
-        descStatus: "investigating",
-        impact: "  Improved error tracking",
-        actionTitle: " Enable debug mode: Auto-scale POS containers",
-        source: "monitoring",
-        time: "13:48:27",
-        buttonOne: "Dismiss",
-        buttonTwo: "Implement"
-    },
-    {
-        action: "Fraud Pattern Detected",
-        actionStatus: "CRITICAL",
-        desc: "Multiple accounts from same IP attempting large withdrawals. Pattern matches known fraud vectors.",
-        descStatus: "98% confidence",
-        impact: "Block potential ₦5.8M fraud",
-        actionTitle: " Block IP and flag accounts",
-        source: "fraud",
-        time: "15:18:10",
 
-
-    },
-
-
-]
 
 
 
 const LastMonitor = () => {
     return (
-        <div className="w-full p-4 bg-white dark:bg-gray-950">
+        <div className="w-full p-2 bg-white dark:bg-gray-950">
             {/* Main container with responsive flex layout */}
             <div className="flex flex-col lg:flex-row gap-4 w-full">
                 {/* Transaction Monitor Container */}
-                <div className="w-full lg:w-1/2 space-y-4 p-4 sm:p-6 rounded-md  dark:bg-gray-800 shadow-sm">
+                <div className="w-full lg:w-1/2 space-y-4 p- sm:p-6 rounded-md  dark:bg-gray-800 shadow-sm">
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2">
                             <Activity className="h-5 w-5 text-blue-500 dark:text-blue-400" />
@@ -257,7 +207,7 @@ const LastMonitor = () => {
 
                     {/* Recommendations List */}
                     <div className="max-h-[500px] overflow-y-auto pr-2">
-                        {activeAlerts.map((ai, index) => (
+                        {aiRecommendation.map((ai, index) => (
                             <div
                                 key={`alert-${index}`}
                                 className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm border-l-4 mb-3 ${

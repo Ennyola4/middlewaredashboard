@@ -4,6 +4,7 @@ import { Activity } from "lucide-react";
 import { AlertTriangle } from "lucide-react"
 import { BellRing } from 'lucide-react';
 import { Eye } from 'lucide-react';
+import { activeAlerts } from "../../utils";
 
 
 
@@ -93,46 +94,7 @@ const systemHealth = [
 
 ]
 
-const activeAlerts = [
-    {
-        action: "High Risk Transaction Detected",
-        actionStatus: "CRITICAL",
-        desc: "Transaction TXN-002-2024 flagged for manual review - ₦1.5M withdrawal from new device",
-        descStatus: "Active",
-        source: "Mobile Banking",
-        time: "15:38:10",
-        buttonOne: "Acknowlegdge",
-        buttonTwo: "Resolve"
-    },
-    {
-        action: "POS System Performance Degraded",
-        actionStatus: "WARNING",
-        desc: "Response times exceeding 1000ms threshold, CPU usage at 92%",
-        descStatus: "Active",
-        source: "POS integration",
-        time: "15:32:10",
-        buttonOne: "Acknowlegdge",
-        buttonTwo: "Resolve"
-    },
-    {
-        action: "Multiple Failed Login Attempts",
-        actionStatus: "MEDIUM",
-        desc: "15 failed login attempts detected from IP 197.xxx.xxx.xxx in 5 minutes",
-        descStatus: "investigating",
-        source: "Business Banking",
-        time: "15:25:10",
-    },
-    {
-        action: "Third-Party API Timeout",
-        actionStatus: "WARNING",
-        desc: "Gold Bucks external payment gateway experiencing intermittent timeouts",
-        descStatus: "resolved",
-        source: "Gold Bucks",
-        time: "15:18:10",
-    },
 
-
-]
 
 const ThirdMonitor = () => {
     return (
@@ -247,7 +209,7 @@ const ThirdMonitor = () => {
             </div>
 
             {/* Active Alert */}
-            <div className="space-y-4 w-full p-6 rounded-md shadow-sm dark:bg-gray-800">
+            <div className="space-y-4 w-full p-6 bg-white rounded-md shadow-sm dark:bg-gray-800">
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-2">
                         <BellRing className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
